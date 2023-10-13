@@ -1,0 +1,4 @@
+# Ignore all Visual Studio metadata files
+Prototype_Game\ Interaction/obj
+Prototype_Game\ Interaction/bin
+.vs
