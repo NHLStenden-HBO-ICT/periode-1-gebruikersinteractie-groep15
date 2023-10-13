@@ -1,1 +1,1 @@
-[![Open Source](https://www.travelandleisure.com/thmb/uH1K1GZiMIzs4CaNGJEVEoaAKJc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/seal-dog-friendship-1-SEALDOGBFFS0120-3bd9d5f8f0ec4ec38d095745452b8313.jpg)]
+![Open Source](https://www.travelandleisure.com/thmb/uH1K1GZiMIzs4CaNGJEVEoaAKJc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/seal-dog-friendship-1-SEALDOGBFFS0120-3bd9d5f8f0ec4ec38d095745452b8313.jpg)
