@@ -1,2 +1,3 @@
 [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-718a45dd9cf7e7f842a935f5ebbe5719a5e09af4491e668f4dbf3b35d5cca122.svg)](https://classroom.github.com/online_ide?assignment_repo_id=12365815&assignment_repo_type=AssignmentRepo)
 hallo ik ben anas en ik zit in groep15
+[![Open Source](https://www.travelandleisure.com/thmb/uH1K1GZiMIzs4CaNGJEVEoaAKJc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/seal-dog-friendship-1-SEALDOGBFFS0120-3bd9d5f8f0ec4ec38d095745452b8313.jpg)]
