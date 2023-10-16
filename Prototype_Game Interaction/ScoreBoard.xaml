@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:Prototype_Game_Interaction"
         mc:Ignorable="d"
         Title="ScoreBoard" Height="450" Width="800">
+    
     <Grid>
-
+        <Button Content="Beginscherm" Click="MainWindowClick" Height="25" HorizontalAlignment="Left" Name="MainButton" VerticalAlignment="Top"  Width="100" ></Button>
     </Grid>
 </Window>
