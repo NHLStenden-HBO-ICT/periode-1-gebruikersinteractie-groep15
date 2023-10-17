@@ -23,5 +23,11 @@ namespace Prototype_Game_Interaction
         {
             InitializeComponent();
         }
+        private void MainWindowClick(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Visibility = Visibility.Visible;
+            this.Visibility = Visibility.Hidden;
+        }
     }
 }

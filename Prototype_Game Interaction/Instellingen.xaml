@@ -6,7 +6,18 @@
         xmlns:local="clr-namespace:Prototype_Game_Interaction"
         mc:Ignorable="d"
         Title="Instellingen" Height="450" Width="800">
-    <Grid>
-        
+    <Grid RenderTransformOrigin="0.502,0.367">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="69*" />
+            <RowDefinition Height="365*"/>
+        </Grid.RowDefinitions>
+        <Rectangle Grid.Row="1" Fill="AliceBlue"/>
+        <Rectangle Grid.Row="0" />
+        <TextBlock Text="Instellingen" FontSize="40" Grid.Row="0"/>
+        <Button Content="Beginscherm" Click="MainWindowClick" Height="25" HorizontalAlignment="Left" x:Name="MainButton" VerticalAlignment="Center"  Width="100" Margin="663,0,0,0" />
+        <TextBlock Text="Geluid" FontSize="20" Grid.Row="1" Height="320"/>
+        <Slider Maximum="100" Margin="80,31,251,297" Grid.Row="1"/>
+        <TextBlock Text="Muziek" FontSize="20" Grid.Row="1" Height="230"/>
+        <Slider Maximum="100" Grid.Row="1" Margin="80,73,251,252"/>
     </Grid>
 </Window>
