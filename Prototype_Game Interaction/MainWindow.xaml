@@ -23,8 +23,8 @@
                    FontWeight="Bold"
                    VerticalContentAlignment="Center"
                    HorizontalAlignment="Center"
-                   Content="Lifting to Victory" Margin="0,-228,0,228"/>
-            <StackPanel Margin="144,68,148,-2" RenderTransformOrigin="0.5,0.5">
+                   Content="Lifting to Victory" Margin="0,-182,0,182"/>
+            <StackPanel Margin="144,68,148,-2" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center">
                 <StackPanel.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
