@@ -1,0 +1,74 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!-- Huisstijl Font van Sportschool Kees -->
+    <FontFamily x:Key="SquadaOne">./Fonts/Squada_One.ttf#Squada One</FontFamily>
+
+
+    <!-- Voor het automatisch verwijderen van WPF's stomme default mouse-over effect -->   
+    <Style x:Key="disableDefault" TargetType="Button">
+        <Setter Property="OverridesDefaultStyle" Value="True"/>
+        <Setter Property="Margin" Value="0"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Name="border" 
+                BorderThickness="0"
+                Padding="0" 
+                BorderBrush="Transparent" 
+                CornerRadius="0" 
+                Background="{TemplateBinding Background}">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- Stijl voor on-hover effect: Terug naar beginscherm knop. Veranderd basically de imagebron -->
+    <Style x:Key="TerugHover" TargetType="Button" BasedOn="{StaticResource disableDefault}">
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="/Assets/TerugFx.png" />
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="Background" Value="Transparent"/>
+            </Trigger>
+            <Trigger Property="IsMouseOver" Value="False">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="/Assets/Terug.png" />
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="Background" Value="Transparent" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <!-- Stijl voor on-hover effect: Rollen knop, om het 'spelletje' te spelen. Veranderd basically de imagebron -->
+    <Style x:Key="rollButton" TargetType="Button" BasedOn="{StaticResource disableDefault}">
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="Assets/rollenFx.png" Margin="1,-2,1,-2"/>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="Background" Value="Transparent"/>
+            </Trigger>
+            <Trigger Property="IsMouseOver" Value="False">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="Assets/rollen.png" />
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="Background" Value="Transparent" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+
+
+</ResourceDictionary>

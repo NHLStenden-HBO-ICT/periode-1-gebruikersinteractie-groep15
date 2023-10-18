@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Prototype_Game_Interaction"
         mc:Ignorable="d"
-        Title="StartSpel" Height="450" Width="800">
+        Title="StartSpel" Height="450" Width="800"
+        WindowStartupLocation="CenterScreen">
     <Grid>
         <Button  Content="Spelen" Click="SpelenClick" Height="25" HorizontalAlignment="Left" Name="SpeelButton" VerticalAlignment="Top"  Width="100" ></Button>
         <Button  Content="Beginscherm" Click="MainWindowClick" Height="25" HorizontalAlignment="Left" Name="MainButton" VerticalAlignment="Top" Width="100" Margin="0,30,0,0" ></Button>
