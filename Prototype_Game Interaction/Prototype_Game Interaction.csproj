@@ -9,10 +9,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="img\titel.png" />
     <None Remove="img\ty.jpg" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="img\titel.png" />
     <Resource Include="img\ty.jpg">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>

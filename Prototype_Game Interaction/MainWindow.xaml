@@ -17,14 +17,9 @@
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition Width="3"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <Label
-                   FontFamily="Comic Sans MS"
-                   FontSize="36"
-                   FontWeight="Bold"
-                   VerticalContentAlignment="Center"
-                   HorizontalAlignment="Center"
-                   Content="Lifting to Victory" Margin="0,-182,0,182"/>
-            <StackPanel Margin="144,68,148,-2" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center">
+            <Image Source="/img/titel.png" Width="500" Height="180" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="150,-51,0,0"/>
+
+            <StackPanel Margin="191,68,155,-2" RenderTransformOrigin="0.5,0.5">
                 <StackPanel.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -33,13 +28,25 @@
                         <TranslateTransform X="4.22"/>
                     </TransformGroup>
                 </StackPanel.RenderTransform>
+                <Button Click="StartButtonClick" Height="50" x:Name="StartButton"  Width="300" >
+                    <Image Source="/img/start.png" Stretch="Fill"/>
+                </Button>
+                <Button Click="ScoreBoardClick" Height="50"  x:Name="ScoreButton" VerticalAlignment="Top"  Width="300">
+                    <Image Source="/img/leader.png" Stretch="Fill" />
+                </Button>
+                <Button Click="InstellingenClick" Height="50"  x:Name="InstellingenButton" VerticalAlignment="Top"  Width="300">
+                    <Image Source="/img/instellingen.png" Stretch="Fill" />
 
-                <Button Content="Spelen" Click="StartButtonClick" Height="25" HorizontalAlignment="Left" Name="StartButton" VerticalAlignment="Top"  Width="100" ></Button>
-                <Button Content="Scoreboard" Click="ScoreBoardClick" Height="25" HorizontalAlignment="Left" Name="ScoreButton" VerticalAlignment="Top"  Width="100" ></Button>
-                <Button Content="Instellingen" Click="InstellingenClick" Height="25" HorizontalAlignment="Left" Name="InstellingenButton" VerticalAlignment="Top"  Width="100"></Button>
-                <Button Content="Help" Click="HelpClick" Height="25" HorizontalAlignment="Left" Name="HelpButton" VerticalAlignment="Top"  Width="100" ></Button>
-                <Button Content="Afsluiten" Click="QuitButtonClick" Height="25" HorizontalAlignment="Left" Name="QuitButton" VerticalAlignment="Top"  Width="100" ></Button>
+                </Button>
+                <Button Click="HelpClick" Height="50"  x:Name="HelpButton" VerticalAlignment="Top"  Width="300" >
+                    <Image Source="/img/Help.png" Stretch="Fill" />
+                </Button>
+                <Button Click="QuitButtonClick" Height="50" x:Name="QuitButton" VerticalAlignment="Top"  Width="300" >
+                    <Image Source="/img/Afsluiten.png"  Stretch="Fill"/>
+                </Button>
+
             </StackPanel>
+
         </Grid>
     </Grid>
 </Window>

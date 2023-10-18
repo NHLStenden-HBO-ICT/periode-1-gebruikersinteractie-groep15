@@ -17,6 +17,6 @@
         <Slider Maximum="100" Margin="80,31,251,297" Grid.Row="1"/>
         <TextBlock Text="Muziek" FontSize="20" Grid.Row="1" Height="230"/>
         <Slider Maximum="100" Grid.Row="1" Margin="80,73,251,252"/>
-        <Image Source="/img/ty.jpg"/>
+        <Image Source="C:\Users\AnasS\source\repos\periode-1-gebruikersinteractie-groep15\Prototype_Game Interaction\img\ty.jpg" OpacityMask="Black"/>
     </Grid>
 </Window>
