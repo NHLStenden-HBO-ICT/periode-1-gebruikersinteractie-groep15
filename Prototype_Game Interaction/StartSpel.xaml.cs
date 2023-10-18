@@ -12,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Prototype_Game_Interaction;
 
 namespace Prototype_Game_Interaction
 {
@@ -26,18 +27,24 @@ namespace Prototype_Game_Interaction
         }
         private void SpelenClick(object sender, RoutedEventArgs e)
         {
+            SharedData.CurrentScreen = "GameWindow";
+
             GameWindow gameWindow = new GameWindow();
             gameWindow.Visibility = Visibility.Visible;
             this.Visibility = Visibility.Hidden;
         }
         private void MainWindowClick(object sender, RoutedEventArgs e)
         {
+            SharedData.CurrentScreen = "MainWindow";
+
             MainWindow mainWindow = new MainWindow();
             mainWindow.Visibility = Visibility.Visible;
             this.Visibility = Visibility.Hidden;
         }
         private void InstellingenClick(object sender, RoutedEventArgs e)
         {
+            SharedData.CurrentScreen = "Instellingen";
+
             Instellingen instellingen = new Instellingen();
             instellingen.Visibility = Visibility.Visible;
             this.Visibility = Visibility.Hidden;

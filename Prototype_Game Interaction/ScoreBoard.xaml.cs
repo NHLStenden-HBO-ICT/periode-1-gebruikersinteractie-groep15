@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Prototype_Game_Interaction;
 
 namespace Prototype_Game_Interaction
 {
@@ -25,6 +26,8 @@ namespace Prototype_Game_Interaction
         }
         private void MainWindowClick(object sender, RoutedEventArgs e)
         {
+            SharedData.CurrentScreen = "MainWindow";
+
             MainWindow mainWindow = new MainWindow();
             mainWindow.Visibility = Visibility.Visible;
             this.Visibility = Visibility.Hidden;

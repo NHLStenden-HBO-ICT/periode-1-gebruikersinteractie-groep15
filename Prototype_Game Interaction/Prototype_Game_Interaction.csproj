@@ -1,0 +1,57 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net6.0-windows</TargetFramework>
+		<RootNamespace>Prototype_Game_Interaction</RootNamespace>
+		<Nullable>enable</Nullable>
+		<UseWPF>true</UseWPF>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Content Include="Assets\Accepteren keybind change.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\Achtergrond.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\Player1.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\Player2.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\rollenFx.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\Terug.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\TerugFx.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\rollen.png" />
+		<Content Include="C:\repos\periode-1-gebruikersinteractie-groep15\Prototype_Game Interaction\Fonts\Squada_One.ttf">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Remove="Assets\Accepteren keybind change.png" />
+		<None Remove="Assets\Achtergrond.png" />
+		<None Remove="Assets\Player1.png" />
+		<None Remove="Assets\Player2.png" />
+		<None Remove="Assets\rollenFx.png" />
+		<None Remove="Assets\Terug.png" />
+		<None Remove="Assets\TerugFx.png" />
+		<None Remove="Teruggaanfx.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Resource Include="Teruggaan.png" />
+		<Resource Include="onHover.png" />
+		<Content Include="Assets\rollen.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+</Project>

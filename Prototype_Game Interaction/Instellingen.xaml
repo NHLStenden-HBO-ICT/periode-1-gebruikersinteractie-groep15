@@ -5,8 +5,113 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Prototype_Game_Interaction"
         mc:Ignorable="d"
-        Title="Instellingen" Height="450" Width="800">
+        Title="Instellingen" Height="1024" Width="1440" 
+        ResizeMode="CanMinimize" 
+        WindowStartupLocation="CenterScreen">
+
+    <!-- Ophalen van het Styles bestand. Deze bevindt zich in de root van het project -->
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Styles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <!-- Main grid -->
     <Grid>
+        <!-- Grid blok voor de titel van het scherm en de Teruggaan button -->
+        <Grid Height="1008" VerticalAlignment="Top">
+            <TextBlock Name="TitelScherm"     
+                TextAlignment="Center"
+                Width="367"
+                Margin="34,44,1038,862"
+                FontSize="64" 
+                FontFamily="{StaticResource SquadaOne}" Text="Instellingen">
+            </TextBlock>
+
+            <Button x:Name="TeruggaanButton"
+                Click="TeruggaanButton_Click"
+                Margin="946,44,76,870">
+                <Button.Style>
+                    <Style 
+                        TargetType="Button" BasedOn="{StaticResource TerugHover}">
+                    </Style>
+                </Button.Style>
+            </Button>
+
+        </Grid>
         
+        <!-- Een border met een nested grid. Hierin speelt het dobbelsteen spelletje zich af -->
+        <Border Name="CenterScreen"
+                BorderBrush="#586c70" 
+                CornerRadius="5"
+                Background="Transparent" 
+                BorderThickness="4" 
+                Margin="480,265,480,249">
+
+            <Grid ShowGridLines="False">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition Height="121.01" />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+
+                <TextBlock Text="Rol de dobbelsteen" 
+                       FontSize="48" 
+                       Foreground="#586c70"
+                       VerticalAlignment="Top"
+                           TextAlignment="Center"
+                       FontFamily="{StaticResource SquadaOne}" Margin="60,19,60,0"/>
+
+                <Label Name="resultLabel"
+                    FontFamily="{StaticResource SquadaOne}" 
+                    Content="0"
+                    Foreground="#6d92ac"
+                   Background="Transparent"
+                    HorizontalContentAlignment="Center" 
+                   HorizontalAlignment="Center"
+                    VerticalAlignment="Top"
+                    FontSize="56" Height="71" Width="348" Grid.Row="1" Margin="0,17,0,0">
+                </Label>
+
+                <Rectangle HorizontalAlignment="Center" 
+                       Height="70" StrokeThickness="3" 
+                       Stroke="#586c70" 
+                      RadiusX="5" RadiusY="5"
+                       VerticalAlignment="Top" 
+                       Width="140" Grid.Row="1" 
+                       Margin="0,17,0,0">
+                </Rectangle>
+
+                <TextBlock Name="randomText"
+                       FontSize="32" 
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Top"
+                       Foreground="#586c70"
+                       FontFamily="{StaticResource SquadaOne}"
+                       Grid.Row="2" Margin="0,8,0,0" 
+                        Text="Klik op rollen om te... euh.. rollen!">
+                </TextBlock>
+
+                <Button x:Name="rollButton" 
+                    Background="Transparent"
+                    Click="RollButton_Click"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Grid.Row="3" Height="75" Width="385"
+                    Style="{StaticResource rollButton}">
+                </Button>
+
+            </Grid>
+        </Border>
+
+        <!-- De images links- en rechtsonderin de hoeken -->
+        <Grid>
+        <Image Margin="0,706,1135,0" Source="/Assets/Player1.png" Stretch="Fill"/>
+        <Image Margin="1136,706,-10,-7" Source="/Assets/Player2.png" Stretch="Fill"/>
+        </Grid>
+    
     </Grid>
 </Window>

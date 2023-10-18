@@ -2,4 +2,5 @@ Tekst bestand 1.
 
 Nu is het bestand bewerkt..
 
-
+En nu is het nog een keer bewerkt, maar nu in een nieuwe branch.
+Merge tijd!

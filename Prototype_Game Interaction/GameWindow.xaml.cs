@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Prototype_Game_Interaction;
 
 namespace Prototype_Game_Interaction
 {
