@@ -12,7 +12,6 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using Prototype_Game_Interaction;
 
 namespace Prototype_Game_Interaction
 {
@@ -43,8 +42,6 @@ namespace Prototype_Game_Interaction
         }
         private void InstellingenClick(object sender, RoutedEventArgs e)
         {
-            SharedData.CurrentScreen = "Instellingen";
-
             Instellingen instellingen = new Instellingen();
             instellingen.Visibility = Visibility.Visible;
             this.Visibility = Visibility.Hidden;

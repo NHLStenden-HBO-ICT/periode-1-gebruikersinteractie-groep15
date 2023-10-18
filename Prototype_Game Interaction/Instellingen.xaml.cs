@@ -32,7 +32,7 @@ namespace Prototype_Game_Interaction
                 {
                     StartSpel StartSpel = new StartSpel();
                     StartSpel.Visibility = Visibility.Visible;
-                    this.Visibility = Visibility.Hidden; 
+                     
                 }
                 else
                 {
@@ -40,8 +40,8 @@ namespace Prototype_Game_Interaction
 
                     MainWindow mainWindow = new MainWindow();
                     mainWindow.Visibility = Visibility.Visible;
-                    this.Visibility = Visibility.Hidden;
                 }
+                this.Visibility = Visibility.Hidden;
             }    
         }
 
