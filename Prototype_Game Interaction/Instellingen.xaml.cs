@@ -24,7 +24,7 @@ namespace Prototype_Game_Interaction
             InitializeComponent();
         }
 
-        private void MainWindowClick(object sender, RoutedEventArgs e)
+        private void Image_MouseUp(object sender, MouseButtonEventArgs e)
         {
             MainWindow mainWindow = new MainWindow();
             mainWindow.Visibility = Visibility.Visible;

@@ -5,47 +5,40 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Prototype_Game_Interaction"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800"
+         WindowStartupLocation="CenterScreen">
     <Grid>
         <!-- Het hele grid-->
+
         <Grid.RowDefinitions>
             <RowDefinition Height ="100"></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Image Source="/img/logo.png" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150"/>
+        </Grid>
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition Width="3"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <Image Source="/img/titel.png" Width="500" Height="180" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="150,-51,0,0"/>
+            <Image Source="/img/titel.jpg" Width="480" Height="180" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="160,-57,0,0"/>
 
-            <StackPanel Margin="191,68,155,-2" RenderTransformOrigin="0.5,0.5">
-                <StackPanel.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform AngleX="1.447"/>
-                        <RotateTransform/>
-                        <TranslateTransform X="4.22"/>
-                    </TransformGroup>
-                </StackPanel.RenderTransform>
-                <Button Click="StartButtonClick" Height="50" x:Name="StartButton"  Width="300" >
-                    <Image Source="/img/start.png" Stretch="Fill"/>
-                </Button>
-                <Button Click="ScoreBoardClick" Height="50"  x:Name="ScoreButton" VerticalAlignment="Top"  Width="300">
-                    <Image Source="/img/leader.png" Stretch="Fill" />
-                </Button>
-                <Button Click="InstellingenClick" Height="50"  x:Name="InstellingenButton" VerticalAlignment="Top"  Width="300">
-                    <Image Source="/img/instellingen.png" Stretch="Fill" />
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="20">
 
-                </Button>
-                <Button Click="HelpClick" Height="50"  x:Name="HelpButton" VerticalAlignment="Top"  Width="300" >
-                    <Image Source="/img/Help.png" Stretch="Fill" />
-                </Button>
-                <Button Click="QuitButtonClick" Height="50" x:Name="QuitButton" VerticalAlignment="Top"  Width="300" >
-                    <Image Source="/img/Afsluiten.png"  Stretch="Fill"/>
-                </Button>
-
+                <Image Source="/img/start.jpg"  Width="400" Height="50" Mouse.MouseUp="Image_MouseUp_1" Cursor="Hand" />
+                <Image Source="/img/leaderboard.jpg" Width="300" Height="50" Mouse.MouseUp="Image_MouseUp_2" Cursor="Hand"/>
+                <Image Source="/img/instellingen.jpg" Width="300" Height="50" Mouse.MouseUp='Image_MouseUp_3' Cursor="Hand" />
+                <Image Source="/img/help.jpg" Width="300" Height="50" Mouse.MouseUp="Image_MouseUp_4" Cursor="Hand" />
+                <Image Source="/img/Afsluiten.jpg"  Width="300" Height="50" Mouse.MouseUp="Image_MouseUp_5"  Cursor="Hand"/>
             </StackPanel>
+
+            <Image Source="/img/p1.png"  HorizontalAlignment="Left" Height="150" VerticalAlignment="Bottom" />
+            <Image Source="/img/p2.png" HorizontalAlignment="Right" Height="170" VerticalAlignment="Bottom"/>
+
+
+
 
         </Grid>
     </Grid>

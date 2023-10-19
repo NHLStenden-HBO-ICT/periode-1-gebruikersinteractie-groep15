@@ -25,36 +25,39 @@ namespace Prototype_Game_Interaction
             InitializeComponent();
         }
 
-        private void StartButtonClick(object sender, RoutedEventArgs e)
+       
+
+        private void Image_MouseUp_1(object sender, MouseButtonEventArgs e)
         {
             StartSpel startSpel = new StartSpel();
             startSpel.Visibility = Visibility.Visible;
             this.Visibility = Visibility.Hidden;
         }
-        private void ScoreBoardClick(object sender, RoutedEventArgs e)
+
+        private void Image_MouseUp_2(object sender, MouseButtonEventArgs e)
         {
             ScoreBoard scoreBoard = new ScoreBoard();
             scoreBoard.Visibility = Visibility.Visible;
             this.Visibility = Visibility.Hidden;
         }
 
-        private void InstellingenClick(object sender, RoutedEventArgs e)
+        private void Image_MouseUp_3(object sender, MouseButtonEventArgs e)
         {
             Instellingen instellingen = new Instellingen();
             instellingen.Visibility = Visibility.Visible;
             this.Visibility = Visibility.Hidden;
         }
-        private void HelpClick(object sender, RoutedEventArgs e) 
+
+        private void Image_MouseUp_4(object sender, MouseButtonEventArgs e)
         {
             Help help = new Help();
             help.Visibility = Visibility.Visible;
             this.Visibility = Visibility.Hidden;
-
         }
-        private void QuitButtonClick(object sender, RoutedEventArgs e)
+
+        private void Image_MouseUp_5(object sender, MouseButtonEventArgs e)
         {
             Application.Current.Shutdown();
         }
-        
     }
 }

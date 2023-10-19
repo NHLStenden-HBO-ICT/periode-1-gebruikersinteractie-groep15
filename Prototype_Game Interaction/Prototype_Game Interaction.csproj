@@ -9,15 +9,53 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="img\Afsluiten.jpg" />
+    <None Remove="img\Afsluiten.png" />
+    <None Remove="img\begin.png" />
+    <None Remove="img\h icon.png" />
+    <None Remove="img\help.jpg" />
+    <None Remove="img\Help.png" />
+    <None Remove="img\instellingen.jpg" />
+    <None Remove="img\instellingen.png" />
+    <None Remove="img\leader.png" />
+    <None Remove="img\leaderboard.jpg" />
+    <None Remove="img\logo.png" />
+    <None Remove="img\p1.png" />
+    <None Remove="img\p2.png" />
+    <None Remove="img\start - Copy.png" />
+    <None Remove="img\start.jpg" />
+    <None Remove="img\start.png" />
+    <None Remove="img\startspel.jpg" />
+    <None Remove="img\t.help.png" />
+    <None Remove="img\t.ins.png" />
+    <None Remove="img\t.lead.png" />
+    <None Remove="img\Template.png" />
+    <None Remove="img\terug.png" />
+    <None Remove="img\teruggaan.jpg" />
+    <None Remove="img\titel.jpg" />
     <None Remove="img\titel.png" />
-    <None Remove="img\ty.jpg" />
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="img\titel.png" />
-    <Resource Include="img\ty.jpg">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
+    <Resource Include="img\Afsluiten.jpg" />
+    <Resource Include="img\help.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="img\h icon.png" />
+    <Resource Include="img\instellingen.jpg" />
+    <Resource Include="img\leaderboard.jpg" />
+    <Resource Include="img\logo.png" />
+    <Resource Include="img\p1.png" />
+    <Resource Include="img\p2.png" />
+    <Resource Include="img\start.jpg" />
+    <Resource Include="img\startspel.jpg" />
+    <Resource Include="img\t.help.png" />
+    <Resource Include="img\t.ins.png" />
+    <Resource Include="img\t.lead.png" />
+    <Resource Include="img\Template.png" />
+    <Resource Include="img\teruggaan.jpg" />
+    <Resource Include="img\titel.jpg" />
   </ItemGroup>
 
 </Project>

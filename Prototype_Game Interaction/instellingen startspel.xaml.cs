@@ -13,13 +13,22 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
 namespace Prototype_Game_Interaction
-{ 
-    public partial class GameWindow : Window
+{
+    /// <summary>
+    /// Interaction logic for instellingen_startspel.xaml
+    /// </summary>
+    public partial class instellingen_startspel : Window
     {
-        public GameWindow()
+        public instellingen_startspel()
         {
             InitializeComponent();
         }
 
+        private void Image_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            StartSpel startSpel = new StartSpel();
+            startSpel.Visibility = Visibility.Visible;
+            this.Close();
+        }
     }
 }
