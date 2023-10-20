@@ -1,0 +1,40 @@
+﻿<Window x:Class="Prototype_Game_Interaction.ZekerheidMenu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Prototype_Game_Interaction"
+        mc:Ignorable="d"
+        Title="ZekerheidMenu" Height="1024" Width="1440"
+        ResizeMode="CanMinimize"
+        WindowStartupLocation="CenterScreen">
+    
+    <Grid>
+        <TextBlock Name="Text"
+                   TextAlignment="Center"
+                   Text="weet je zeker dat je weer naar het begin menu wilt"
+                   FontSize="30"
+                   Margin="34,44,0,300"
+                   Width="800"
+                   Height="75"
+                   />
+
+        <Button Name="Jaikwilterug" 
+                Content="Ja" 
+                Click="JaClick"
+                FontSize="25"
+                Height="40"
+                Width="60"
+                Margin="10,44,600,-400"
+        />
+
+        <Button Name="neeikwilverder" 
+                Content="Nee" 
+                Click="NeeClick"
+                FontSize="25"
+                Height="40"
+                Width="60"
+                Margin="10,44,-600,-400"
+        />
+    </Grid>
+</Window>

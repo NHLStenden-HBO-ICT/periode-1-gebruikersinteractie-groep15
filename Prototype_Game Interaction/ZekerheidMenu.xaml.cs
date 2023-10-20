@@ -16,17 +16,25 @@ using Prototype_Game_Interaction;
 namespace Prototype_Game_Interaction
 {
     /// <summary>
-    /// Interaction logic for GameWindow.xaml
+    /// Interaction logic for ZekerheidMenu.xaml
     /// </summary>
-    public partial class GameWindow : Window
+    public partial class ZekerheidMenu : Window
     {
-        public GameWindow()
+        public ZekerheidMenu()
         {
             InitializeComponent();
         }
+        //Het terug gaan naar het begin menu
+        private void JaClick(object sender, RoutedEventArgs e)
+        {
+            SharedData.CurrentScreen = "MainWindow";
 
-        // Het veranderen van window van spel scherm naar pauze scherm moet nog wel veranderd worden dat dit met een toets op het toetsen bord gebeurd.
-        private void PauzeClick (object sender, RoutedEventArgs e) 
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Visibility = Visibility.Visible;
+            this.Visibility = Visibility.Hidden;
+        }
+        // Het terug gaan naar Pauze menu
+        private void NeeClick(object sender, RoutedEventArgs e)
         {
             SharedData.CurrentScreen = "PauzeMenu";
 
