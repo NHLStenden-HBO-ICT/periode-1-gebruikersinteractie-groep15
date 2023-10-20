@@ -7,12 +7,10 @@
         mc:Ignorable="d"
         Title="GameWindow" Height="1025" Width="1440"
         WindowStartupLocation="CenterScreen">
+    
+    
     <Grid>
-        <Button Name="Pauze" Content="Pauze menu" 
-                    FontSize="25"
-                    Height="50"
-                    Width="310"
-                    Margin="10,44,1038,-825"
-                    Click="PauzeClick" />
+        
+        
     </Grid>
 </Window>
