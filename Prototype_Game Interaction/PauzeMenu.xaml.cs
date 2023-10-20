@@ -29,6 +29,7 @@ namespace Prototype_Game_Interaction
 
         private void ZekerheidClick (object sender, RoutedEventArgs e)
         {
+            // voor de knop om naar het begin menu te gaan maar je moet eerst nog dat bevestingen in een ander menu
             SharedData.CurrentScreen = "ConformatieMenu";
 
             ZekerheidMenu zekerheidMenu = new ZekerheidMenu();
@@ -38,6 +39,7 @@ namespace Prototype_Game_Interaction
 
         private void GameClick(object sender, RoutedEventArgs e) 
         {
+            // voor de knop om terug te gaan naar het spel
             SharedData.CurrentScreen = "GameWindow";
 
             GameWindow gameWindow = new GameWindow();
