@@ -16,14 +16,23 @@
     <Compile Update="Instellingen.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="PauzeMenu.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="ScoreBoard.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="StartSpel.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="ZekerheidMenu.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="PauzeMenu.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Styles.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -43,6 +52,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="StartSpel.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ZekerheidMenu.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
