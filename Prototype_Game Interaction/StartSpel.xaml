@@ -7,9 +7,19 @@
         mc:Ignorable="d"
         Title="StartSpel" Height="1024" Width="1440"
         WindowStartupLocation="CenterScreen">
+
+    
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    
     <Grid>
-        <Button  Content="Spelen" Click="SpelenClick" Height="75" HorizontalAlignment="Left" Name="SpeelButton" FontSize="40" VerticalAlignment="Top"  Width="275" Margin="0,10,0,0" ></Button>
-        <Button  Content="Beginscherm" Click="MainWindowClick" Height="75" HorizontalAlignment="Left" Name="MainButton" FontSize="40" VerticalAlignment="Top" Width="275" Margin="0,90,0,0" ></Button>
-        <Button  Content="Instellingen" Click="InstellingenClick" Height="75" HorizontalAlignment="Left" Name="InstellingenButton" FontSize="40" VerticalAlignment="Top" Width="275" Margin="0,170,0,0" ></Button>
+        <Button  Content="Spelen" FontFamily="{StaticResource SquadaOne}" Click="SpelenClick" Height="75" HorizontalAlignment="Left" Name="SpeelButton" FontSize="40" VerticalAlignment="Top"  Width="275" Margin="0,10,0,0" ></Button>
+        <Button  Content="Beginscherm" FontFamily="{StaticResource SquadaOne}" Click="MainWindowClick" Height="75" HorizontalAlignment="Left" Name="MainButton" FontSize="40" VerticalAlignment="Top" Width="275" Margin="0,90,0,0" ></Button>
+        <Button  Content="Instellingen" FontFamily="{StaticResource SquadaOne}" Click="InstellingenClick" Height="75" HorizontalAlignment="Left" Name="InstellingenButton" FontSize="40" VerticalAlignment="Top" Width="275" Margin="0,170,0,0" ></Button>
     </Grid>
 </Window>
