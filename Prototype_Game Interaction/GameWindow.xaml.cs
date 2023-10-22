@@ -25,7 +25,7 @@ namespace Prototype_Game_Interaction
         public GameWindow()
         {
             InitializeComponent();
-            this.KeyDown += PauzeMenu_keyDown; // voor de knop om daat het pauze menu te gaan
+            this.KeyDown += PauzeMenu_keyDown; // voor de knop om naar het pauze menu te gaan
         }
 
         private void PauzeMenu_keyDown(object sender, KeyEventArgs e)

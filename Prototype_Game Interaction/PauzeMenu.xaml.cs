@@ -67,7 +67,7 @@ namespace Prototype_Game_Interaction
         {
             if (e.Key == Key.Enter)
             {
-                // when the Enter key is pressed you eil got to the conformation menu
+                // when the Enter key is pressed you wil go to the conformation menu
                 // voor de knop om verder naar het conformatie scherm te gaan.
                 SharedData.CurrentScreen = "ZekerheidMenu";
 
