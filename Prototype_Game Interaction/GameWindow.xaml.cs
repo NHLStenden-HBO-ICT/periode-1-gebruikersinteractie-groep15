@@ -25,15 +25,15 @@ namespace Prototype_Game_Interaction
         public GameWindow()
         {
             InitializeComponent();
-            this.KeyDown +=  PauzeMenu_keyDown; // voor de knop om daat het pauze menu te gaan
+            this.KeyDown += PauzeMenu_keyDown; // voor de knop om daat het pauze menu te gaan
         }
 
         private void PauzeMenu_keyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Escape)
             {
-                // Perform the desired action when the Enter key is pressed
-                // voor de knop om daat het pauze menu te gaan
+                // when the Esc key is pressed the screen will go to the PauzeMenu
+                // voor de knop om naar het pauze menu te gaan
                 SharedData.CurrentScreen = "PauzeMenu";
 
                 PauzeMenu pauzeMenu = new PauzeMenu();

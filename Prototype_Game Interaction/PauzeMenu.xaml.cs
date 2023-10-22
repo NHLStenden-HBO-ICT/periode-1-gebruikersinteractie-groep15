@@ -25,6 +25,8 @@ namespace Prototype_Game_Interaction
         public PauzeMenu()
         {
             InitializeComponent();
+            this.KeyDown += GameWindow_keyDown;
+            this.KeyDown += ZekerheidMenu_keyDown;
         }
 
         private void ZekerheidClick (object sender, RoutedEventArgs e)
@@ -45,6 +47,34 @@ namespace Prototype_Game_Interaction
             GameWindow gameWindow = new GameWindow();
             gameWindow.Visibility = Visibility.Visible;
             this.Visibility= Visibility.Hidden;
+        }
+        
+        private void GameWindow_keyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Escape)
+            {
+                // when the Esc key is pressed the screen will go back to the game
+                // voor de knop om verder te gaan met het spel.
+                SharedData.CurrentScreen = "GameWindow";
+
+                GameWindow gameWindow = new GameWindow();
+                gameWindow.Visibility = Visibility.Visible;
+                this.Visibility = Visibility.Hidden;
+            }
+        }
+
+        private void ZekerheidMenu_keyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                // when the Enter key is pressed you eil got to the conformation menu
+                // voor de knop om verder naar het conformatie scherm te gaan.
+                SharedData.CurrentScreen = "ZekerheidMenu";
+
+                ZekerheidMenu zekerheidMenu = new ZekerheidMenu();
+                zekerheidMenu.Visibility = Visibility.Visible;
+                this.Visibility = Visibility.Hidden;
+            }
         }
     }
 }

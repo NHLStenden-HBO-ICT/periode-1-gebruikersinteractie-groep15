@@ -5,12 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Prototype_Game_Interaction"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800"
+        Title="MainWindow" Height="1025" Width="1440"
         WindowStartupLocation="CenterScreen">
     <Grid>
         <!-- Het hele grid-->
         <Grid.RowDefinitions>
-            <RowDefinition Height ="100"></RowDefinition>
+            <RowDefinition Height ="50"></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
         <Grid Grid.Row="1">
@@ -20,7 +20,7 @@
             </Grid.ColumnDefinitions>
             <Label
                    FontFamily="Comic Sans MS"
-                   FontSize="36"
+                   FontSize="60"
                    FontWeight="Bold"
                    VerticalContentAlignment="Center"
                    HorizontalAlignment="Center"
@@ -35,11 +35,11 @@
                     </TransformGroup>
                 </StackPanel.RenderTransform>
 
-                <Button Content="Spelen" Click="StartButtonClick" Height="25" HorizontalAlignment="Left" Name="StartButton" VerticalAlignment="Top"  Width="100" ></Button>
-                <Button Content="Scoreboard" Click="ScoreBoardClick" Height="25" HorizontalAlignment="Left" Name="ScoreButton" VerticalAlignment="Top"  Width="100" ></Button>
-                <Button Content="Instellingen" Click="InstellingenClick" Height="25" HorizontalAlignment="Left" Name="InstellingenButton" VerticalAlignment="Top"  Width="100"></Button>
-                <Button Content="Help" Click="HelpClick" Height="25" HorizontalAlignment="Left" Name="HelpButton" VerticalAlignment="Top"  Width="100" ></Button>
-                <Button Content="Afsluiten" Click="QuitButtonClick" Height="25" HorizontalAlignment="Left" Name="QuitButton" VerticalAlignment="Top"  Width="100" ></Button>
+                <Button Content="Spelen" Click="StartButtonClick" Height="75" HorizontalAlignment="Left" Name="StartButton" VerticalAlignment="Top"  Width="275" FontSize="40"></Button>
+                <Button Content="Scoreboard" Click="ScoreBoardClick" Height="75" HorizontalAlignment="Left" Name="ScoreButton" VerticalAlignment="Top"  Width="275" FontSize="40" ></Button>
+                <Button Content="Instellingen" Click="InstellingenClick" Height="75" HorizontalAlignment="Left" Name="InstellingenButton" VerticalAlignment="Top"  Width="275" FontSize="40"></Button>
+                <Button Content="Help" Click="HelpClick" Height="75" HorizontalAlignment="Left" Name="HelpButton" VerticalAlignment="Top"  Width="275" FontSize="40"></Button>
+                <Button Content="Afsluiten" Click="QuitButtonClick" Height="75" HorizontalAlignment="Left" Name="QuitButton" VerticalAlignment="Top"  Width="275" FontSize="40" ></Button>
             </StackPanel>
         </Grid>
     </Grid>
