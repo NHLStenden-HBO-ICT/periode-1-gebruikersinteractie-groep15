@@ -6,19 +6,33 @@
         xmlns:local="clr-namespace:Prototype_Game_Interaction"
         mc:Ignorable="d"
         Title="instellingen_startspel" Height="450" Width="800">
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Styles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    
     <Grid RenderTransformOrigin="0.502,0.367">
         <Grid.RowDefinitions>
             <RowDefinition Height="69*" />
             <RowDefinition Height="365*"/>
         </Grid.RowDefinitions>
-        <Image Source="/img/t.ins.png" HorizontalAlignment="Left" />
+
+        <TextBlock        HorizontalAlignment="Left"
+                    Width="300"
+                    FontSize="50" 
+                    FontFamily="{StaticResource SquadaOne}" Text="Instellingen">
+        </TextBlock>
         <Image Source="/img/teruggaan.jpg" Width="300" Height="50" HorizontalAlignment="Right" Mouse.MouseUp="Image_MouseUp" Cursor="Hand"/>
 
 
         <Grid Grid.Row="1">
-            <TextBlock Text="Geluid" FontSize="20" Height="320"/>
+            <TextBlock Text="Geluid" FontSize="20" Height="320" FontFamily="{StaticResource SquadaOne}"/>
             <Slider Maximum="100" Margin="80,31,251,297" Value="50"/>
-            <TextBlock Text="Muziek" FontSize="20" Grid.Row="1" Margin="0,68,0,252"/>
+            <TextBlock Text="Muziek" FontSize="20" Grid.Row="1" Margin="0,68,0,252" FontFamily="{StaticResource SquadaOne}"/>
             <Slider Maximum="100" Grid.Row="1" Margin="80,73,251,252" Value="50"/>
             <Image Source="/img/p1.png"  HorizontalAlignment="Left" Height="150" VerticalAlignment="Bottom" />
             <Image Source="/img/p2.png" HorizontalAlignment="Right" Height="170" VerticalAlignment="Bottom"/>
