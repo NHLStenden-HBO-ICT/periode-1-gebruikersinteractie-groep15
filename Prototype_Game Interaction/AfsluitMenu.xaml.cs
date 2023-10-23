@@ -11,21 +11,27 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using Prototype_Game_Interaction;
 
 namespace Prototype_Game_Interaction
 {
     /// <summary>
-    /// Interaction logic for ScoreBoard.xaml
+    /// Interaction logic for AfsluitMenu.xaml
     /// </summary>
-    public partial class ScoreBoard : Window
+    public partial class AfsluitMenu : Window
     {
-        public ScoreBoard()
+        public AfsluitMenu()
         {
             InitializeComponent();
-            this.KeyDown += MainWindow_keyDown; // voor de knop om terug te gaan naar het hoofdmenu
+            this.KeyDown += Afsluiten_keyDown;
+            this.KeyDown += MainWindow_keyDown;
         }
-        private void MainWindowClick(object sender, RoutedEventArgs e)
+
+        private void AfsluitenClick(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
+
+        private void NietafsluitenClick(object sender, RoutedEventArgs e)
         {
             SharedData.CurrentScreen = "MainWindow";
 
@@ -34,9 +40,16 @@ namespace Prototype_Game_Interaction
             this.Visibility = Visibility.Hidden;
         }
 
+        private void Afsluiten_keyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                Application.Current.Shutdown();
+            }
+        }
+
         private void MainWindow_keyDown(object sender, KeyEventArgs e)
         {
-            // when the Esc key is pressed the screen will go back to the main menu
             if (e.Key == Key.Escape)
             {
                 MainWindow mainWindow = new MainWindow();

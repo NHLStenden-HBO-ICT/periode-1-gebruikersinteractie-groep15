@@ -66,7 +66,11 @@ namespace Prototype_Game_Interaction
         }
         private void QuitButtonClick(object sender, RoutedEventArgs e)
         {
-            Application.Current.Shutdown();
+            SharedData.CurrentScreen = "AflsuitMenu";
+
+            AfsluitMenu afsluitMenu = new AfsluitMenu();
+            afsluitMenu.Visibility = Visibility.Visible;
+            this.Visibility = Visibility.Hidden;
         }
         
     }
