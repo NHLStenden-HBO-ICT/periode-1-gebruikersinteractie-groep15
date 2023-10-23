@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:Prototype_Game_Interaction"
         mc:Ignorable="d"
         Title="Help" Height="450" Width="800"
+<<<<<<< HEAD
          WindowStartupLocation="CenterScreen">
 
 
@@ -45,5 +46,10 @@
             </TextBlock>
             </Border>
         </Grid>
+=======
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        
+>>>>>>> parent of 68f2b8c (Merge branch 'anas')
     </Grid>
 </Window>

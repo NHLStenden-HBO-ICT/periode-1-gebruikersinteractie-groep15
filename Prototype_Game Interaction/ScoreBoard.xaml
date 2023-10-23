@@ -9,6 +9,7 @@
         mc:Ignorable="d"
         Title="ScoreBoard" Height="450" Width="800"
         WindowStartupLocation="CenterScreen">
+<<<<<<< HEAD
 
     <Window.Resources>
         <ResourceDictionary>
@@ -42,7 +43,10 @@
             <Image Source="/img/p1.png"  HorizontalAlignment="Left" Height="150" VerticalAlignment="Bottom" />
             <Image Source="/img/p2.png" HorizontalAlignment="Right" Height="170" VerticalAlignment="Bottom"/>
         </Grid>
+=======
+    
+    <Grid>
+        <Button Content="Beginscherm" Click="MainWindowClick" Height="25" HorizontalAlignment="Left" Name="MainButton" VerticalAlignment="Top"  Width="100" ></Button>
+>>>>>>> parent of 68f2b8c (Merge branch 'anas')
     </Grid>
-
-
 </Window>
