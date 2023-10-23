@@ -28,7 +28,9 @@ namespace Prototype_Game_Interaction
             SharedData.CurrentScreen = "MainWindow";
         }
 
-        private void StartButtonClick(object sender, RoutedEventArgs e)
+       
+
+        private void Image_MouseUp_1(object sender, MouseButtonEventArgs e)
         {
             SharedData.CurrentScreen = "StartSpel";
 
@@ -36,7 +38,8 @@ namespace Prototype_Game_Interaction
             startSpel.Visibility = Visibility.Visible;
             this.Visibility = Visibility.Hidden;
         }
-        private void ScoreBoardClick(object sender, RoutedEventArgs e)
+
+        private void Image_MouseUp_2(object sender, MouseButtonEventArgs e)
         {
             SharedData.CurrentScreen = "ScoreBoard";
 
@@ -45,7 +48,7 @@ namespace Prototype_Game_Interaction
             this.Visibility = Visibility.Hidden;
         }
 
-        private void InstellingenClick(object sender, RoutedEventArgs e)
+        private void Image_MouseUp_3(object sender, MouseButtonEventArgs e)
         {
             SharedData.CurrentScreen = "Instellingen";
 
@@ -55,19 +58,19 @@ namespace Prototype_Game_Interaction
             
 
         }
-        private void HelpClick(object sender, RoutedEventArgs e) 
+
+        private void Image_MouseUp_4(object sender, MouseButtonEventArgs e)
         {
             SharedData.CurrentScreen = "Help";
 
             Help help = new Help();
             help.Visibility = Visibility.Visible;
             this.Visibility = Visibility.Hidden;
-
         }
-        private void QuitButtonClick(object sender, RoutedEventArgs e)
+
+        private void Image_MouseUp_5(object sender, MouseButtonEventArgs e)
         {
             Application.Current.Shutdown();
         }
-        
     }
 }
