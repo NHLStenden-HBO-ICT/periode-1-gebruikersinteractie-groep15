@@ -23,6 +23,21 @@ namespace Prototype_Game_Interaction
         public Help()
         {
             InitializeComponent();
+            this.KeyDown += MainWindow_KeyDown; // maakt onderdeel uit van de key press om terug te gaan naar het begin menu. 
+        }
+
+        private void MainWindow_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Escape)
+            {
+                // when the Esc key is pressed the screen will go to the BeginMenu
+                // voor de knop om naar het begin menu te gaan
+                SharedData.CurrentScreen = "MainWindow";
+
+                MainWindow mainWindow = new MainWindow();
+                mainWindow.Visibility = Visibility.Visible;
+                this.Visibility = Visibility.Hidden;
+            }
         }
     }
 }

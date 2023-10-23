@@ -23,6 +23,7 @@ namespace Prototype_Game_Interaction
         public Instellingen()
         {
             InitializeComponent();
+            this.KeyDown += MainWindow_keyDown;
         }
 
         private void TeruggaanButton_Click(object sender, RoutedEventArgs e)
@@ -43,6 +44,18 @@ namespace Prototype_Game_Interaction
                 }
                 this.Visibility = Visibility.Hidden;
             }    
+        }
+
+        private void MainWindow_keyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Escape) 
+            {
+                SharedData.CurrentScreen = "MainWindow";
+
+                MainWindow mainWindow = new MainWindow();
+                mainWindow.Visibility = Visibility.Visible;
+                this.Visibility = Visibility.Hidden;
+            }
         }
 
         private async void RollButton_Click(object sender, RoutedEventArgs e)
