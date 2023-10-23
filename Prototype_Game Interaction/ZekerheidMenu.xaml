@@ -8,7 +8,7 @@
         Title="ZekerheidMenu" Height="1024" Width="1440"
         ResizeMode="CanMinimize"
         WindowStartupLocation="CenterScreen"
-        SizeToContent="WidthAndHeight">
+        >
 
     <!-- Ophalen van het het Styles Bestand-->
     <Window.Resources>
