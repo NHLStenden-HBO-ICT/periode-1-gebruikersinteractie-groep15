@@ -20,7 +20,8 @@
             <RowDefinition Height="50"/>
             <RowDefinition Height="120"/>
             <RowDefinition/>
- 
+            <RowDefinition Height="80"/>
+
         </Grid.RowDefinitions>
         
         <Grid Grid.Row="0">
@@ -38,18 +39,49 @@
 
         <Grid Grid.Row="2">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="300"/>
+                <ColumnDefinition Width="350"/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
-            <TextBlock
-                HorizontalAlignment="Right"
-          FontSize="30" 
-          FontFamily="{StaticResource SquadaOne}" Text="Email:">
-            </TextBlock>
-            <PasswordBox Grid.Column="1"></PasswordBox>
+            <StackPanel>
+                <TextBlock x:Name="mail"
+                 HorizontalAlignment="Right"
+                 FontSize="30" 
+                FontFamily="{StaticResource SquadaOne}" Text="Email:"/>
+                <TextBlock Text=" "/>
+                <TextBlock x:Name="ww" HorizontalAlignment="Right"
+                           FontSize="30"
+                           FontFamily="{StaticResource SquadaOne}"
+                           Text=" Wachtwoord:"/>
+            </StackPanel>
 
+            <StackPanel Grid.Column="1">
+                <TextBox x:Name="email"  Height="30" Width="200" HorizontalAlignment="Left" 
+                         VerticalAlignment="Top" FontSize="20" Style="{StaticResource Textbox1}"/>
+                <TextBlock/>
+                <PasswordBox x:Name="wachtwoord"  Height="30" Width="200" 
+                             HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="20"
+                             Style="{StaticResource Passwordbox}"/>
+            </StackPanel>
 
+        </Grid>
+
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Button Height="50" Width="160" HorizontalAlignment="Right"
+                    Grid.Column="0" Content="Account aanmaken" FontFamily="{StaticResource SquadaOne}"
+                    FontSize="20" Background="#FBEEE4" 
+                    Style="{StaticResource btnBlue}"/>
+            
+            <Button x:Name="inloggen" Height="50" Width="150" HorizontalAlignment="Left"
+                    Grid.Column="2" Content="Inloggen" FontFamily="{StaticResource SquadaOne}"
+                    FontSize="20" Click="inloggen_Click" Background="#FBEEE4" Opacity="100"
+                   Style="{StaticResource btnBlue}" />
         </Grid>
     </Grid>
 </Window>

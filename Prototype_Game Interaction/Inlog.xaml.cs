@@ -23,5 +23,18 @@ namespace Prototype_Game_Interaction
         {
             InitializeComponent();
         }
+
+        private void inloggen_Click(object sender, RoutedEventArgs e)
+        {
+            if (wachtwoord.Password != "" && email.Text !="")
+            {
+                if(wachtwoord.Password == "test" && email.Text == "user")
+                {
+                    MainWindow main = new MainWindow();
+                    main.Visibility = Visibility.Visible;
+                    this.Close();
+                }
+            }
+        }
     }
 }

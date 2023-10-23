@@ -68,6 +68,12 @@ namespace Prototype_Game_Interaction
         {
             Application.Current.Shutdown();
         }
-        
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Inlog inlog = new Inlog();
+            inlog.Visibility = Visibility.Visible;
+            this.Close();
+        }
     }
 }
