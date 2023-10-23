@@ -11,25 +11,24 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using Prototype_Game_Interaction;
 
 namespace Prototype_Game_Interaction
 {
     /// <summary>
-    /// Interaction logic for Help.xaml
+    /// Interaction logic for instellingen_startspel.xaml
     /// </summary>
-    public partial class Help : Window
+    public partial class instellingen_startspel : Window
     {
-        public Help()
+        public instellingen_startspel()
         {
             InitializeComponent();
         }
-     
+
         private void Image_MouseUp(object sender, MouseButtonEventArgs e)
         {
-            MainWindow mainWindow = new MainWindow();
-            mainWindow.Visibility = Visibility.Visible;
-            this.Visibility = Visibility.Hidden;
+            StartSpel startSpel = new StartSpel();
+            startSpel.Visibility = Visibility.Visible;
+            this.Close();
         }
     }
 }
