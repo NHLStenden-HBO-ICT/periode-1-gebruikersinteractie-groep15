@@ -24,12 +24,5 @@ namespace Prototype_Game_Interaction
         {
             InitializeComponent();
         }
-     
-        private void Image_MouseUp(object sender, MouseButtonEventArgs e)
-        {
-            MainWindow mainWindow = new MainWindow();
-            mainWindow.Visibility = Visibility.Visible;
-            this.Visibility = Visibility.Hidden;
-        }
     }
 }

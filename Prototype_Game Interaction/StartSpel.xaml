@@ -6,14 +6,10 @@
         xmlns:local="clr-namespace:Prototype_Game_Interaction"
         mc:Ignorable="d"
         Title="StartSpel" Height="450" Width="800"
-         WindowStartupLocation="CenterScreen">
+        WindowStartupLocation="CenterScreen">
     <Grid>
-        <StackPanel>
-            <Image Source="/img/teruggaan.jpg" Width="150" Height="40" HorizontalAlignment="Left"  Mouse.MouseUp="Image_MouseUp" Cursor="Hand"/>
-            <Image Source="/img/instellingen.jpg" Width="150" Height="40" HorizontalAlignment="Left" Mouse.MouseUp="Image_MouseUp_1" Cursor="Hand"/>
-        </StackPanel>
-        
-        <Image Source="/img/start.jpg"  Width="200" Height="50" HorizontalAlignment="Left" VerticalAlignment="Bottom" Mouse.MouseUp="Image_MouseUp_2" Cursor="Hand"/>
-        
+        <Button  Content="Spelen" Click="SpelenClick" Height="25" HorizontalAlignment="Left" Name="SpeelButton" VerticalAlignment="Top"  Width="100" ></Button>
+        <Button  Content="Beginscherm" Click="MainWindowClick" Height="25" HorizontalAlignment="Left" Name="MainButton" VerticalAlignment="Top" Width="100" Margin="0,30,0,0" ></Button>
+        <Button  Content="Instellingen" Click="InstellingenClick" Height="25" HorizontalAlignment="Left" Name="InstellingenButton" VerticalAlignment="Top" Width="100" Margin="0,276,0,0" ></Button>
     </Grid>
 </Window>
