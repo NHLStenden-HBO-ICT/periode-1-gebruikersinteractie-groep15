@@ -39,29 +39,36 @@
 
         <Grid Grid.Row="2">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="350"/>
-                <ColumnDefinition/>
+                <ColumnDefinition Width="400"/>
+                <ColumnDefinition Width="400"/>
             </Grid.ColumnDefinitions>
 
             <StackPanel>
-                <TextBlock x:Name="mail"
+                <TextBlock x:Name="mail" Height="30"
                  HorizontalAlignment="Right"
                  FontSize="30" 
                 FontFamily="{StaticResource SquadaOne}" Text="Email:"/>
-                <TextBlock Text=" "/>
+                <Rectangle Fill="White" Height="5"/>
                 <TextBlock x:Name="ww" HorizontalAlignment="Right"
                            FontSize="30"
                            FontFamily="{StaticResource SquadaOne}"
                            Text=" Wachtwoord:"/>
+                <Rectangle Fill="White" Height="12"/>
+                
+                <TextBlock Text="Blijf ingelogd" FontSize="10" FontFamily="{StaticResource SquadaOne}" HorizontalAlignment="Right"/>
             </StackPanel>
 
             <StackPanel Grid.Column="1">
-                <TextBox x:Name="email"  Height="30" Width="200" HorizontalAlignment="Left" 
+                <TextBox x:Name="email"  Height="27" Width="200" HorizontalAlignment="Left" 
                          VerticalAlignment="Top" FontSize="20" Style="{StaticResource Textbox1}"/>
                 <TextBlock/>
-                <PasswordBox x:Name="wachtwoord"  Height="30" Width="200" 
+                <Rectangle Fill="White"/>
+                <PasswordBox x:Name="wachtwoord"  Height="28" Width="200" 
                              HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="20"
                              Style="{StaticResource Passwordbox}"/>
+                <Rectangle Fill="White" Height="4"/>
+                <Rectangle Fill="#aaa6a2" Height="3" Width="200" HorizontalAlignment="Left"/>
+                <CheckBox/>
             </StackPanel>
 
         </Grid>
