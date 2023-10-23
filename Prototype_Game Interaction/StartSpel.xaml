@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="StartSpel" Height="1024" Width="1440"
         WindowStartupLocation="CenterScreen"
-        SizeToContent="WidthAndHeight">
+        >
 
     <Window.Resources>
         <ResourceDictionary>

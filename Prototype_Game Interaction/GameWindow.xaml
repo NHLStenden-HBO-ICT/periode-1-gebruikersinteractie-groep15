@@ -7,10 +7,18 @@
         mc:Ignorable="d"
         Title="GameWindow" Height="1025" Width="1440"
         WindowStartupLocation="CenterScreen">
-    
-    
+
+    <!-- Ophalen van het het Styles Bestand-->
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
     <Grid>
-        
-        
+        <TextBlock Name="knop" Text="Druk eens op Enter" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="{StaticResource SquadaOne}" FontSize="30" Height="40" Width="220"  />
+
     </Grid>
 </Window>
