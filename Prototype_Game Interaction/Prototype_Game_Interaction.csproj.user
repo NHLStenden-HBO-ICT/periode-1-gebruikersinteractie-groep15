@@ -19,9 +19,6 @@
     <Compile Update="Instellingen.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="main_instellingen.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="PauzeMenu.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -36,9 +33,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="main_instellingen.xaml">
-      <SubType>Designer</SubType>
-    </Page>
     <Page Update="PauzeMenu.xaml">
       <SubType>Designer</SubType>
     </Page>
