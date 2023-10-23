@@ -1,0 +1,55 @@
+﻿<Window x:Class="Prototype_Game_Interaction.Inlog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Prototype_Game_Interaction"
+        mc:Ignorable="d"
+        Title="Inlog" Height="450" Width="800">
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Styles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="120"/>
+            <RowDefinition/>
+ 
+        </Grid.RowDefinitions>
+        
+        <Grid Grid.Row="0">
+            
+        </Grid>
+        
+        <Grid Grid.Row="1">
+            <TextBlock
+                HorizontalAlignment="Center"
+          Width="500"
+          FontSize="64" 
+          FontFamily="{StaticResource SquadaOne}" Text="Lifthing to Victory">
+            </TextBlock>
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="300"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock
+                HorizontalAlignment="Right"
+          FontSize="30" 
+          FontFamily="{StaticResource SquadaOne}" Text="Email:">
+            </TextBlock>
+            <PasswordBox Grid.Column="1"></PasswordBox>
+
+
+        </Grid>
+    </Grid>
+</Window>
