@@ -24,27 +24,27 @@ namespace Prototype_Game_Interaction
         {
             InitializeComponent();
         }
-
-        private void Image_MouseUp(object sender, MouseButtonEventArgs e)
+        private void SpelenClick(object sender, RoutedEventArgs e)
         {
-            MainWindow mainWindow = new MainWindow();
-            mainWindow.Visibility = Visibility.Visible;
-            this.Visibility = Visibility.Hidden;
-        }
+            SharedData.CurrentScreen = "GameWindow";
 
-        private void Image_MouseUp_1(object sender, MouseButtonEventArgs e)
-        {
-          instellingen_startspel instellingen_startspel= new instellingen_startspel();
-            instellingen_startspel.Visibility = Visibility.Visible;
-            this.Close();
-        }
-
-        private void Image_MouseUp_2(object sender, MouseButtonEventArgs e)
-        {
             GameWindow gameWindow = new GameWindow();
             gameWindow.Visibility = Visibility.Visible;
             this.Visibility = Visibility.Hidden;
         }
+        private void MainWindowClick(object sender, RoutedEventArgs e)
+        {
+            SharedData.CurrentScreen = "MainWindow";
+
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Visibility = Visibility.Visible;
+            this.Visibility = Visibility.Hidden;
+        }
+        private void InstellingenClick(object sender, RoutedEventArgs e)
+        {
+            Instellingen instellingen = new Instellingen();
+            instellingen.Visibility = Visibility.Visible;
+            this.Visibility = Visibility.Hidden;
+        }
     }
-    
 }

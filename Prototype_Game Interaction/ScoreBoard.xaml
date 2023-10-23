@@ -7,28 +7,8 @@
         mc:Ignorable="d"
         Title="ScoreBoard" Height="450" Width="800"
         WindowStartupLocation="CenterScreen">
-
-
-
-
+    
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="87*"></RowDefinition>
-            <RowDefinition Height="347*"></RowDefinition>
-        </Grid.RowDefinitions>
-
-        <Grid>
-            <Image Source="/img/t.lead.png"   HorizontalAlignment="Left"/>
-
-            <Image Source="/img/teruggaan.jpg"  Width="155" Height="50" HorizontalAlignment="Right" Mouse.MouseUp="Image_MouseUp" Cursor="Hand"/>
-
-        </Grid>
-
-        <Grid Grid.Row="1">
-            <Image Source="/img/p1.png"  HorizontalAlignment="Left" Height="150" VerticalAlignment="Bottom" />
-            <Image Source="/img/p2.png" HorizontalAlignment="Right" Height="170" VerticalAlignment="Bottom"/>
-        </Grid>
+        <Button Content="Beginscherm" Click="MainWindowClick" Height="25" HorizontalAlignment="Left" Name="MainButton" VerticalAlignment="Top"  Width="100" ></Button>
     </Grid>
-
-
 </Window>
