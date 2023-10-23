@@ -1,6 +1,4 @@
-﻿
-    
-    <Window x:Class="Prototype_Game_Interaction.ScoreBoard"
+﻿<Window x:Class="Prototype_Game_Interaction.ScoreBoard"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -10,15 +8,11 @@
         Title="ScoreBoard" Height="450" Width="800"
         WindowStartupLocation="CenterScreen">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
-    <Window.Resources>
-        <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="/Styles.xaml"/>
-            </ResourceDictionary.MergedDictionaries>
-        </ResourceDictionary>
-    </Window.Resources>
-        
+
+
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="87*"></RowDefinition>
@@ -26,14 +20,7 @@
         </Grid.RowDefinitions>
 
         <Grid>
-
-            <TextBlock Name="TitelScherm"     
-              HorizontalAlignment="Left"
-              Width="300"
-              FontSize="50" 
-             FontFamily="{StaticResource SquadaOne}" Text="Leaderboard">
-            </TextBlock>
-
+            <Image Source="/img/t.lead.png"   HorizontalAlignment="Left"/>
 
             <Image Source="/img/teruggaan.jpg"  Width="155" Height="50" HorizontalAlignment="Right" Mouse.MouseUp="Image_MouseUp" Cursor="Hand"/>
 
@@ -43,6 +30,11 @@
             <Image Source="/img/p1.png"  HorizontalAlignment="Left" Height="150" VerticalAlignment="Bottom" />
             <Image Source="/img/p2.png" HorizontalAlignment="Right" Height="170" VerticalAlignment="Bottom"/>
         </Grid>
+=======
+    
+    <Grid>
+        <Button Content="Beginscherm" Click="MainWindowClick" Height="25" HorizontalAlignment="Left" Name="MainButton" VerticalAlignment="Top"  Width="100" ></Button>
+>>>>>>> parent of 68f2b8c (Merge branch 'anas')
 =======
     
     <Grid>

@@ -49,9 +49,9 @@ namespace Prototype_Game_Interaction
         {
             SharedData.CurrentScreen = "Instellingen";
 
-            main_instellingen instellingen = new main_instellingen();
-            instellingen .Visibility = Visibility.Visible;
-            this.Close();
+            Instellingen instellingen = new Instellingen();
+            instellingen.Visibility = Visibility.Visible;
+            this.Visibility = Visibility.Hidden;
             
 
         }
