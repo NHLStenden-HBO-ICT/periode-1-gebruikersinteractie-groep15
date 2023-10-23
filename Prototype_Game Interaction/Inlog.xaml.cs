@@ -28,13 +28,20 @@ namespace Prototype_Game_Interaction
         {
             if (wachtwoord.Password != "" && email.Text !="")
             {
-                if(wachtwoord.Password == "test" && email.Text == "user")
+                if(wachtwoord.Password == "test" && email.Text == "admin@")
                 {
                     MainWindow main = new MainWindow();
                     main.Visibility = Visibility.Visible;
                     this.Close();
                 }
+
+                else
+                {
+                    MessageBox.Show("Gebruiker niet geregegistreerd, Probeer opnieuw.");
+                }
             }
+
+           
         }
     }
 }

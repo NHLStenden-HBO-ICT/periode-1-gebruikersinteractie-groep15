@@ -41,10 +41,12 @@
 		<None Remove="Assets\rollenFx.png" />
 		<None Remove="Assets\Terug.png" />
 		<None Remove="Assets\TerugFx.png" />
+		<None Remove="Fonts\Squada_One.ttf" />
 		<None Remove="Teruggaanfx.png" />
 	</ItemGroup>
 
 	<ItemGroup>
+		<Resource Include="Fonts\Squada_One.ttf" />
 		<Resource Include="Teruggaan.png" />
 		<Resource Include="onHover.png" />
 		<Content Include="Assets\rollen.png">

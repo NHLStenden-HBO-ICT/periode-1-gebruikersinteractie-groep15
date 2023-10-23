@@ -40,7 +40,6 @@
                 <Button Content="Instellingen" Click="InstellingenClick" Height="25" HorizontalAlignment="Left" Name="InstellingenButton" VerticalAlignment="Top"  Width="100"></Button>
                 <Button Content="Help" Click="HelpClick" Height="25" HorizontalAlignment="Left" Name="HelpButton" VerticalAlignment="Top"  Width="100" ></Button>
                 <Button Content="Afsluiten" Click="QuitButtonClick" Height="25" HorizontalAlignment="Left" Name="QuitButton" VerticalAlignment="Top"  Width="100" ></Button>
-                <Button Content="inlog" Click="Button_Click"/>
             </StackPanel>
         </Grid>
     </Grid>

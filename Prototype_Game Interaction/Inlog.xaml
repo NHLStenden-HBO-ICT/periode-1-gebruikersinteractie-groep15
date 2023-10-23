@@ -6,6 +6,8 @@
         xmlns:local="clr-namespace:Prototype_Game_Interaction"
         mc:Ignorable="d"
         Title="Inlog" Height="450" Width="800">
+    
+    
 
     <Window.Resources>
         <ResourceDictionary>
