@@ -5,7 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Prototype_Game_Interaction"
         mc:Ignorable="d"
-        Title="GameWindow" Height="1025" Width="1440"
+        Title="GameWindow" 
+        Width="{x:Static SystemParameters.PrimaryScreenWidth}"
+        Height="{x:Static SystemParameters.PrimaryScreenHeight}"
         WindowStartupLocation="CenterScreen">
 
     <!-- Ophalen van het het Styles Bestand-->
@@ -21,4 +23,5 @@
         <TextBlock Name="knop" Text="Druk eens op Enter" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="{StaticResource SquadaOne}" FontSize="30" Height="40" Width="220"  />
 
     </Grid>
+    
 </Window>

@@ -5,8 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Prototype_Game_Interaction"
         mc:Ignorable="d"
-        Title="StartSpel" Height="1024" Width="1440"
-        WindowStartupLocation="CenterScreen"
+        Title="StartSpel" 
+        Width="{x:Static SystemParameters.PrimaryScreenWidth}"
+        Height="{x:Static SystemParameters.PrimaryScreenHeight}"
+        WindowStartupLocation="CenterScreen"    
         >
 
     <Window.Resources>
@@ -17,6 +19,7 @@
         </ResourceDictionary>
     </Window.Resources>
     <!-- Grid voor buttons -->
+    
     <Grid>
 
         <Canvas>

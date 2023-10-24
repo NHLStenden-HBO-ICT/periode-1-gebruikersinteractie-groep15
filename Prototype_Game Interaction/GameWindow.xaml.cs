@@ -12,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 using Prototype_Game_Interaction;
 
 
@@ -22,12 +23,12 @@ namespace Prototype_Game_Interaction
     /// </summary>
     public partial class GameWindow : Window
     {
+
         public GameWindow()
         {
             InitializeComponent();
             this.KeyDown += PauzeMenu_keyDown; // voor de knop om naar het pauze menu te gaan
             this.KeyDown += Button1_keyDown;
-            
         }
 
         private void PauzeMenu_keyDown(object sender, KeyEventArgs e)
