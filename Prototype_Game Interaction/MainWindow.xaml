@@ -5,7 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Prototype_Game_Interaction"
         mc:Ignorable="d"
-        Title="MainWindow" Height="1025" Width="1440"
+        Title="MainWindow"
+        Width="{x:Static SystemParameters.PrimaryScreenWidth}"
+        Height="{x:Static SystemParameters.PrimaryScreenHeight}"
         WindowStartupLocation="CenterScreen"
         SizeToContent="WidthAndHeight">
 
@@ -17,6 +19,11 @@
         </ResourceDictionary>
     </Window.Resources>
 
+    <!-- Achtergrond MainWindow -->
+    <Window.Background>
+        <ImageBrush ImageSource="/Assets/Hoofdmenu.png" Stretch="Fill"/>
+    </Window.Background>
+
     <Grid>
         <!-- Het hele grid-->
         <Grid.RowDefinitions>
@@ -24,9 +31,11 @@
             <RowDefinition Height ="3*"/>
         </Grid.RowDefinitions>
 
-        <Label Content="Lifting to Victory" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Comic Sans MS" FontSize="90"/>
 
-        
+        <!-- Titel van het spel -->
+
+        <Image Source="/Assets/GameTitel.png" Width="650" Height="100" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,60,0,0"/>
+
         <!-- Grid voor Buttons-->
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
@@ -41,7 +50,7 @@
                 <Button Content="Help" FontFamily="{StaticResource SquadaOne}" Click="HelpClick" Height="75" HorizontalAlignment="Center" Name="HelpButton" VerticalAlignment="Top"  Width="275" FontSize="50"></Button>
                 <Button Content="Afsluiten" FontFamily="{StaticResource SquadaOne}" Click="QuitButtonClick" Height="75" HorizontalAlignment="Center" Name="QuitButton" VerticalAlignment="Top"  Width="275" FontSize="50" ></Button>
             </StackPanel>
-            
+
         </Grid>
     </Grid>
 </Window>
