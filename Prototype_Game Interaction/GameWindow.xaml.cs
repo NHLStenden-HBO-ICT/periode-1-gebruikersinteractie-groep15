@@ -24,25 +24,31 @@ namespace Prototype_Game_Interaction
     /// </summary>
     public partial class GameWindow : Window
     {
-        private int frameIndex = 0;
+        private int frameIndex = 1;
         private int frameWidth = 512;
         private int frameHeight = 512;
         private int totalFrames = 22;
+        private bool isAnimationRunning = false;
         private DispatcherTimer animationTimer;
+        BitmapImage spriteSheet = new BitmapImage(new Uri("Assets/player1curlSheet.png", UriKind.Relative));
 
         public GameWindow()
         {
             InitializeComponent();
-            this.KeyDown += PauzeMenu_keyDown; // voor de knop om naar het pauze menu te gaan
+
+            ShowPlayer1Frame();
+
             this.KeyDown += Button1_keyDown;
-            
+            this.KeyDown += Button5_keyDown;
+            this.KeyUp += Button1_keyUp;
+
+
             // Start the animation timer
             animationTimer = new DispatcherTimer();
-            animationTimer.Interval = TimeSpan.FromMilliseconds(18);
+            animationTimer.Interval = TimeSpan.FromMilliseconds(25);
             animationTimer.Tick += AnimationTimer_Tick;
-            animationTimer.Start();
+
         }
-    
 
         private void PauzeMenu_keyDown(object sender, KeyEventArgs e)
         {
@@ -58,7 +64,7 @@ namespace Prototype_Game_Interaction
             }
         }
 
-        private void Button1_keyDown(object sender, KeyEventArgs e)
+        private void Button5_keyDown(object sender, KeyEventArgs e)
         {
             // dit is als test om te kijken of de knop werkt
             if (e.Key == Key.Enter)
@@ -70,17 +76,64 @@ namespace Prototype_Game_Interaction
         private void AnimationTimer_Tick(object sender, EventArgs e)
         {
             // Update the frame index
-            frameIndex = (frameIndex + 1) % totalFrames;
+            frameIndex++;
+            // dit checkt of alle frames zijn afgespeeld van de sprite sheet
+            if (frameIndex >= totalFrames)
+            {
+                // Stop the animation
+                animationTimer.Stop();
+                return;
+            }
+
 
             // Calculate the position of the current frame in the sprite sheet
             int x = frameIndex * frameWidth;
             int y = 0;
 
             // Create a new CroppedBitmap that displays the current frame
-            CroppedBitmap frame = new CroppedBitmap(new BitmapImage(new Uri("Assets/player1curlSheet.png", UriKind.Relative)), new Int32Rect(x, y, frameWidth, frameHeight));
+            CroppedBitmap frame = new CroppedBitmap(spriteSheet, new Int32Rect(x, y, frameWidth, frameHeight));
+            
+
+
 
             // Update the Source property of the MyImage control to display the current frame
             Player1curl.Source = frame;
+        }
+
+        private void ShowPlayer1Frame()
+        {
+            int x = frameIndex * frameWidth;
+            int y = 0;
+            CroppedBitmap frame = new CroppedBitmap(spriteSheet, new Int32Rect(x, y, frameWidth, frameHeight));
+            Player1curl.Source = frame;
+        }
+        private void Button1_keyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.W)
+            {
+                if (animationTimer.IsEnabled == false)
+                {
+                    // Reset de frameIndex naar 0
+                     // Toon de eerste frame voordat de animatie begint
+                    animationTimer.Start();
+                    if (frameIndex >= totalFrames)
+                    {
+                        animationTimer.Stop(); 
+                    }
+                }
+            }
+        }
+
+        private void Button1_keyUp(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.W)
+            {
+                if (frameIndex >= totalFrames)
+                {
+                    // Reset de frameIndex naar 0
+                    frameIndex = 1;
+                }
+            }
         }
     }
 }

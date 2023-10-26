@@ -6,8 +6,8 @@
         xmlns:local="clr-namespace:Prototype_Game_Interaction"
         mc:Ignorable="d"
         Title="GameWindow" 
-        Width="{x:Static SystemParameters.PrimaryScreenWidth}"
-        Height="{x:Static SystemParameters.PrimaryScreenHeight}"
+        Height="1024" 
+        Width="1440"
         WindowStartupLocation="CenterScreen">
 
     <!-- Ophalen van het het Styles Bestand-->
@@ -28,8 +28,7 @@
            Width="220"  
            Margin="10,44,1038,800"
            />
-
-        <Image x:Name="Player1curl" Source="Assets/player1curlSheet.png" Width="512" Height="512" Margin="10,44,1038,-800"/>
+        <Image Name="Player1curl" Source="/Assets/player1curlSheetFirstFrame.png" Margin="10,254,718,42"/>
 
     </Grid>
 
