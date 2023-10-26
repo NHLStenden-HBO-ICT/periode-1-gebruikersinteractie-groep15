@@ -20,8 +20,17 @@
     </Window.Resources>
 
     <Grid>
-        <TextBlock Name="knop" Text="Druk eens op Enter" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="{StaticResource SquadaOne}" FontSize="30" Height="40" Width="220"  />
+        <TextBlock Name="knop" 
+           Text="Druk eens op Enter"
+           FontFamily="{StaticResource SquadaOne}" 
+           FontSize="30" 
+           Height="40" 
+           Width="220"  
+           Margin="10,44,1038,800"
+           />
+
+        <Image x:Name="Player1curl" Source="Assets/player1 curl-Sheet.png" Width="1000" Height="100" Margin="10,44,1038,-800"/>
 
     </Grid>
-    
+
 </Window>
