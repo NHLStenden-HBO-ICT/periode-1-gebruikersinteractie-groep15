@@ -117,7 +117,7 @@ namespace Prototype_Game_Interaction
             // dit is als test om te kijken of de knop werkt
             if (e.Key == Key.Enter)
             {
-                //knop.Text = "Nee mag niet!!";
+                knop.Text = "Nee mag niet!!";
             }
         }
     }
