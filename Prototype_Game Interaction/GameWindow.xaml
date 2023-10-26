@@ -29,7 +29,7 @@
            Margin="10,44,1038,800"
            />
 
-        <Image x:Name="Player1curl" Source="Assets/player1 curl-Sheet.png" Width="1000" Height="100" Margin="10,44,1038,-800"/>
+        <Image x:Name="Player1curl" Source="Assets/player1curlSheet.png" Width="512" Height="512" Margin="10,44,1038,-800"/>
 
     </Grid>
 

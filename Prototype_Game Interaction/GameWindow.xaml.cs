@@ -25,8 +25,8 @@ namespace Prototype_Game_Interaction
     public partial class GameWindow : Window
     {
         private int frameIndex = 0;
-        private int frameWidth = 32;
-        private int frameHeight = 32;
+        private int frameWidth = 512;
+        private int frameHeight = 512;
         private int totalFrames = 22;
         private DispatcherTimer animationTimer;
 
@@ -77,11 +77,10 @@ namespace Prototype_Game_Interaction
             int y = 0;
 
             // Create a new CroppedBitmap that displays the current frame
-            CroppedBitmap frame = new CroppedBitmap(new BitmapImage(new Uri("Assets/player1 curl-Sheet.png", UriKind.Relative)), new Int32Rect(x, y, frameWidth, frameHeight));
+            CroppedBitmap frame = new CroppedBitmap(new BitmapImage(new Uri("Assets/player1curlSheet.png", UriKind.Relative)), new Int32Rect(x, y, frameWidth, frameHeight));
 
             // Update the Source property of the MyImage control to display the current frame
             Player1curl.Source = frame;
         }
-
     }
 }
