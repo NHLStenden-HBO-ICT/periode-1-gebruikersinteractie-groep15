@@ -24,10 +24,15 @@ namespace Prototype_Game_Interaction
     /// </summary>
     public partial class GameWindow : Window
     {
-        private bool lift = true;
+        public bool lift1, lift2 = true;
         private DispatcherTimer GameTimer = new DispatcherTimer();
         private ImageBrush player1Brush = new ImageBrush();
         private ImageBrush player2Brush = new ImageBrush();
+
+        private Key[] keysPlayer1 = { Key.W, Key.S, Key.D, Key.A };
+        private Key[] keysPlayer2 = { Key.Up, Key.Down, Key.Right, Key.Left };
+        public Key lift1Key, lift2Key;
+
 
         public GameWindow()
         {
@@ -35,6 +40,14 @@ namespace Prototype_Game_Interaction
             this.KeyDown += PauzeMenu_keyDown; // voor de knop om naar het pauze menu te gaan
             this.KeyDown += Button1_keyDown;
 
+
+          
+
+            this.KeyDown += new KeyEventHandler(Player1Controls);
+            this.KeyUp += new KeyEventHandler(Player1Controls);
+
+            this.KeyDown += new KeyEventHandler(Player2Controls);
+            this.KeyUp += new KeyEventHandler(Player2Controls);
 
             GameTimer.Interval = TimeSpan.FromMilliseconds(20);
             GameTimer.Tick += GameEngine;
@@ -47,54 +60,51 @@ namespace Prototype_Game_Interaction
         private void GameEngine(object? sender, EventArgs e)
         {
             // Controls
-            //Random random = new Random();
-            //int controls = Convert.ToInt32(lift);
+            Random random = new Random();
+            lift1Key = keysPlayer1[random.Next(keysPlayer1.Length)];
+            lift2Key = keysPlayer2[random.Next(keysPlayer2.Length)];
+        }
 
-            //if (lift)
-               
+       
 
 
+        private void Player1Controls(object sender, KeyEventArgs e)
+        {
 
+            // Controls Player 1
+            if (e.Key == Key.W)
+                lift1 = true;
+
+            if (e.Key == Key.S)
+                lift1 = true;
+
+            if (e.Key == Key.D)
+                lift1 = true;
+
+            if (e.Key == Key.A)
+                lift1 = true;
 
         }
 
-        //private void Player1Controls(object sender, KeyEventArgs e)
-        //{
 
-        //    // Controls Player 1
-        //    if (e.Key == Key.W)
-        //        lift = true;
+        private void Player2Controls(object sender, KeyEventArgs e)
+        {
 
-        //    if (e.Key == Key.S)
-        //        lift = true;
+            // Controls Player 2
 
-        //    if (e.Key == Key.D)
-        //        lift = true;
+            if (e.Key == Key.Up)
+                lift2 = true;
 
-        //    if (e.Key == Key.A)
-        //        lift = true;
+            if (e.Key == Key.Down)
+                lift2 = true;
 
-        //}
+            if (e.Key == Key.Right)
+                lift2 = true;
 
+            if (e.Key == Key.Left)
+                lift2 = true;
 
-        //private void Player2Controls(object sender, KeyEventArgs e)
-        //{
-
-        //    // Controls Player 2
-
-        //    if (e.Key == Key.Up)
-        //        lift = true;
-
-        //    if (e.Key == Key.Down)
-        //        lift = true;
-
-        //    if (e.Key == Key.Right)
-        //        lift = true;
-
-        //    if (e.Key == Key.Left)
-        //        lift = true;
-
-        //}
+        }
 
 
 

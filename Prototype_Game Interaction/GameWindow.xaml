@@ -19,16 +19,30 @@
         </ResourceDictionary>
     </Window.Resources>
 
+    <Canvas x:Name="GameCanvas"
+            Focusable="True"
+            Background="Beige">
 
-    <Grid>
-        <TextBlock Name="knop" 
+        <Label x:Name="ScoreP1"
+               Content="Score: 0"
+               Foreground="Black"
+               FontSize="50"
+               FontFamily="{StaticResource SquadaOne}"/>
+        <Label x:Name="ScoreP2"
+               Content="Score: 0"
+               Foreground="Black"
+               FontSize="50"
+               FontFamily="{StaticResource SquadaOne}" Canvas.Left="1409" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+
+        <Grid Canvas.Left="141" Canvas.Top="150">
+            <TextBlock Name="knop" 
            Text="Druk eens op Enter"
            FontFamily="{StaticResource SquadaOne}" 
            FontSize="30" 
            Height="40" 
            Width="220"  
-           Margin="10,44,1038,800"
-           />
-
-    </Grid>
+           Margin="634,442,414,402"/>
+        </Grid>
+    </Canvas>
 </Window>
