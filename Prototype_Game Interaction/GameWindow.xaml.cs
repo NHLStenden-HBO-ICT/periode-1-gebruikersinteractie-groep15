@@ -41,6 +41,7 @@ namespace Prototype_Game_Interaction
             this.KeyDown += Button1_keyDown;
             this.KeyDown += Button5_keyDown;
             this.KeyUp += Button1_keyUp;
+            this.KeyDown += PauzeMenu_keyDown;
 
 
             // Start the animation timer
@@ -92,7 +93,7 @@ namespace Prototype_Game_Interaction
 
             // Create a new CroppedBitmap that displays the current frame
             CroppedBitmap frame = new CroppedBitmap(spriteSheet, new Int32Rect(x, y, frameWidth, frameHeight));
-            
+
 
 
 
@@ -114,11 +115,11 @@ namespace Prototype_Game_Interaction
                 if (animationTimer.IsEnabled == false)
                 {
                     // Reset de frameIndex naar 0
-                     // Toon de eerste frame voordat de animatie begint
+                    // Toon de eerste frame voordat de animatie begint
                     animationTimer.Start();
                     if (frameIndex >= totalFrames)
                     {
-                        animationTimer.Stop(); 
+                        animationTimer.Stop();
                     }
                 }
             }
