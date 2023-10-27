@@ -6,8 +6,8 @@
         xmlns:local="clr-namespace:Prototype_Game_Interaction"
         mc:Ignorable="d"
         Title="GameWindow"
-        Width="{x:Static SystemParameters.PrimaryScreenWidth}"
-        Height="{x:Static SystemParameters.PrimaryScreenHeight}"
+        Width="1440"
+        Height="1024"
         WindowStartupLocation="CenterScreen">
 
     <!-- Ophalen van het het Styles Bestand-->
@@ -32,10 +32,10 @@
                Content="Score: 0"
                Foreground="Black"
                FontSize="50"
-               FontFamily="{StaticResource SquadaOne}" Canvas.Left="1409" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+               FontFamily="{StaticResource SquadaOne}" Canvas.Left="1236" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Top="5"/>
 
 
-        <Grid Canvas.Left="141" Canvas.Top="150">
+        <Grid Canvas.Left="52" Canvas.Top="68">
             <TextBlock Name="knop" 
            Text="Druk eens op Enter"
            FontFamily="{StaticResource SquadaOne}" 

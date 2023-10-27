@@ -6,8 +6,8 @@
         xmlns:local="clr-namespace:Prototype_Game_Interaction"
         mc:Ignorable="d"
         Title="StartSpel"
-        Width="{x:Static SystemParameters.PrimaryScreenWidth}"
-        Height="{x:Static SystemParameters.PrimaryScreenHeight}"
+        Width="1440"
+        Height="1024"
         WindowStartupLocation="CenterScreen">
 
     <Window.Resources>
@@ -72,24 +72,24 @@
                 Content="Speler 1"
                 Foreground="Black"
                 FontSize="45"
-                FontWeight="Bold" Canvas.Left="720" Canvas.Top="353" HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="{StaticResource SquadaOne}"/>
+                FontWeight="Bold" Canvas.Left="750" Canvas.Top="353" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="{StaticResource SquadaOne}"/>
             <Label x:Name="Speler2"
                     Content="Speler 2"
                     Foreground="Black"
                     FontSize="45"
-                    FontWeight="Bold" Canvas.Left="1148" Canvas.Top="353" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="{StaticResource SquadaOne}" />
+                    FontWeight="Bold" Canvas.Left="1164" Canvas.Top="353" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="{StaticResource SquadaOne}" />
 
             <!-- Achtergrond -->
-            <Image Source="/Assets/Player1.png" Width="200" Height="180" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Top="668" Canvas.Left="-9"/>
-            <Image Source="/Assets/Player2.png" Width="200" Height="180" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="1353" Canvas.Top="668" RenderTransformOrigin="-0.934,0.596"/>
+            <Image Source="/Assets/Player1.png" Width="200" Height="180" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Top="818"/>
+            <Image Source="/Assets/Player2.png" Width="200" Height="180" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Left="1247" Canvas.Top="818" RenderTransformOrigin="-0.934,0.596"/>
 
             <!-- Player keys -->
-            <Image Source="/Assets/WASDKeys.png" Width="200" Height="150" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Left="690" Canvas.Top="472" />
-            <Image Source="/Assets/PijltjesKeys.png" Width="200" Height="150" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Left="1123" Canvas.Top="467"/>
+            <Image Source="/Assets/WASDKeys.png" Width="200" Height="150" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Left="720" Canvas.Top="494" />
+            <Image Source="/Assets/PijltjesKeys.png" Width="200" Height="150" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="1139" Canvas.Top="499"/>
 
             <!-- De spelers -->
-            <Image Source="/Assets/Speler1.png" Width="200" Height="230" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Left="690" Canvas.Top="86"/>
-            <Image Source="/Assets/Speler2.png" Width="200" Height="232" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Left="1123" Canvas.Top="95"/>
+            <Image Source="/Assets/Speler1.png" Width="200" Height="230" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="720" Canvas.Top="80"/>
+            <Image Source="/Assets/Speler2.png" Width="200" Height="232" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="1139" Canvas.Top="98"/>
         </Canvas>
     </Grid>
 </Window>
