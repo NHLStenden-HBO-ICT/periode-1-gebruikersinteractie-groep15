@@ -6,8 +6,7 @@
         xmlns:local="clr-namespace:Prototype_Game_Interaction"
         mc:Ignorable="d"
         Title="StartSpel" 
-        Width="{x:Static SystemParameters.PrimaryScreenWidth}"
-        Height="{x:Static SystemParameters.PrimaryScreenHeight}"
+        Height="1024" Width="1440"
         WindowStartupLocation="CenterScreen"    
         >
 

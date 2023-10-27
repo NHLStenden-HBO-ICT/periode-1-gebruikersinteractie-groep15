@@ -67,5 +67,6 @@ namespace Prototype_Game_Interaction
                 Scorespeler2.Text = "Score: 50";
             }
         }
+        /* hiet moet not ergens een functie komen die de score van de speler ophaalt en in de text box zet en die van de speler vergelijkt met de tegenstander dus ook een af statement*/
     }
 }
