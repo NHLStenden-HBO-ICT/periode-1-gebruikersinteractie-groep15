@@ -79,6 +79,15 @@
                     FontSize="45"
                     FontWeight="Bold" Canvas.Left="1164" Canvas.Top="353" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="{StaticResource SquadaOne}" />
 
+
+            <!-- Tekst Controls -->
+            <Label x:Name="Controls"
+                    Content="-- Controls --"
+                    Foreground="Black"
+                    FontSize="45"
+                    FontWeight="Bold" Canvas.Left="900" Canvas.Top="410" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="{StaticResource SquadaOne}" />
+
+
             <!-- Achtergrond -->
             <Image Source="/Assets/Player1.png" Width="200" Height="180" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Top="818"/>
             <Image Source="/Assets/Player2.png" Width="200" Height="180" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Left="1247" Canvas.Top="818" RenderTransformOrigin="-0.934,0.596"/>
