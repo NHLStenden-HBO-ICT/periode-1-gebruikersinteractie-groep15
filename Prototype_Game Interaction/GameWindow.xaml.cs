@@ -29,7 +29,6 @@ namespace Prototype_Game_Interaction
         {
             InitializeComponent();
             this.KeyDown += PauzeMenu_keyDown; // voor de knop om naar het pauze menu te gaan
-            this.KeyDown += Button1_keyDown;
         }
         private void PauzeMenu_keyDown(object sender, KeyEventArgs e)
         {
@@ -45,13 +44,5 @@ namespace Prototype_Game_Interaction
             }
         }
 
-        private void Button1_keyDown(object sender, KeyEventArgs e)
-        {
-            // dit is als test om te kijken of de knop werkt
-            if (e.Key == Key.Enter)
-            {
-                knop.Text = "Nee mag niet!!";
-            }
-        }
     }
 }
