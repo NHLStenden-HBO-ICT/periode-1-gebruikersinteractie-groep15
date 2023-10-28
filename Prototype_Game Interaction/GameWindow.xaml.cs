@@ -4,6 +4,7 @@ using System.Data.SqlTypes;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -23,6 +24,7 @@ namespace Prototype_Game_Interaction
 {
     public partial class GameWindow : Window
     {
+
         private int frameIndex = 0;
         private int frameWidth = 512;
         private int frameHeight = 512;
@@ -64,6 +66,7 @@ namespace Prototype_Game_Interaction
                     return key.ToString();
             }
         }
+
 
 
         public GameWindow()
@@ -169,6 +172,7 @@ namespace Prototype_Game_Interaction
         }
 
 
+
         // dit controleert de keys van speler 2
         private bool IsPlayer2Key(Key key)
         {
@@ -178,6 +182,7 @@ namespace Prototype_Game_Interaction
 
         // Hier alle key aanslagen
         private void GameWindow_KeyDown(object sender, KeyEventArgs e)
+
         {
             // De escape knop brengt je naar het pauzemenu, en ((((pauzeert dan dus ook de game)))) DIT MOET NOG WERKEND ZIJN, NU RESET HET DE GAME.
             if (e.Key == Key.Escape)

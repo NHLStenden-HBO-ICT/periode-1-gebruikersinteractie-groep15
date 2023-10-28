@@ -19,6 +19,7 @@
         </ResourceDictionary>
     </Window.Resources>
 
+
     <Grid>
 
         <Image Name="Player1curl" 
@@ -91,3 +92,4 @@
     </Grid>
 
 </Window>
+
