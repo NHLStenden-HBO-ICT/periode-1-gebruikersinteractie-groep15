@@ -18,10 +18,19 @@
 		<Content Include="Assets\Player1.png">
 		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</Content>
+		<Content Include="Assets\player1curlSheet.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
 		<Content Include="Assets\player1curlSheetFirstFrame.png">
 		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</Content>
 		<Content Include="Assets\Player2.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\player2curlSheet.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\player2curlSheetFirstFrame.png">
 		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</Content>
 		<Content Include="Assets\rollenFx.png">
@@ -43,8 +52,11 @@
 		<None Remove="Assets\Accepteren keybind change.png" />
 		<None Remove="Assets\Achtergrond.png" />
 		<None Remove="Assets\Player1.png" />
+		<None Remove="Assets\player1curlSheet.png" />
 		<None Remove="Assets\player1curlSheetFirstFrame.png" />
 		<None Remove="Assets\Player2.png" />
+		<None Remove="Assets\player2curlSheet.png" />
+		<None Remove="Assets\player2curlSheetFirstFrame.png" />
 		<None Remove="Assets\rollenFx.png" />
 		<None Remove="Assets\Terug.png" />
 		<None Remove="Assets\TerugFx.png" />
