@@ -5,42 +5,53 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Prototype_Game_Interaction"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800"
+        Title="MainWindow"
+        Width="1440"
+        Height="1024"
+        ResizeMode="CanMinimize"
         WindowStartupLocation="CenterScreen">
+
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <!-- Achtergrond MainWindow -->
+    <Window.Background>
+        <ImageBrush ImageSource="/Assets/Hoofdmenu.png" Stretch="Fill"/>
+    </Window.Background>
+
     <Grid>
         <!-- Het hele grid-->
         <Grid.RowDefinitions>
-            <RowDefinition Height ="100"></RowDefinition>
-            <RowDefinition></RowDefinition>
+            <RowDefinition Height ="*"/>
+            <RowDefinition Height ="3*"/>
         </Grid.RowDefinitions>
+
+
+        <!-- Titel van het spel -->
+
+        <Image Source="/Assets/GameTitel.png" Width="650" Height="100" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,60,0,0"/>
+
+        <!-- Grid voor Buttons-->
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition Width="3"></ColumnDefinition>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Label
-                   FontFamily="Comic Sans MS"
-                   FontSize="36"
-                   FontWeight="Bold"
-                   VerticalContentAlignment="Center"
-                   HorizontalAlignment="Center"
-                   Content="Lifting to Victory" Margin="0,-228,0,228"/>
-            <StackPanel Margin="144,68,148,-2" RenderTransformOrigin="0.5,0.5">
-                <StackPanel.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform AngleX="1.447"/>
-                        <RotateTransform/>
-                        <TranslateTransform X="4.22"/>
-                    </TransformGroup>
-                </StackPanel.RenderTransform>
 
-                <Button Content="Spelen" Click="StartButtonClick" Height="25" HorizontalAlignment="Left" Name="StartButton" VerticalAlignment="Top"  Width="100" ></Button>
-                <Button Content="Scoreboard" Click="ScoreBoardClick" Height="25" HorizontalAlignment="Left" Name="ScoreButton" VerticalAlignment="Top"  Width="100" ></Button>
-                <Button Content="Instellingen" Click="InstellingenClick" Height="25" HorizontalAlignment="Left" Name="InstellingenButton" VerticalAlignment="Top"  Width="100"></Button>
-                <Button Content="Help" Click="HelpClick" Height="25" HorizontalAlignment="Left" Name="HelpButton" VerticalAlignment="Top"  Width="100" ></Button>
-                <Button Content="Afsluiten" Click="QuitButtonClick" Height="25" HorizontalAlignment="Left" Name="QuitButton" VerticalAlignment="Top"  Width="100" ></Button>
+            <StackPanel Grid.ColumnSpan="3">
+                <Button Content="Spelen" FontFamily="{StaticResource SquadaOne}" Click="StartButtonClick" Height="75" HorizontalAlignment="Center" Name="StartButton" VerticalAlignment="Top"  Width="275" FontSize="50"></Button>
+                <Button Content="Scoreboard" FontFamily="{StaticResource SquadaOne}" Click="ScoreBoardClick" Height="75" HorizontalAlignment="Center" Name="ScoreButton" VerticalAlignment="Top"  Width="275" FontSize="50" ></Button>
+                <Button Content="Instellingen" FontFamily="{StaticResource SquadaOne}" Click="InstellingenClick" Height="75" HorizontalAlignment="Center" Name="InstellingenButton" VerticalAlignment="Top"  Width="275" FontSize="50"></Button>
+                <Button Content="Help" FontFamily="{StaticResource SquadaOne}" Click="HelpClick" Height="75" HorizontalAlignment="Center" Name="HelpButton" VerticalAlignment="Top"  Width="275" FontSize="50"></Button>
+                <Button Content="Afsluiten" FontFamily="{StaticResource SquadaOne}" Click="QuitButtonClick" Height="75" HorizontalAlignment="Center" Name="QuitButton" VerticalAlignment="Top"  Width="275" FontSize="50" ></Button>
             </StackPanel>
+
         </Grid>
     </Grid>
 </Window>

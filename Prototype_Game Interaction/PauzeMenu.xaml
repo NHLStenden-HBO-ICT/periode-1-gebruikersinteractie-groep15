@@ -8,6 +8,16 @@
         Title="PauzeMenu" Height="1024" Width="1440"
         ResizeMode="CanMinimize"
         WindowStartupLocation="CenterScreen">
+    <!-- Ophalen van het het Styles Bestand-->
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <!-- Grid voor het Pauze menu -->
+    
     <Grid>
         <Grid Height="1008" VerticalAlignment="Top">
             <TextBlock Name ="TitelScherm"
@@ -15,27 +25,28 @@
                        Width="340"
                        Margin="34,44,1038,862"
                        FontSize="64"
-                       Text="Pauze menu"/>
+                       Text="Pauze menu"
+                       FontFamily="{StaticResource SquadaOne}"/>
 
             <Button Name="Terugnaarmenu" 
                     Content="Terug naar het begin menu" 
                     Click="ZekerheidClick"
-                    FontSize="25"
-                    Height="50"
-                    Width="310"
-                    Margin="10,44,1038,-825"
+                    FontSize="30"
+                    FontFamily="{StaticResource SquadaOne}"
+                    Margin="48,914,1078,44" RenderTransformOrigin="0.301,0.544"
             />
 
             <Button Name="Verder" 
                     Content="Verder spelen" 
                     Click="GameClick"
                     FontSize="25"
-                    Height="50"
-                    Width="310"
-                    Margin="10,44,-1038,-825"
+                    FontFamily="{StaticResource SquadaOne}"
+                    Margin="1214,914,62,44"
             />
 
 
         </Grid>
+        <Image Source="/Assets/Player1.png" Margin="0,511,1135,195"/>
+        <Image Source="/Assets/Player2.png"  Margin="1116,504,10,195"/>
     </Grid>
 </Window>

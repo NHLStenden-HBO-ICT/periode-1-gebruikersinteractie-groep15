@@ -5,12 +5,125 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Prototype_Game_Interaction"
         mc:Ignorable="d"
-        Title="GameWindow" Height="1025" Width="1440"
+        Title="GameWindow" 
+        Height="1024" 
+        Width="1440"
         WindowStartupLocation="CenterScreen">
-    
-    
+
+    <!-- Ophalen van het het Styles Bestand-->
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+
     <Grid>
-        
-        
+
+        <Rectangle x:Name="countdownOverlay" 
+                   Fill="AliceBlue"
+                   Opacity="0.5"
+                   Visibility="Hidden" 
+                   Panel.ZIndex="1"/>
+
+        <TextBlock x:Name="countDown"
+            HorizontalAlignment="Center" 
+            Margin="0,34,0,0" 
+            TextWrapping="Wrap" 
+            VerticalAlignment="Top" 
+            FontFamily="{StaticResource SquadaOne}"
+            FontSize="300"
+            TextAlignment="Center"
+            Height="295" 
+            Width="258" 
+            Text="3"
+            Panel.ZIndex="2"/>
+
+
+        <Grid>
+            <Image x:Name="Player1curl" 
+               Source="/Assets/player1curlSheetFirstFrame.png" 
+               Margin="12,316,740,4">
+                <Image.Effect>
+                    <DropShadowEffect Color="Yellow" Direction="0" BlurRadius="50" Opacity="1.0"/>
+                </Image.Effect>
+            </Image>
+
+
+            <Image x:Name="Player2curl" 
+               Source="/Assets/player2curlSheetFirstFrame.png" 
+               Margin="740,316,12,4">
+                <Image.Effect>
+                    <DropShadowEffect Color="Red" Direction="0" BlurRadius="50" Opacity="1.0"/>
+                </Image.Effect>
+            </Image>
+
+
+
+            <!-- Textblock voor welke key player 1 moet aanslaan om punten te scoren -->
+            <TextBlock x:Name="player1KeyInput"
+           Margin="206,318,934,490" 
+           Width="300"
+           Height="200"
+           FontFamily="{StaticResource SquadaOne}"
+           FontSize="128"
+           Text="W"
+           TextAlignment="Center"/>
+
+            <!-- Textblock voor welke key player 2 moet aanslaan om punten te scoren -->
+            <TextBlock x:Name="player2KeyInput"      
+           Margin="934,318,206,490" 
+           Width="300"
+           Height="200"
+           FontFamily="{StaticResource SquadaOne}"
+           FontSize="158"
+           Text="↑"
+           TextAlignment="Center"/>
+
+            <!-- Weergave van player 1 huidige score -->
+            <TextBlock x:Name="player1ScoreText"
+           Margin="132,111,0,0" 
+           Width="448"
+           Height="126"
+           FontFamily="{StaticResource SquadaOne}"
+           FontSize="84"
+           HorizontalAlignment="Left"
+           VerticalAlignment="Top" 
+           TextAlignment="Center"
+           Text="Speler 1: 0" />
+
+            <!-- Weergave van player 2 huidige score -->
+
+            <TextBlock x:Name="player2ScoreText"
+            Margin="860,111,0,0" 
+            Width="448"
+            Height="126"
+            FontFamily="{StaticResource SquadaOne}"
+            FontSize="84"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top" 
+            TextAlignment="Center"
+            Text="Speler 2: 0" />
+
+            <TextBlock x:Name="timeTextBlock"
+            HorizontalAlignment="Center" 
+                   Margin="0,373,0,0" 
+                   TextWrapping="Wrap" 
+                   VerticalAlignment="Top" 
+                   TextAlignment="Left"
+                   FontFamily="{StaticResource SquadaOne}"
+                   FontSize="64"
+                   Height="69" 
+                   Width="188"><Run Text="T"/><Run Text="ijd:"/><Run Language="nl-nl" Text=" 60"/></TextBlock>
+
+
+
+        </Grid>
+
+
     </Grid>
+
 </Window>
+

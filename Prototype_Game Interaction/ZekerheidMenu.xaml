@@ -7,12 +7,23 @@
         mc:Ignorable="d"
         Title="ZekerheidMenu" Height="1024" Width="1440"
         ResizeMode="CanMinimize"
-        WindowStartupLocation="CenterScreen">
+        WindowStartupLocation="CenterScreen"
+        >
+
+    <!-- Ophalen van het het Styles Bestand-->
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
     
     <Grid>
         <TextBlock Name="Text"
                    TextAlignment="Center"
                    Text="weet je zeker dat je weer naar het begin menu wilt"
+                   FontFamily="{StaticResource SquadaOne}"
                    FontSize="30"
                    Margin="34,44,0,300"
                    Width="800"
@@ -22,7 +33,8 @@
         <Button Name="Jaikwilterug" 
                 Content="Ja" 
                 Click="JaClick"
-                FontSize="25"
+                FontFamily="{StaticResource SquadaOne}"
+                FontSize="30"
                 Height="40"
                 Width="60"
                 Margin="10,44,600,-400"
@@ -31,10 +43,14 @@
         <Button Name="neeikwilverder" 
                 Content="Nee" 
                 Click="NeeClick"
-                FontSize="25"
+                FontFamily="{StaticResource SquadaOne}"
+                FontSize="30"
                 Height="40"
                 Width="60"
                 Margin="10,44,-600,-400"
         />
+
+        <Image Source="/Assets/Player1.png" Margin="0,706,1135,0"/>
+        <Image Source="/Assets/Player2.png"  Margin="1136,706,-10,-7"/>
     </Grid>
 </Window>
