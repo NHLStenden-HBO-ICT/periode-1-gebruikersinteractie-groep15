@@ -86,6 +86,17 @@
             TextAlignment="Center"
             Text="Speler 2: 0" />
 
+        <TextBlock x:Name="timeTextBlock"
+            HorizontalAlignment="Center" 
+                   Margin="0,373,0,0" 
+                   TextWrapping="Wrap" 
+                   VerticalAlignment="Top" 
+                   TextAlignment="Left"
+                   FontFamily="{StaticResource SquadaOne}"
+                   FontSize="64"
+                   Height="69" 
+                   Width="188"><Run Text="T"/><Run Text="ijd:"/><Run Language="nl-nl" Text=" 60"/></TextBlock>
+
 
 
 

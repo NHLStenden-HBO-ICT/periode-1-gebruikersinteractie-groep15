@@ -49,6 +49,10 @@ namespace Prototype_Game_Interaction
         private bool player1KeyProcessed = false;
         private bool player2KeyProcessed = false;
 
+        // Game timer van 1 minuut
+        private int remainingTime = 10; // 60 seconden, oftewel 1 minuut
+        private DispatcherTimer gameTimer;
+
         //Methode om de pijltjestoetsen te laten zien in het scherm ipv. Up, Down, Left, Right. Had vast mooier gekund, maar idk.
         private string GetKeyText(Key key)
         {
@@ -74,12 +78,48 @@ namespace Prototype_Game_Interaction
             InitializeComponent();
             this.KeyDown += GameWindow_KeyDown;
 
+            // animatie timer
             animationTimer = new DispatcherTimer();
             animationTimer.Interval = TimeSpan.FromMilliseconds(50);
             animationTimer.Tick += AnimationTimer_Tick;
             animationTimer.Start();
 
+            // Game timer van 1 minuut
+            gameTimer = new DispatcherTimer();
+            gameTimer.Interval = TimeSpan.FromSeconds(1); // Elke 1 seconde
+            gameTimer.Tick += GameTimer_Tick;
+            gameTimer.Start();
+
             GenerateKeysForNextRound();
+        }
+
+
+        // de 1 minuut gametimer. als deze is afgelopen dan eindigd het spel.
+        private void GameTimer_Tick(object sender, EventArgs e)
+        {
+            remainingTime--;
+
+            if (remainingTime == 0)
+            {
+                // De tijd is verstreken, stop de timer en eindig het spel
+                gameTimer.Stop();
+                timeTextBlock.Text = "Tijd: 0";
+
+                EndGame endGameScreen = new EndGame();
+
+                // Onderstaande zorgt ervoor dat de winnaar en de gescoorde punten meegenomen worden naar het EndGame scherm.
+                endGameScreen.SetPlayerScores(player1Score, player2Score);
+                endGameScreen.SetWinner();
+
+                endGameScreen.Visibility = Visibility.Visible;
+                this.Visibility = Visibility.Hidden;
+                // hier nog code toevoegen wat je naar het einde spel scherm brengt en de resultaten laat zien.
+            }
+            else
+            {
+                // Werk de resterende tijd weer
+                timeTextBlock.Text = $"Tijd: {remainingTime}";
+            }
         }
 
 
