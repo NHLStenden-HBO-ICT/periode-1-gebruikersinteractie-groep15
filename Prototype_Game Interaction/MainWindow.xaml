@@ -8,8 +8,9 @@
         Title="MainWindow"
         Width="1440"
         Height="1024"
-        WindowStartupLocation="CenterScreen"
-        SizeToContent="WidthAndHeight">
+        ResizeMode="CanMinimize"
+        WindowStartupLocation="CenterScreen">
+
 
     <Window.Resources>
         <ResourceDictionary>
