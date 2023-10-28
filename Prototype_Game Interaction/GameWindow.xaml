@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Prototype_Game_Interaction"
         mc:Ignorable="d"
-        Title="GameWindow"
+        Title="GameWindow" 
+        Height="1024" 
         Width="1440"
-        Height="1024"
         WindowStartupLocation="CenterScreen">
 
     <!-- Ophalen van het het Styles Bestand-->
@@ -18,4 +18,78 @@
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Window.Resources>
+
+
+    <Grid>
+
+        <Image Name="Player1curl" 
+               Source="/Assets/player1curlSheetFirstFrame.png" 
+               Margin="12,316,740,4">
+            <Image.Effect>
+                <DropShadowEffect Color="Yellow" Direction="0" BlurRadius="50" Opacity="1.0"/>
+            </Image.Effect>
+        </Image>
+
+
+        <Image Name="Player2curl" 
+               Source="/Assets/player2curlSheetFirstFrame.png" 
+               Margin="740,316,12,4">
+            <Image.Effect>
+                <DropShadowEffect Color="Red" Direction="0" BlurRadius="50" Opacity="1.0"/>
+            </Image.Effect>
+        </Image>
+
+
+
+        <!-- Textblock voor welke key player 1 moet aanslaan om punten te scoren -->
+        <TextBlock Name="player1KeyInput"
+           Margin="206,318,934,490" 
+           Width="300"
+           Height="200"
+           FontFamily="{StaticResource SquadaOne}"
+           FontSize="128"
+           Text=""
+           TextAlignment="Center"/>
+
+        <!-- Textblock voor welke key player 2 moet aanslaan om punten te scoren -->
+        <TextBlock Name="player2KeyInput"      
+           Margin="934,318,206,490" 
+           Width="300"
+           Height="200"
+           FontFamily="{StaticResource SquadaOne}"
+           FontSize="158"
+           Text="↑"
+           TextAlignment="Center"/>
+
+        <!-- Weergave van player 1 huidige score -->
+        <TextBlock Name="player1ScoreText"
+           Margin="132,111,0,0" 
+           Width="448"
+           Height="126"
+           FontFamily="{StaticResource SquadaOne}"
+           FontSize="84"
+           HorizontalAlignment="Left"
+           VerticalAlignment="Top" 
+           TextAlignment="Center"
+           Text="Speler 1: 0" />
+
+        <!-- Weergave van player 2 huidige score -->
+
+        <TextBlock x:Name="player2ScoreText"
+            Margin="860,111,0,0" 
+            Width="448"
+            Height="126"
+            FontFamily="{StaticResource SquadaOne}"
+            FontSize="84"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top" 
+            TextAlignment="Center"
+            Text="Speler 2: 0" />
+
+
+
+
+    </Grid>
+
 </Window>
+
