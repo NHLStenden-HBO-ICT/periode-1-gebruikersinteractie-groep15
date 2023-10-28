@@ -24,6 +24,10 @@ namespace Prototype_Game_Interaction
 {
     public partial class GameWindow : Window
     {
+        public static GameWindow CurrentGameWindow { get; private set; }
+        private bool isGameWindowVisible = true;
+        private bool isPaused = false;
+        private PauzeMenu pauzeMenu;
 
         private int frameIndex = 0;
         private int frameWidth = 512;
@@ -50,8 +54,12 @@ namespace Prototype_Game_Interaction
         private bool player2KeyProcessed = false;
 
         // Game timer van 1 minuut
-        private int remainingTime = 10; // 60 seconden, oftewel 1 minuut
+        private int remainingTime = 60; // 60 seconden, oftewel 1 minuut
         private DispatcherTimer gameTimer;
+
+        // 3 seconden countdown voordat de game begint
+        private int countdownTime = 3; 
+        private DispatcherTimer countdownStartTimer;
 
         //Methode om de pijltjestoetsen te laten zien in het scherm ipv. Up, Down, Left, Right. Had vast mooier gekund, maar idk.
         private string GetKeyText(Key key)
@@ -77,6 +85,7 @@ namespace Prototype_Game_Interaction
         {
             InitializeComponent();
             this.KeyDown += GameWindow_KeyDown;
+            CurrentGameWindow = this;
 
             // animatie timer
             animationTimer = new DispatcherTimer();
@@ -90,7 +99,82 @@ namespace Prototype_Game_Interaction
             gameTimer.Tick += GameTimer_Tick;
             gameTimer.Start();
 
+            // Afteltimer voor het starten van de game
+            countdownStartTimer = new DispatcherTimer();
+            countdownStartTimer.Interval = TimeSpan.FromSeconds(1);
+            countdownStartTimer.Tick += CountdownStartTimer_Tick;
+            countdownStartTimer.Start();
+
+            // Maak de overlay-rechthoek zichtbaar en verberg de game-elementen
+            countdownOverlay.Visibility = Visibility.Visible;
+
+            // Pauzeer de animatie- en gametimer
+            animationTimer.Stop();
+            gameTimer.Stop();
+
+            // Initialiseer het PauzeMenu en stel de zichtbaarheid in op Hidden
+            pauzeMenu = new PauzeMenu();
+            pauzeMenu.Visibility = Visibility.Hidden;
+
             GenerateKeysForNextRound();
+
+            PauseGame();
+
+            // Stel de initial visibility in
+            isGameWindowVisible = true;
+        }
+        private void PauseGame()
+        {
+            isPaused = true;
+            animationTimer.Stop();
+            gameTimer.Stop();
+
+            
+
+            // Verberg de GameWindow wanneer het spel wordt gepauzeerd
+            isGameWindowVisible = this.Visibility == Visibility.Visible;
+            this.Visibility = Visibility.Hidden;
+
+            // Toon het PauzeMenu wanneer het spel wordt gepauzeerd
+            pauzeMenu.Visibility = Visibility.Visible;
+        }
+
+        public void ResumeGame()
+        {
+            isPaused = false;
+            animationTimer.Start();
+            gameTimer.Start();
+
+            // Herstel de zichtbaarheid van de GameWindow wanneer het spel wordt hervat
+            this.Visibility = isGameWindowVisible ? Visibility.Visible : Visibility.Hidden;
+
+            // Verberg het PauzeMenu wanneer het spel wordt hervat
+            pauzeMenu.Visibility = Visibility.Hidden;
+        }
+
+        // Countdown timer van 3 seconden voordat het spel begint.
+        private void CountdownStartTimer_Tick(object sender, EventArgs e)
+        {
+            countdownTime--;
+
+            if (countdownTime == 0)
+            {
+                // De countdown is afgelopen, stop de timer en start de game.
+                countdownStartTimer.Stop();
+                countDown.Visibility = Visibility.Hidden;
+
+                // Maak de overlay-rectangle onzichtbaar en start de animatie- en gametimer opnieuw.
+                countdownOverlay.Visibility = Visibility.Hidden;
+
+                // Start de animatie- en gametimer opnieuw.
+                animationTimer.Start();
+                gameTimer.Start();
+            }
+            else
+            {
+                // Update de tekst op je scherm om de resterende tijd weer te geven.
+                countDown.Text = $"{countdownTime}";
+            }
         }
 
 
@@ -224,13 +308,20 @@ namespace Prototype_Game_Interaction
         private void GameWindow_KeyDown(object sender, KeyEventArgs e)
 
         {
-            // De escape knop brengt je naar het pauzemenu, en ((((pauzeert dan dus ook de game)))) DIT MOET NOG WERKEND ZIJN, NU RESET HET DE GAME.
+            // De escape knop brengt je naar het pauzemenu, en pauzeert dan dus ook de game.
             if (e.Key == Key.Escape)
             {
-                SharedData.CurrentScreen = "PauzeMenu";
-                PauzeMenu pauzeMenu = new PauzeMenu();
-                pauzeMenu.Visibility = Visibility.Visible;
-                this.Visibility = Visibility.Hidden;
+                if (isPaused)
+                {
+                    // Hervat het spel
+                    ResumeGame();
+                }
+                else
+                {
+                    // Pauzeer het spel
+                    PauseGame();
+                }
+                return;
             }
 
             // Player 1 control check. Checkt ook of er die animatieronde al een toets is aangeslagen.

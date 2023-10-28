@@ -39,27 +39,29 @@ namespace Prototype_Game_Interaction
             this.Visibility = Visibility.Hidden;
         }
 
-        private void GameClick(object sender, RoutedEventArgs e) 
+        private void GameClick(object sender, RoutedEventArgs e)
         {
-            // voor de knop om terug te gaan naar het spel
-            SharedData.CurrentScreen = "GameWindow";
+            if (GameWindow.CurrentGameWindow != null)
+            {
+                // Ga terug naar het bestaande GameWindow
+                GameWindow.CurrentGameWindow.Visibility = Visibility.Visible;
 
-            GameWindow gameWindow = new GameWindow();
-            gameWindow.Visibility = Visibility.Visible;
-            this.Visibility= Visibility.Hidden;
+                // Hervat het spel
+                GameWindow.CurrentGameWindow.ResumeGame();
+            }
+            this.Visibility = Visibility.Hidden;
         }
-        
+
+
         private void GameWindow_keyDown(object sender, KeyEventArgs e)
         {
-            if (e.Key == Key.Escape)
+            if (e.Key == Key.Escape && GameWindow.CurrentGameWindow != null)
             {
-                // when the Esc key is pressed the screen will go back to the game
-                // voor de knop om verder te gaan met het spel.
-                SharedData.CurrentScreen = "GameWindow";
+                // Ga terug naar het bestaande GameWindow
+                GameWindow.CurrentGameWindow.Visibility = Visibility.Visible;
 
-                GameWindow gameWindow = new GameWindow();
-                gameWindow.Visibility = Visibility.Visible;
-                this.Visibility = Visibility.Hidden;
+                // Hervat het spel
+                GameWindow.CurrentGameWindow.ResumeGame();
             }
         }
 
