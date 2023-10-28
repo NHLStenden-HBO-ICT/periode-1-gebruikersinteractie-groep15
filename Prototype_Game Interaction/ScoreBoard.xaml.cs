@@ -32,5 +32,10 @@ namespace Prototype_Game_Interaction
             mainWindow.Visibility = Visibility.Visible;
             this.Visibility = Visibility.Hidden;
         }
+
+        private void Beginscherm_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
