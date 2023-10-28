@@ -10,6 +10,9 @@
     <Compile Update="AfsluitMenu.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="EndGame.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="GameWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -34,6 +37,9 @@
   </ItemGroup>
   <ItemGroup>
     <Page Update="AfsluitMenu.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="EndGame.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="PauzeMenu.xaml">
