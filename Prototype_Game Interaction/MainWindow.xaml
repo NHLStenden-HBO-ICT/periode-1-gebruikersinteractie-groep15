@@ -5,7 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Prototype_Game_Interaction"
         mc:Ignorable="d"
-        Title="MainWindow" Height="1025" Width="1440"
+        Title="MainWindow" 
+        Width="1440"
+        Height="1024"
         WindowStartupLocation="CenterScreen"
         >
 

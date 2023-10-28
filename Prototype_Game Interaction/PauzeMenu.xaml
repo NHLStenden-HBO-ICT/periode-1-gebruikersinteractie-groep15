@@ -33,9 +33,7 @@
                     Click="ZekerheidClick"
                     FontSize="30"
                     FontFamily="{StaticResource SquadaOne}"
-                    Height="50"
-                    Width="310"
-                    Margin="10,44,1038,-825"
+                    Margin="48,914,1078,44" RenderTransformOrigin="0.301,0.544"
             />
 
             <Button Name="Verder" 
@@ -43,9 +41,7 @@
                     Click="GameClick"
                     FontSize="25"
                     FontFamily="{StaticResource SquadaOne}"
-                    Height="50"
-                    Width="310"
-                    Margin="10,44,-1038,-825"
+                    Margin="1214,914,62,44"
             />
 
 

@@ -26,6 +26,7 @@ namespace Prototype_Game_Interaction
         {
             InitializeComponent();
             SharedData.CurrentScreen = "MainWindow";
+            this.KeyDown += Afsluiten_keyDown;
         }
 
         private void StartButtonClick(object sender, RoutedEventArgs e)
@@ -52,10 +53,10 @@ namespace Prototype_Game_Interaction
             Instellingen instellingen = new Instellingen();
             instellingen.Visibility = Visibility.Visible;
             this.Visibility = Visibility.Hidden;
-            
+
 
         }
-        private void HelpClick(object sender, RoutedEventArgs e) 
+        private void HelpClick(object sender, RoutedEventArgs e)
         {
             SharedData.CurrentScreen = "Help";
 
@@ -72,6 +73,18 @@ namespace Prototype_Game_Interaction
             afsluitMenu.Visibility = Visibility.Visible;
             this.Visibility = Visibility.Hidden;
         }
-        
+
+        private void Afsluiten_keyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Escape)
+            {
+                SharedData.CurrentScreen = "AflsuitMenu";
+
+                AfsluitMenu afsluitMenu = new AfsluitMenu();
+                afsluitMenu.Visibility = Visibility.Visible;
+                this.Visibility = Visibility.Hidden;
+            }
+        }
+
     }
 }
