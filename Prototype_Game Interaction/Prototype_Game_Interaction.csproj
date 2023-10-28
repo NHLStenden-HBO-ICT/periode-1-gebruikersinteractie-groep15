@@ -61,7 +61,7 @@
 		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</Content>
 		<Content Include="Assets\rollen.png" />
-		<Content Include="C:\Users\Durk\Documents\School\Coderen\periode-1-gebruikersinteractie-groep15\Prototype_Game Interaction\Fonts\Squada_One.ttf">
+		<Content Include="C:\repos\periode-1-gebruikersinteractie-groep15\Prototype_Game Interaction\Fonts\Squada_One.ttf">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</Content>
 	</ItemGroup>
