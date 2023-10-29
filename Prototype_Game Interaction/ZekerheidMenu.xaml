@@ -22,12 +22,10 @@
     <Grid>
         <TextBlock Name="Text"
                    TextAlignment="Center"
-                   Text="weet je zeker dat je weer naar het begin menu wilt"
+                   Text="weet je zeker dat je weer naar het begin menu wilt de scores worden niet opgeslagen!"
                    FontFamily="{StaticResource SquadaOne}"
-                   FontSize="30"
-                   Margin="34,44,0,300"
-                   Width="800"
-                   Height="75"
+                   FontSize="40"
+                   Margin="83,448,83,504"
                    />
 
         <Button Name="Jaikwilterug" 

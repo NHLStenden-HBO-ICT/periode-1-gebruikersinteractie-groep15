@@ -76,5 +76,15 @@ namespace Prototype_Game_Interaction
                 this.Visibility = Visibility.Hidden;
             }
         }
+
+        private void EindClick(object sender, RoutedEventArgs e)
+        {
+            // voor de knop om naar het eind scherm te gaan
+            SharedData.CurrentScreen = "Endgame";
+
+            Endgame endgame = new Endgame();
+            endgame.Visibility = Visibility.Visible;
+            this.Visibility = Visibility.Hidden;
+        }
     }
 }
