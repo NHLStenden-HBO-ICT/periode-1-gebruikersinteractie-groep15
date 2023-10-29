@@ -21,31 +21,31 @@
             TextAlignment="Center"
             Text="weet je zeker dat je wilt afsluiten?"
             FontFamily="{StaticResource SquadaOne}"
-            FontSize="40"
-            Margin="34,44,0,300"
-            Width="945"
-            Height="75"
-            />
+            FontSize="48"
+            Margin="219,267,219,666"
+            Height="75"/>
 
-        <Button Name="Jaikwilafsluiten" 
-            Content="Afsluiten" 
-            Click="AfsluitenClick"
-            FontFamily="{StaticResource SquadaOne}"
-            FontSize="30"
-            Height="40"
-            Width="125"
-            Margin="10,44,600,-400"
-            />
+        <!-- Ja button -->
+        <Button x:Name="Jaikwilafsluiten"
+      Click="AfsluitenClick"
+      Margin="511,586,511,327">
+            <Button.Style>
+                <Style 
+            TargetType="Button" BasedOn="{StaticResource jaButton}">
+                </Style>
+            </Button.Style>
+        </Button>
 
-        <Button Name="Nietafsluiten" 
-            Content="Niet afsluiten" 
-            Click="NietafsluitenClick"
-            FontFamily="{StaticResource SquadaOne}"
-            FontSize="30"
-            Height="40"
-            Width="200"
-            Margin="10,44,-600,-400"
-        />
+        <!-- Nee button -->
+        <Button x:Name="Nietafsluiten"
+       Click="NietafsluitenClick"
+       Margin="511,462,511,450">
+            <Button.Style>
+                <Style 
+            TargetType="Button" BasedOn="{StaticResource neeButton}">
+                </Style>
+            </Button.Style>
+        </Button>
 
         <Image Source="/Assets/Player1.png" Margin="0,706,1135,0"/>
         <Image Source="/Assets/Player2.png"  Margin="1136,706,-10,-7"/>

@@ -18,56 +18,94 @@
     </Window.Resources>
 
     <Grid>
-        <Image Name="Player1end" Source="/Assets/player1curlSheetFirstFrame.png" Margin="228,175,720,341"/>
-        <Image Name="Player2end" Source="/Assets/player2curlSheetFirstFrame.png" Margin="720,175,228,341"/>
+        <Image Name="Player1end" Source="/Assets/player1curlSheetFirstFrame.png" Margin="228,258,720,258"/>
+        <Image Name="Player2end" Source="/Assets/player2curlSheetFirstFrame.png" Margin="720,258,228,258"/>
 
         <TextBlock Name="speler1" 
                    Text="Speler 1"
                    FontFamily="{StaticResource SquadaOne}" 
                    FontSize="50" 
-                   Margin="400,271,851,667"
+                   Foreground="#586c70"
+                   TextAlignment="Center"
+                   Margin="380,370,872,568"
         />
 
         <TextBlock x:Name="player1ScoreText"
                    FontFamily="{StaticResource SquadaOne}" 
-                   FontSize="40" 
-                   Margin="384,698,851,245" RenderTransformOrigin="0.492,0.436"
+                   FontSize="54" 
+                   Margin="351,262,843,652" RenderTransformOrigin="0.492,0.436"
+                   Foreground="#FF6D92AC"
+                   TextAlignment="Center"
         ><Run Text="999"/><Run Text=" punten!"/><LineBreak/><Run/></TextBlock>
 
         <TextBlock Name="speler2" 
                    Text="Speler 2"
                    FontFamily="{StaticResource SquadaOne}" 
                    FontSize="50" 
-                   Margin="892,271,360,667"
+                   Foreground="#586c70"
+                   TextAlignment="Center"
+                   Margin="872,370,380,568"
         />
 
         <TextBlock x:Name="player2ScoreText"
                    FontFamily="{StaticResource SquadaOne}" 
-                   FontSize="40" 
-                   Margin="876,698,360,245"
+                   FontSize="54" 
+                   Margin="842,262,352,652"
+                   Foreground="#FF6D92AC"
+                   TextAlignment="Center"
         ><Run Language="nl-nl" Text="999"/><Run Text=" punten!"/></TextBlock>
 
         <TextBlock Name="winnaar" 
                    Text="De winnaar is: Speler 2!"
                    FontFamily="{StaticResource SquadaOne}" 
                    FontSize="100" 
-                   Margin="280,52,280,834"
+                   Margin="212,52,212,834"
+                   TextAlignment="Center"
         />
 
-        <Button Name="BeginMenu" 
-                Content="Beginmenu" 
+        
+
+        <Button x:Name="BeginMenu"
                 Click="MenuClick"
-                FontSize="50"
-                FontFamily="{StaticResource SquadaOne}"
-                Margin="966,859,180,59" RenderTransformOrigin="0.498,0.571"
-        />
+                Margin="757,857,265,57">
+                <Button.Style>
+                    <Style 
+                        TargetType="Button" BasedOn="{StaticResource TerugHover}">
+                    </Style>
+                </Button.Style>
+        </Button>
 
-        <Button Name="Opnieuwspelen" 
-                Content="Opnieuw spelen" 
-                Click="GameClick"
-                FontSize="50"
-                FontFamily="{StaticResource SquadaOne}"
-                Margin="154,859,850,59" RenderTransformOrigin="0.498,0.571"
-        />
+        
+
+        <Button x:Name="Opnieuwspelen"
+         Click="GameClick"
+         Margin="262,857,760,57">
+            <Button.Style>
+                <Style 
+                 TargetType="Button" BasedOn="{StaticResource herstartButton}">
+                </Style>
+            </Button.Style>
+        </Button>
+
+        <Image Margin="0,-16,0,0" Source="/Assets/GameBackground.png" Stretch="Fill" Panel.ZIndex="-5" Opacity="0.06"/>
+        <Rectangle HorizontalAlignment="Left" 
+                   Height="425" 
+                   Margin="295,356,0,0" 
+                   Stroke="#586c70" 
+                   StrokeThickness="5" 
+                   VerticalAlignment="Top" 
+                   Panel.ZIndex="-1"
+                   Width="353">
+        </Rectangle>
+
+
+        <Rectangle HorizontalAlignment="Left" 
+                   Height="425" 
+                   Margin="789,356,0,0" 
+                   Stroke="#586c70" 
+                   StrokeThickness="5" 
+                   VerticalAlignment="Top" 
+                   Width="353">
+        </Rectangle>
     </Grid>
 </Window>

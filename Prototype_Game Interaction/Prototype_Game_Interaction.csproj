@@ -15,13 +15,64 @@
 		<Content Include="Assets\Achtergrond.png">
 		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</Content>
+		<Content Include="Assets\Afsluiten.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\AfsluitenFx.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
 		<Content Include="Assets\Beginscherm.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\BeginschermFx.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\GameBackground.png">
 		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</Content>
 		<Content Include="Assets\GameTitel.png">
 		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</Content>
+		<Content Include="Assets\Help.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\HelpFx.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\Herstarten.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\HerstartenFx.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\Hervatten.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\HervattenFx.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
 		<Content Include="Assets\Instellingen.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\InstellingenFx.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\JaButton.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\JaButtonFx.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\Leaderboard.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\LeaderboardFx.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\NeeButton.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\NeeButtonFx.png">
 		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</Content>
 		<Content Include="Assets\Player1.png">
@@ -54,6 +105,15 @@
 		<Content Include="Assets\Start.png">
 		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</Content>
+		<Content Include="Assets\StartFx.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\StartSpel.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\StartSpelFx.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
 		<Content Include="Assets\Terug.png">
 		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</Content>
@@ -69,10 +129,27 @@
 	<ItemGroup>
 		<None Remove="Assets\Accepteren keybind change.png" />
 		<None Remove="Assets\Achtergrond.png" />
+		<None Remove="Assets\Afsluiten.png" />
+		<None Remove="Assets\AfsluitenFx.png" />
 		<None Remove="Assets\Beginscherm.png" />
+		<None Remove="Assets\BeginschermFx.png" />
+		<None Remove="Assets\GameBackground.png" />
 		<None Remove="Assets\GameTitel.png" />
+		<None Remove="Assets\Help.png" />
+		<None Remove="Assets\HelpFx.png" />
+		<None Remove="Assets\Herstarten.png" />
+		<None Remove="Assets\HerstartenFx.png" />
+		<None Remove="Assets\Hervatten.png" />
+		<None Remove="Assets\HervattenFx.png" />
 		<None Remove="Assets\Hoofdmenu.png" />
 		<None Remove="Assets\Instellingen.png" />
+		<None Remove="Assets\InstellingenFx.png" />
+		<None Remove="Assets\JaButton.png" />
+		<None Remove="Assets\JaButtonFx.png" />
+		<None Remove="Assets\Leaderboard.png" />
+		<None Remove="Assets\LeaderboardFx.png" />
+		<None Remove="Assets\NeeButton.png" />
+		<None Remove="Assets\NeeButtonFx.png" />
 		<None Remove="Assets\PijltjesKeys.png" />
 		<None Remove="Assets\Player1.png" />
 		<None Remove="Assets\player1curlSheet.png" />
@@ -84,6 +161,9 @@
 		<None Remove="Assets\Speler1.png" />
 		<None Remove="Assets\Speler2.png" />
 		<None Remove="Assets\Start.png" />
+		<None Remove="Assets\StartFx.png" />
+		<None Remove="Assets\StartSpel.png" />
+		<None Remove="Assets\StartSpelFx.png" />
 		<None Remove="Assets\Terug.png" />
 		<None Remove="Assets\TerugFx.png" />
 		<None Remove="Assets\WASDKeys.png" />

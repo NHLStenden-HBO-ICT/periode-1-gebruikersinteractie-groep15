@@ -54,7 +54,7 @@ namespace Prototype_Game_Interaction
         private bool player2KeyProcessed = false;
 
         // Game timer van 1 minuut
-        private int remainingTime = 60; // 60 seconden, oftewel 1 minuut
+        private int remainingTime = 3; // 60 seconden, oftewel 1 minuut
         private DispatcherTimer gameTimer;
 
         // 3 seconden countdown voordat de game begint
@@ -89,7 +89,7 @@ namespace Prototype_Game_Interaction
 
             // animatie timer
             animationTimer = new DispatcherTimer();
-            animationTimer.Interval = TimeSpan.FromMilliseconds(50);
+            animationTimer.Interval = TimeSpan.FromMilliseconds(32);
             animationTimer.Tick += AnimationTimer_Tick;
             animationTimer.Start();
 
@@ -105,10 +105,10 @@ namespace Prototype_Game_Interaction
             countdownStartTimer.Tick += CountdownStartTimer_Tick;
             countdownStartTimer.Start();
 
-            // Maak de overlay-rechthoek zichtbaar en verberg de game-elementen
+            // Maakt de overlay zichtbaar en verbergt de game-elementen enigszins
             countdownOverlay.Visibility = Visibility.Visible;
 
-            // Pauzeer de animatie- en gametimer
+            // Pauzeer de animatie en gametimer
             animationTimer.Stop();
             gameTimer.Stop();
 
@@ -118,7 +118,7 @@ namespace Prototype_Game_Interaction
 
             GenerateKeysForNextRound();
 
-            PauseGame();
+            
 
             // Stel de initial visibility in
             isGameWindowVisible = true;
@@ -167,8 +167,10 @@ namespace Prototype_Game_Interaction
                 countdownOverlay.Visibility = Visibility.Hidden;
 
                 // Start de animatie- en gametimer opnieuw.
-                animationTimer.Start();
                 gameTimer.Start();
+                animationTimer.Start();
+                timeTextBlock.Text = "30";
+
             }
             else
             {
@@ -187,7 +189,7 @@ namespace Prototype_Game_Interaction
             {
                 // De tijd is verstreken, stop de timer en eindig het spel
                 gameTimer.Stop();
-                timeTextBlock.Text = "Tijd: 0";
+                timeTextBlock.Text = "0";
 
                 EndGame endGameScreen = new EndGame();
 
@@ -202,7 +204,7 @@ namespace Prototype_Game_Interaction
             else
             {
                 // Werk de resterende tijd weer
-                timeTextBlock.Text = $"Tijd: {remainingTime}";
+                timeTextBlock.Text = $"{remainingTime}";
             }
         }
 
@@ -270,14 +272,14 @@ namespace Prototype_Game_Interaction
                     Color = Colors.Yellow,
                     Direction = 0,
                     BlurRadius = 50,
-                    Opacity = 1.0
+                    Opacity = 0.5
                 };
                 Player2curl.Effect = new DropShadowEffect
                 {
-                    Color = Colors.Red,
+                    Color = (Color)ColorConverter.ConvertFromString("#fdb4d8"),
                     Direction = 0,
                     BlurRadius = 50,
-                    Opacity = 1.0
+                    Opacity = 0.5
                 };
             }
             else
@@ -488,7 +490,7 @@ namespace Prototype_Game_Interaction
             if (!player1KeyProcessed && IsPlayer1Key(e.Key) && !(frameIndex >= 9 && frameIndex <= 15))
             {
                 player1Score -= 5;
-                player1ScoreText.Text = $"Player 1: {player1Score}";
+                player1ScoreText.Text = $"{player1Score}";
                 player1KeyProcessed = true;
             }
 
@@ -497,7 +499,7 @@ namespace Prototype_Game_Interaction
             if (!player2KeyProcessed && IsPlayer2Key(e.Key) && !(frameIndex >= 9 && frameIndex <= 15))
             {
                 player2Score -= 5;
-                player2ScoreText.Text = $"Player 2: {player2Score}";
+                player2ScoreText.Text = $"{player2Score}";
                 player2KeyProcessed = true;
             }
         }
@@ -509,12 +511,12 @@ namespace Prototype_Game_Interaction
             if (player == Player.Player1)
             {
                 player1Score += 10;
-                player1ScoreText.Text = $"Player 1: {player1Score}";
+                player1ScoreText.Text = $"{player1Score}";
             }
             else if (player == Player.Player2)
             {
                 player2Score += 10;
-                player2ScoreText.Text = $"Player 2: {player2Score}";
+                player2ScoreText.Text = $"{player2Score}";
             }
         }
 
@@ -525,12 +527,12 @@ namespace Prototype_Game_Interaction
             if (player == Player.Player1)
             {
                 player1Score -= 2;
-                player1ScoreText.Text = $"Player 1: {player1Score}";
+                player1ScoreText.Text = $"{player1Score}";
             }
             else if (player == Player.Player2)
             {
                 player2Score -= 2;
-                player2ScoreText.Text = $"Player 2: {player2Score}";
+                player2ScoreText.Text = $"{player2Score}";
             }
         }
     }

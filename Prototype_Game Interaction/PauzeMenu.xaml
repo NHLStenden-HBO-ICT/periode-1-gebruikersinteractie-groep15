@@ -17,7 +17,7 @@
         </ResourceDictionary>
     </Window.Resources>
     <!-- Grid voor het Pauze menu -->
-    
+
     <Grid>
         <Grid Height="1008" VerticalAlignment="Top">
             <TextBlock Name ="TitelScherm"
@@ -28,25 +28,34 @@
                        Text="Pauze menu"
                        FontFamily="{StaticResource SquadaOne}"/>
 
-            <Button Name="Terugnaarmenu" 
-                    Content="Terug naar het begin menu" 
-                    Click="ZekerheidClick"
-                    FontSize="30"
-                    FontFamily="{StaticResource SquadaOne}"
-                    Margin="48,914,1078,44" RenderTransformOrigin="0.301,0.544"
-            />
 
-            <Button Name="Verder" 
-                    Content="Verder spelen" 
-                    Click="GameClick"
-                    FontSize="25"
-                    FontFamily="{StaticResource SquadaOne}"
-                    Margin="1214,914,62,44"
-            />
+            <!-- Beginscherm button -->
+            <Button x:Name="Terugnaarmenu"
+                Click="ZekerheidClick"
+                Margin="511,518,511,396">
+                <Button.Style>
+                    <Style 
+                        TargetType="Button" BasedOn="{StaticResource beginschermButton}">
+                    </Style>
+                </Button.Style>
+            </Button>
+
+
+            <Button x:Name="Verder"
+                Click="GameClick"
+                Margin="511,396,511,518">
+                <Button.Style>
+                    <Style 
+                        TargetType="Button" BasedOn="{StaticResource hervattenButton}">
+                    </Style>
+                </Button.Style>
+            </Button>
+
+
 
 
         </Grid>
-        <Image Source="/Assets/Player1.png" Margin="0,511,1135,195"/>
-        <Image Source="/Assets/Player2.png"  Margin="1116,504,10,195"/>
+        <Image Source="/Assets/Player1.png" Margin="0,706,1135,-1"/>
+        <Image Source="/Assets/Player2.png"  Margin="1136,705,-10,-7"/>
     </Grid>
 </Window>
