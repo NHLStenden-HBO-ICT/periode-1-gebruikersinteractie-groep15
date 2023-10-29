@@ -23,20 +23,26 @@ namespace Prototype_Game_Interaction
         public ScoreBoard()
         {
             InitializeComponent();
+            this.KeyDown += MainWindow_keyDown; // voor de knop om terug te gaan naar het hoofdmenu
         }
-
-
-        private void ZekerheidClick(object sender, RoutedEventArgs e)
+        private void MainWindowClick(object sender, RoutedEventArgs e)
         {
-            // voor de knop om naar het begin menu te gaan maar je moet eerst nog dat bevestingen in een ander menu
-            SharedData.CurrentScreen = "ConformatieMenu";
+            SharedData.CurrentScreen = "MainWindow";
 
-            ZekerheidMenu zekerheidMenu = new ZekerheidMenu();
-            zekerheidMenu.Visibility = Visibility.Visible;
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Visibility = Visibility.Visible;
             this.Visibility = Visibility.Hidden;
         }
 
+        private void MainWindow_keyDown(object sender, KeyEventArgs e)
+        {
+            // when the Esc key is pressed the screen will go back to the main menu
+            if (e.Key == Key.Escape)
+            {
+                MainWindow mainWindow = new MainWindow();
+                mainWindow.Visibility = Visibility.Visible;
+                this.Visibility = Visibility.Hidden;
+            }
         }
     }
-
-
+}
