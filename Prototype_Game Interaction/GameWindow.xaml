@@ -52,7 +52,7 @@
 
 
         <Grid>
-            <Image Margin="0,-16,0,0" Source="/Assets/GameBackground.png" Stretch="Fill" Panel.ZIndex="-2" Opacity="0.5"/>
+            <Image Margin="0,-16,0,0" Source="/Assets/GameBackground2.png" Stretch="Fill" Panel.ZIndex="-2" Opacity="0.5"/>
 
 
             <Image x:Name="Player1curl" 

@@ -32,7 +32,7 @@
             <!-- Beginscherm button -->
             <Button x:Name="Terugnaarmenu"
                 Click="ZekerheidClick"
-                Margin="511,518,511,396">
+                Margin="511,582,511,332">
                 <Button.Style>
                     <Style 
                         TargetType="Button" BasedOn="{StaticResource beginschermButton}">
@@ -40,10 +40,10 @@
                 </Button.Style>
             </Button>
 
-
+            <!-- Game hervatten button -->
             <Button x:Name="Verder"
                 Click="GameClick"
-                Margin="511,396,511,518">
+                Margin="511,338,511,576">
                 <Button.Style>
                     <Style 
                         TargetType="Button" BasedOn="{StaticResource hervattenButton}">
@@ -51,6 +51,16 @@
                 </Button.Style>
             </Button>
 
+            <!-- Instellingen button -->
+            <Button x:Name="InstellingenButton"
+                Click="InstellingenClick"
+                Margin="511,460,511,454">
+                <Button.Style>
+                    <Style 
+                        TargetType="Button" BasedOn="{StaticResource instellingenButton}">
+                    </Style>
+                </Button.Style>
+            </Button>
 
 
 

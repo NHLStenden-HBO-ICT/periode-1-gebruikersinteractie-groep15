@@ -129,7 +129,7 @@ namespace Prototype_Game_Interaction
             animationTimer.Stop();
             gameTimer.Stop();
 
-            
+            SharedData.CurrentScreen = "PauzeMenu";
 
             // Verberg de GameWindow wanneer het spel wordt gepauzeerd
             isGameWindowVisible = this.Visibility == Visibility.Visible;

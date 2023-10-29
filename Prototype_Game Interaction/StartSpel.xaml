@@ -77,30 +77,30 @@
            FontFamily="{StaticResource SquadaOne}" 
            FontSize="50" 
            Foreground="#586c70"
-           TextAlignment="Center" Canvas.Left="662" Canvas.Top="423" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="705,446,0,0"/>
+           TextAlignment="Center" Canvas.Left="662" Canvas.Top="423" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="688,406,0,0" Height="45" Width="144"/>
 
         <Rectangle HorizontalAlignment="Left" 
-           Height="407" 
+           Height="347" 
            Stroke="#586c70" 
            StrokeThickness="5" 
            VerticalAlignment="Top" 
            Panel.ZIndex="-1"
-           Width="330" Canvas.Left="566" Canvas.Top="83" Margin="606,97,0,0"/>
+           Width="281" Canvas.Left="566" Canvas.Top="83" Margin="617,114,0,0"/>
 
         <TextBlock Name="speler2" 
            Text="Speler 2"
            FontFamily="{StaticResource SquadaOne}" 
            FontSize="50" 
            Foreground="#586c70"
-           TextAlignment="Center" Canvas.Left="1064" Canvas.Top="423" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1081,445,0,0"/>
+           TextAlignment="Center" Canvas.Left="1064" Canvas.Top="423" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1006,406,0,0" Height="45" Width="158"/>
 
         <Rectangle HorizontalAlignment="Left" 
-Height="408" 
+Height="348" 
 Stroke="#586c70" 
 StrokeThickness="5" 
 VerticalAlignment="Top" 
 Panel.ZIndex="-1"
-Width="330" Canvas.Left="972" Canvas.Top="83" Margin="990,97,0,0"/>
+Width="282" Canvas.Left="972" Canvas.Top="83" Margin="944,114,0,0"/>
 
 
         <!-- Tekst Controls -->
@@ -108,7 +108,7 @@ Width="330" Canvas.Left="972" Canvas.Top="83" Margin="990,97,0,0"/>
                     Content="&lt;-- Controls --&gt;"
                     Foreground="#586c70"
                     FontSize="36"
-                     Canvas.Left="820" Canvas.Top="526" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="{StaticResource SquadaOne}" Height="66" Margin="846,542,0,0" />
+                     Canvas.Left="820" Canvas.Top="526" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="{StaticResource SquadaOne}" Height="66" Margin="806,504,0,0" />
 
 
         <!-- Achtergrond -->
@@ -116,13 +116,13 @@ Width="330" Canvas.Left="972" Canvas.Top="83" Margin="990,97,0,0"/>
         <Image Height="302.04" Width="305" Margin="1136,706,-10,-7" Source="/Assets/Player2.png" Stretch="Fill"/>
 
         <!-- Player keys -->
-        <Image Source="/Assets/WASDKeys.png" Width="200" Height="150" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="631" Canvas.Top="591" Margin="671,608,0,0" />
-        <Image Source="/Assets/PijltjesKeys.png" Width="200" Height="150" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="1037" Canvas.Top="589" Margin="1055,608,0,0"/>
+        <Image Source="/Assets/WASDKeys.png" Width="188" Height="142" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="631" Canvas.Top="591" Margin="666,559,0,0" />
+        <Image Source="/Assets/PijltjesKeys.png" Width="190" Height="142" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="1037" Canvas.Top="589" Margin="990,559,0,0"/>
 
         <!-- De spelers -->
 
-        <Image Name="Player1end" Source="/Assets/player1curlSheetFirstFrame.png" Canvas.Left="528" Canvas.Top="-41" Height="406" Width="406" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="571,-30,0,0"/>
-        <Image Name="Player2end" Source="/Assets/player2curlSheetFirstFrame.png" Canvas.Left="934" Canvas.Top="-41" Height="406" Width="406" Margin="952,-31,82,633"/>
+        <Image Name="Player1end" Source="/Assets/player1curlSheetFirstFrame.png" Canvas.Left="528" Canvas.Top="-41" Height="346" Width="346" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="587,6,0,0"/>
+        <Image Name="Player2end" Source="/Assets/player2curlSheetFirstFrame.png" Canvas.Left="934" Canvas.Top="-41" Margin="912,5,182,657"/>
 
 
 
