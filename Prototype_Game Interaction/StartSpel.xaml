@@ -5,10 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Prototype_Game_Interaction"
         mc:Ignorable="d"
-        Title="StartSpel" 
-        Height="1024" Width="1440"
-        WindowStartupLocation="CenterScreen"    
-        >
+        Title="StartSpel"
+        Width="1440"
+        Height="1024"
+        ResizeMode="CanMinimize"
+        WindowStartupLocation="CenterScreen">
+
 
     <Window.Resources>
         <ResourceDictionary>
@@ -17,30 +19,89 @@
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Window.Resources>
+
     <!-- Grid voor buttons -->
     
     <Grid>
-
         <Canvas>
-            <Button  Content="Spelen" FontFamily="{StaticResource SquadaOne}" Click="SpelenClick" Height="75" HorizontalAlignment="Center" Name="SpeelButton" FontSize="40" VerticalAlignment="Top"  Width="275" Canvas.Top="176" Canvas.Left="10" />
-            <Button  Content="Beginscherm" FontFamily="{StaticResource SquadaOne}" Click="MainWindowClick" Height="75" HorizontalAlignment="Center" Name="MainButton" FontSize="40" VerticalAlignment="Top" Width="275" Canvas.Left="10" Canvas.Top="302" />
-            <Button  Content="Instellingen" FontFamily="{StaticResource SquadaOne}" Click="InstellingenClick" Height="75" HorizontalAlignment="Center" Name="InstellingenButton" FontSize="40" VerticalAlignment="Top" Width="275" Canvas.Left="10" Canvas.Top="429" />
+
+            <!-- Titel van het spel-->
+            <TextBlock Name="TitelSpel"     
+                TextAlignment="Center"
+                Width="474"
+                FontSize="64" 
+                FontFamily="{StaticResource SquadaOne}" Text="Lifting to Victory" Canvas.Top="46" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+            <!-- Buttons Startspel scherm-->
+            <Button Click="SpelenClick" 
+                    Height="50" 
+                    Width="270"
+                    HorizontalAlignment="Center" 
+                    Name="SpeelButton" 
+                    FontSize="40" 
+                    VerticalAlignment="Top"   
+                    Canvas.Top="176" 
+                    Canvas.Left="10">
+                <Image Source="/Assets/Start.png"></Image>
+            </Button>
+
+            <Button Click="MainWindowClick" 
+                    Height="50" 
+                    Width="270"
+                    HorizontalAlignment="Center" 
+                    Name="MainButton" 
+                    FontSize="40" 
+                    VerticalAlignment="Top"   
+                    Canvas.Top="302" 
+                    Canvas.Left="10">
+                <Image Source="/Assets/Beginscherm.png"></Image>
+            </Button>
+
+            <Button Click="InstellingenClick" 
+                    Height="50" 
+                    Width="270"
+                    HorizontalAlignment="Center" 
+                    Name="InstellingenButton" 
+                    FontSize="40" 
+                    VerticalAlignment="Top"   
+                    Canvas.Top="429" 
+                    Canvas.Left="10">
+                <Image Source="/Assets/Instellingen.png" Width="260"></Image>
+            </Button>
+
 
             <!-- Tekst Spelers -->
             <Label x:Name="Speler1"
                 Content="Speler 1"
                 Foreground="Black"
                 FontSize="45"
-                FontWeight="Bold" Canvas.Left="720" Canvas.Top="353" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                FontWeight="Bold" Canvas.Left="750" Canvas.Top="353" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="{StaticResource SquadaOne}"/>
             <Label x:Name="Speler2"
                     Content="Speler 2"
                     Foreground="Black"
                     FontSize="45"
-                    FontWeight="Bold" Canvas.Left="1148" Canvas.Top="353" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                    FontWeight="Bold" Canvas.Left="1164" Canvas.Top="353" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="{StaticResource SquadaOne}" />
+
+
+            <!-- Tekst Controls -->
+            <Label x:Name="Controls"
+                    Content="-- Controls --"
+                    Foreground="Black"
+                    FontSize="45"
+                    FontWeight="Bold" Canvas.Left="900" Canvas.Top="410" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="{StaticResource SquadaOne}" />
+
 
             <!-- Achtergrond -->
-            <Image Source="/Assets/Player1.png" Width="200" Height="180" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Top="828"/>
-            <Image Source="/Assets/Player2.png" Width="200" Height="180" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Left="1240" Canvas.Top="828" RenderTransformOrigin="-0.934,0.596"/>
+            <Image Source="/Assets/Player1.png" Width="200" Height="180" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Top="818"/>
+            <Image Source="/Assets/Player2.png" Width="200" Height="180" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Left="1247" Canvas.Top="818" RenderTransformOrigin="-0.934,0.596"/>
+
+            <!-- Player keys -->
+            <Image Source="/Assets/WASDKeys.png" Width="200" Height="150" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Left="720" Canvas.Top="494" />
+            <Image Source="/Assets/PijltjesKeys.png" Width="200" Height="150" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="1139" Canvas.Top="499"/>
+
+            <!-- De spelers -->
+            <Image Source="/Assets/Speler1.png" Width="200" Height="230" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="720" Canvas.Top="80"/>
+            <Image Source="/Assets/Speler2.png" Width="200" Height="232" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="1139" Canvas.Top="98"/>
         </Canvas>
     </Grid>
 </Window>
