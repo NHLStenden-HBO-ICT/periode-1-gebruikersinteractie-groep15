@@ -51,7 +51,7 @@ namespace Prototype_Game_Interaction
 
                 else
                 {
-                    MessageBox.Show("user not found");
+                    MessageBox.Show("Gebruiker niet gevonden. Probeer opnieuw.");
                 }
             }
         }

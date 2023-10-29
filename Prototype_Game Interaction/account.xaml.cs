@@ -20,20 +20,15 @@ namespace Prototype_Game_Interaction
     /// </summary>
     public partial class account : Window
     {
-        
+
         public account()
         {
             InitializeComponent();
         }
 
-    
 
-        private void inlog()
-        {
-            MainWindow main = new MainWindow();
-            main.Show();
-            this.Close();
-        }
+
+
 
         private void Image_MouseDown(object sender, MouseButtonEventArgs e)
         {
@@ -42,27 +37,30 @@ namespace Prototype_Game_Interaction
             string wachtwoord = ww.Text;
             string postcode = pc.Text;
 
-        
+            // zorgt ervoor dat geen gegevens missen
 
             if (string.IsNullOrEmpty(gebruikersnaam))
             {
                 MessageBox.Show("Vull uw gebruikersnaam in");
                 return;
             }
-            if (string.IsNullOrEmpty(wachtwoord))
-            {
-                MessageBox.Show("Vull uw wachtwoord in");
-                return;
-            }
+
             if (string.IsNullOrEmpty(email))
             {
                 MessageBox.Show("Vull uw email in");
                 return;
             }
 
+            if (string.IsNullOrEmpty(wachtwoord))
+            {
+                MessageBox.Show("Vull uw wachtwoord in");
+                return;
+            }
+
+
             using (UserDataContext context = new UserDataContext())
             {
-                // Create a new user object and set its properties
+                // Maakt een nieuwe gebruiker
                 User newUser = new User
                 {
                     gebruikersnaam = gebruikersnaam,
@@ -71,12 +69,15 @@ namespace Prototype_Game_Interaction
                     postcode = postcode
                 };
 
-                // Add the user object to the database
+                // Voegt de gegevens in de databese
                 context.Users.Add(newUser);
-                context.SaveChanges(); // Save changes to the database
+                context.SaveChanges(); // slaat de gegevens in de databease op
             }
 
-            inlog();
+            Inlog inlog = new Inlog();
+            inlog.Visibility = Visibility.Visible;
+            this.Close();
         }
+
     }
 }

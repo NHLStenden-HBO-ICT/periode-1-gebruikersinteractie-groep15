@@ -34,8 +34,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<None Remove="Assets\acc.png" />
 		<None Remove="Assets\Accepteren keybind change.png" />
-		<None Remove="Assets\account.jpg" />
 		<None Remove="Assets\Achtergrond.png" />
 		<None Remove="Assets\GameTitel.png" />
 		<None Remove="Assets\log.jpg" />
@@ -49,7 +49,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<Resource Include="Assets\account.jpg" />
+		<Resource Include="Assets\acc.png" />
 		<Resource Include="Assets\GameTitel.png" />
 		<Resource Include="Assets\log.jpg" />
 		<Resource Include="Fonts\Squada_One.ttf" />
