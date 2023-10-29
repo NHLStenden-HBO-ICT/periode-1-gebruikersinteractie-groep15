@@ -53,8 +53,8 @@ namespace Prototype_Game_Interaction
         private bool player1KeyProcessed = false;
         private bool player2KeyProcessed = false;
 
-        // Game timer van 1 minuut
-        private int remainingTime = 3; // 60 seconden, oftewel 1 minuut
+        // Game timer van 30 seconden
+        private int remainingTime = 30; // 30 seconden
         private DispatcherTimer gameTimer;
 
         // 3 seconden countdown voordat de game begint
