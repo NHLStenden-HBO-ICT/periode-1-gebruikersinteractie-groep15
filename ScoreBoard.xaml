@@ -1,0 +1,252 @@
+﻿<Window x:Class="Prototype_Game_Interaction.ScoreBoard"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Prototype_Game_Interaction"
+        mc:Ignorable="d"
+        Title="ScoreBoard" Height="1024" Width="1440"
+        SizeToContent="WidthAndHeight" Topmost="False" WindowState="Normal"
+        ResizeMode="CanMinimize"
+        WindowStartupLocation="CenterScreen">
+
+    <!-- Ophalen van het Styles bestand. Deze bevindt zich in de root van het project -->
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Styles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+
+
+
+
+
+    <Grid Margin="0,0,0,-6">
+
+
+        <!-- Grid -->
+        <Grid.ColumnDefinitions>
+
+            <ColumnDefinition Width="720" />
+            <ColumnDefinition Width="720"/>
+
+
+            <!--/// Met de ColumnDefinition Width kan je de breedte instellen van de window in pixels \\\-->
+
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="700" />
+            <RowDefinition Height="324"/>
+
+
+            <!--/// Met de RowDefinition Height kan je de hoogte instellen van de windows in pixels \\\-->
+        </Grid.RowDefinitions>
+
+
+
+
+
+        <Label Content="" Height="550" Width="440" FontFamily="{StaticResource SquadaOne}"  Background="#f3c9a6" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="30" BorderBrush="White" Margin="56,140,0,0" Grid.Column="1" RenderTransformOrigin="0.312,0.501"/>
+        <Label Content="" Height="550" Width="440" FontFamily="{StaticResource SquadaOne}"  Background="#f3c9a6" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="30" BorderBrush="White" Margin="103,148,0,0"/>
+
+
+
+
+
+        <Label Content=" LeaderBoard" Margin="61,42,0,0" Height="57" Width="228" FontFamily="{StaticResource SquadaOne}"  HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="45" BorderBrush="White"/>
+
+
+
+
+
+        <!--! Spelers score  !-->
+
+        <StackPanel HorizontalAlignment="Left" Margin="283,171,0,0" VerticalAlignment="Top" Width="130" Height="530" Grid.RowSpan="2">
+
+            <Label Grid.Column="2" Content="score"  Margin="0,0,0,0"    Height="30" Width="130"  FontSize="15" x:Name="Player1score" FontFamily="{StaticResource SquadaOne}" BorderBrush="White"/>
+            <Label Grid.Column="2" Content="score"  Margin="0,15,0,0"   Height="30" Width="130"  FontSize="15" x:Name="Player2score" FontFamily="{StaticResource SquadaOne}"  BorderBrush="White" />
+            <Label Grid.Column="2" Content="score"  Margin="0,15,0,0"  Height="30" Width="130"  FontSize="15" x:Name="Player3score" FontFamily="{StaticResource SquadaOne}"  BorderBrush="White" />
+            <Label Grid.Column="2" Content="score"  Margin="0,15,0,0"  Height="30" Width="130"  FontSize="15" x:Name="Player4score" FontFamily="{StaticResource SquadaOne}"  BorderBrush="White" />
+            <Label Grid.Column="2" Content="score"  Margin="0,15,0,0"  Height="30" Width="130"  FontSize="15" x:Name="Player5score" FontFamily="{StaticResource SquadaOne}"  BorderBrush="White" />
+            <Label Grid.Column="2" Content="score"  Margin="0,15,0,0"  Height="30" Width="130"  FontSize="15" x:Name="Player6score" FontFamily="{StaticResource SquadaOne}"  BorderBrush="White" />
+            <Label Grid.Column="2" Content="score"  Margin="0,15,0,0"  Height="30" Width="130"  FontSize="15" x:Name="Player7score" FontFamily="{StaticResource SquadaOne}" BorderBrush="White" />
+            <Label Grid.Column="2" Content="score"  Margin="0,15,0,0"  Height="30" Width="130"  FontSize="15" x:Name="Player8score" FontFamily="{StaticResource SquadaOne}"  BorderBrush="White" />
+            <Label Grid.Column="2" Content="score"  Margin="0,15,0,0"  Height="30" Width="130"  FontSize="15" x:Name="Player9score" FontFamily="{StaticResource SquadaOne}"  BorderBrush="White" />
+            <Label Grid.Column="2" Content="score" Margin="0,15,0,0"  Height="30" Width="130"  FontSize="15" x:Name="Player10score" FontFamily="{StaticResource SquadaOne}"  BorderBrush="White" />
+
+
+
+            <!--! Nummer 1 tot 10 !-->
+
+
+        </StackPanel>
+
+        <StackPanel VerticalAlignment="Top" Margin="166,171,529,0" Height="530" Width="25" Grid.RowSpan="2"        >
+            <Label Content="1." Height="30" Width="50" FontSize="15" FontFamily="{StaticResource SquadaOne}" BorderBrush="White" Margin="0,0,0,0"/>
+            <Label Content="2." HorizontalAlignment="Left" Margin="0,15,0,0" Height="30" Width="25" FontSize="15" FontFamily="{StaticResource SquadaOne}"  BorderBrush="White" />
+            <Label Content="3." HorizontalAlignment="Left" Margin="0,15,0,0" Height="30" Width="25" FontSize="15" FontFamily="{StaticResource SquadaOne}"  BorderBrush="White" />
+            <Label Content="4." HorizontalAlignment="Left" Margin="0,15,0,0" Height="30" Width="25" FontSize="15" FontFamily="{StaticResource SquadaOne}"  BorderBrush="White" />
+            <Label Content="5." HorizontalAlignment="Left" Margin="0,15,0,0" Height="30" Width="25" FontSize="15" FontFamily="{StaticResource SquadaOne}"  BorderBrush="White" />
+            <Label Content="6." HorizontalAlignment="Left" Margin="0,15,0,0" Height="30" Width="25" FontSize="15" FontFamily="{StaticResource SquadaOne}"  BorderBrush="White" />
+            <Label Content="7." HorizontalAlignment="Left" Margin="0,15,0,0" Height="30" Width="25" FontSize="15" FontFamily="{StaticResource SquadaOne}"  BorderBrush="White" />
+            <Label Content="8." HorizontalAlignment="Left" Margin="0,15,0,0" Height="30" Width="25" FontSize="15" FontFamily="{StaticResource SquadaOne}"  BorderBrush="White" />
+            <Label Content="9." HorizontalAlignment="Left" Margin="0,15,0,0" Height="30" Width="25" FontSize="15" FontFamily="{StaticResource SquadaOne}"  BorderBrush="White" />
+            <Label Content="10." HorizontalAlignment="Left" Margin="0,15,0,0" Height="30" Width="25" FontSize="15" FontFamily="{StaticResource SquadaOne}" BorderBrush="White" />
+
+        </StackPanel>
+
+
+        <!--! namen van speler hoogste score -->
+        <StackPanel HorizontalAlignment="Left" Margin="209,171,0,0" VerticalAlignment="Top" Width="80" Height="530" Grid.RowSpan="2">
+
+            <Label Grid.Column="2" Content="naam"  Margin="0,0,0,0"    Height="30" Width="80"  FontSize="15" x:Name="Player1" FontFamily="{StaticResource SquadaOne}"  BorderBrush="White"/>
+            <Label Grid.Column="2" Content="naam"  Margin="0,15,0,0"   Height="30" Width="80"  FontSize="15" x:Name="Player2" FontFamily="{StaticResource SquadaOne}"  BorderBrush="White" />
+            <Label Grid.Column="2" Content="naam"  Margin="0,15,0,0"  Height="30" Width="80"  FontSize="15" x:Name="Player3" FontFamily="{StaticResource SquadaOne}"  BorderBrush="White" />
+            <Label Grid.Column="2" Content="naam"  Margin="0,15,0,0"  Height="30" Width="80"  FontSize="15" x:Name="Player4" FontFamily="{StaticResource SquadaOne}"  BorderBrush="White" />
+            <Label Grid.Column="2" Content="naam"  Margin="0,15,0,0"  Height="30" Width="80"  FontSize="15" x:Name="Player5" FontFamily="{StaticResource SquadaOne}"  BorderBrush="White" />
+            <Label Grid.Column="2" Content="naam"  Margin="0,15,0,0"  Height="30" Width="80"  FontSize="15" x:Name="Player6" FontFamily="{StaticResource SquadaOne}" BorderBrush="White" />
+            <Label Grid.Column="2" Content="naam"  Margin="0,15,0,0"  Height="30" Width="80"  FontSize="15" x:Name="Player7" FontFamily="{StaticResource SquadaOne}"  BorderBrush="White" />
+            <Label Grid.Column="2" Content="naam"  Margin="0,15,0,0"  Height="30" Width="80"  FontSize="15" x:Name="Player8" FontFamily="{StaticResource SquadaOne}" BorderBrush="White" />
+            <Label Grid.Column="2" Content="naam"  Margin="0,15,0,0"  Height="30" Width="80"  FontSize="15" x:Name="Player9" FontFamily="{StaticResource SquadaOne}"  BorderBrush="White" />
+            <Label Grid.Column="2" Content="naam" Margin="0,15,0,0"  Height="30" Width="80"  FontSize="15" x:Name="Player10" FontFamily="{StaticResource SquadaOne}"  BorderBrush="White" />
+
+
+
+        </StackPanel>
+
+
+
+
+
+        <!-- Labels for the Scores !-->
+
+        <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Margin="255,150,0,0" Width="130" Height="530" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
+            <StackPanel.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="-0.09"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="-0.498"/>
+                </TransformGroup>
+            </StackPanel.RenderTransform>
+
+
+
+            <!--! Scores speler maandelijks !-->
+            <Label Content="score"   Height="30" Width="130" FontSize="15" x:Name="Score1monthly" FontFamily="{StaticResource SquadaOne}"  BorderBrush="White" />
+            <Label Grid.Column="2" Content="score"  Margin="0,15,0,0"  Height="30" Width="130" FontSize="15" x:Name="Score2monthly" FontFamily="{StaticResource SquadaOne}"  BorderBrush="White" />
+            <Label Grid.Column="2" Content="score"  Margin="0,15,0,0"  Height="30" Width="130" FontSize="15" x:Name="Score3monthly" FontFamily="{StaticResource SquadaOne}"  BorderBrush="White" />
+            <Label Grid.Column="2" Content="score"  Margin="0,15,0,0"  Height="30" Width="130" FontSize="15" x:Name="Score4monthly" FontFamily="{StaticResource SquadaOne}"  BorderBrush="White" />
+            <Label Grid.Column="2" Content="score"  Margin="0,15,0,0"  Height="30" Width="130" FontSize="15" x:Name="Score5monthly" FontFamily="{StaticResource SquadaOne}"  BorderBrush="White" />
+            <Label Grid.Column="2" Content="score"  Margin="0,15,0,0"  Height="30" Width="130" FontSize="15" x:Name="Score6monthly" FontFamily="{StaticResource SquadaOne}"  BorderBrush="White" />
+            <Label Grid.Column="2" Content="score"  Margin="0,15,0,0"  Height="30" Width="130" FontSize="15" x:Name="Score7monthly" FontFamily="{StaticResource SquadaOne}"  BorderBrush="White" />
+            <Label Grid.Column="2" Content="score" Margin="0,15,0,0"  Height="30" Width="130" FontSize="15" x:Name="Score8monthly" FontFamily="{StaticResource SquadaOne}" BorderBrush="White" />
+            <Label Grid.Column="2" Content="score"  Margin="0,15,0,0"  Height="30" Width="130" FontSize="15" x:Name="Score9monthly" FontFamily="{StaticResource SquadaOne}" BorderBrush="White" />
+            <Label Grid.Column="2" Content="score" Margin="0,15,0,0"  Height="30" Width="130" FontSize="15" x:Name="Score10monthly" FontFamily="{StaticResource SquadaOne}"  BorderBrush="White" />
+            <Label Grid.Column="2" Content="score" Margin="0,15,0,0"  Height="30" Width="130" FontSize="15" x:Name="Score11monthly" FontFamily="{StaticResource SquadaOne}"  BorderBrush="White" />
+            <Label Grid.Column="2" Content="score" Margin="0,15,0,0"  Height="30" Width="130" FontSize="15" x:Name="Score12monthly" FontFamily="{StaticResource SquadaOne}"  BorderBrush="White" />
+
+        </StackPanel>
+
+        <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Margin="178,148,0,0" Width="80" Height="530" Grid.Column="1">
+            <Label Content="naam"   Height="30" Width="80" FontSize="15" x:Name="player1monthly" FontFamily="{StaticResource SquadaOne}"  BorderBrush="White" />
+            <Label Grid.Column="2" Content="naam"  Margin="0,15,0,0"  Height="30" Width="80" FontSize="15" x:Name="Player2monthly" FontFamily="{StaticResource SquadaOne}" BorderBrush="White" />
+            <Label Grid.Column="2" Content="naam"  Margin="0,15,0,0"  Height="30" Width="80" FontSize="15" x:Name="Player3monthly" FontFamily="{StaticResource SquadaOne}"  BorderBrush="White" />
+            <Label Grid.Column="2" Content="naam"  Margin="0,15,0,0"  Height="30" Width="80" FontSize="15" x:Name="Player4monthly" FontFamily="{StaticResource SquadaOne}" BorderBrush="White" />
+            <Label Grid.Column="2" Content="naam"  Margin="0,15,0,0"  Height="30" Width="80" FontSize="15" x:Name="Player5monthly" FontFamily="{StaticResource SquadaOne}"  BorderBrush="White" />
+            <Label Grid.Column="2" Content="naam"  Margin="0,15,0,0"  Height="30" Width="80" FontSize="15" x:Name="Player6monthly" FontFamily="{StaticResource SquadaOne}"  BorderBrush="White" />
+            <Label Grid.Column="2" Content="naam"  Margin="0,15,0,0"  Height="30" Width="80" FontSize="15" x:Name="Player7monthly" FontFamily="{StaticResource SquadaOne}"  BorderBrush="White" />
+            <Label Grid.Column="2" Content="naam" Margin="0,15,0,0"  Height="30" Width="80" FontSize="15" x:Name="Player8monthly" FontFamily="{StaticResource SquadaOne}" BorderBrush="White" />
+            <Label Grid.Column="2" Content="naam"  Margin="0,15,0,0"  Height="30" Width="80" FontSize="15" x:Name="Player9monthly" FontFamily="{StaticResource SquadaOne}" BorderBrush="White" />
+            <Label Grid.Column="2" Content="naam" Margin="0,15,0,0"  Height="30" Width="80" FontSize="15" x:Name="Player10monthly" FontFamily="{StaticResource SquadaOne}"  BorderBrush="White" />
+            <Label Grid.Column="2" Content="naam" Margin="0,15,0,0"  Height="30" Width="80" FontSize="15" x:Name="Player11monthly" FontFamily="{StaticResource SquadaOne}"  BorderBrush="White" />
+            <Label Grid.Column="2" Content="naam" Margin="0,15,0,0"  Height="30" Width="80" FontSize="15" x:Name="Player12monthly" FontFamily="{StaticResource SquadaOne}"  BorderBrush="White" />
+
+        </StackPanel>
+
+
+        <!--! Maanden !-->
+        <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Width="80" Height="530" Grid.Column="1" Margin="93,148,0,0">
+            <Label Content="January"   Height="30" Width="80" FontSize="15"  FontFamily="{StaticResource SquadaOne}"  BorderBrush="White" />
+            <Label Grid.Column="2" Content="Februari"  Margin="0,15,0,0"  Height="30" Width="80" FontSize="15" FontFamily="{StaticResource SquadaOne}"  BorderBrush="White" />
+            <Label Grid.Column="2" Content="Maart"  Margin="0,15,0,0"  Height="30" Width="80" FontSize="15" FontFamily="{StaticResource SquadaOne}" BorderBrush="White" />
+            <Label Grid.Column="2" Content="April"  Margin="0,15,0,0"  Height="30" Width="80" FontSize="15"  FontFamily="{StaticResource SquadaOne}" BorderBrush="White" />
+            <Label Grid.Column="2" Content="Mei"  Margin="0,15,0,0"  Height="30" Width="80" FontSize="15"  FontFamily="{StaticResource SquadaOne}"  BorderBrush="White" />
+            <Label Grid.Column="2" Content="Juni"  Margin="0,15,0,0"  Height="30" Width="80" FontSize="15"  FontFamily="{StaticResource SquadaOne}"  BorderBrush="White" />
+            <Label Grid.Column="2" Content="Juli"  Margin="0,15,0,0"  Height="30" Width="80" FontSize="15"  FontFamily="{StaticResource SquadaOne}"  BorderBrush="White" />
+            <Label Grid.Column="2" Content="Augustus" Margin="0,15,0,0"  Height="30" Width="80" FontSize="15"  FontFamily="{StaticResource SquadaOne}"  BorderBrush="White" />
+            <Label Grid.Column="2" Content="September"  Margin="0,15,0,0"  Height="30" Width="80" FontSize="15"  FontFamily="{StaticResource SquadaOne}"  BorderBrush="White" />
+            <Label Grid.Column="2" Content="Oktober" Margin="0,15,0,0"  Height="30" Width="80" FontSize="15"  FontFamily="{StaticResource SquadaOne}" BorderBrush="White" />
+            <Label Grid.Column="2" Content="November" Margin="0,15,0,0"  Height="30" Width="80" FontSize="15"  FontFamily="{StaticResource SquadaOne}" BorderBrush="White" />
+            <Label Grid.Column="2" Content="December" Margin="0,15,0,0"  Height="30" Width="80" FontSize="15"  FontFamily="{StaticResource SquadaOne}"  BorderBrush="White" />
+
+        </StackPanel>
+
+        <!-- Achtergrond -->
+        <Image Margin="-2,10,362,18" Source="/Assets/Player1.png" Stretch="Fill" Grid.Row="1"/>
+        <Image Margin="360,10,0,18" Source="/Assets/Player2.png" Stretch="Fill" Grid.Column="1" Grid.Row="1"/>
+
+
+
+        <!-- Beginscherm button -->
+        <Button x:Name="Terugnaarmenu"
+                Click="ZekerheidClick"
+                Margin="308,9,92,583" Grid.Column="1" RenderTransformOrigin="0.497,0.618">
+            <Button.Style>
+                <Style 
+                        TargetType="{x:Type Button}" BasedOn="{StaticResource beginschermButton}"/>
+            </Button.Style>
+        </Button>
+
+        <Label Content="Hoogste score" Margin="635,82,0,0" Height="60" Width="170" FontFamily="{StaticResource SquadaOne}"  HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="30" BorderBrush="White" RenderTransformOrigin="0.435,6.859" Grid.ColumnSpan="2" Grid.Row="1"/>
+        <Label Content="   Naam" x:Name="hoostescorenaam" Margin="612,161,0,0" Height="60" Width="108" FontFamily="{StaticResource SquadaOne}" Background="#33D6F5" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="30" BorderBrush="White" Grid.Row="1"/>
+        <Label Content="   score" x:Name="hoostescore" Margin="0,161,0,0" Height="60" Width="115" FontFamily="{StaticResource SquadaOne}" Background="#33D6F5" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="30" BorderBrush="White" Grid.Row="1" Grid.Column="1"/>
+
+
+        <!--///
+
+		* Grid                                    : Een grid is raster dat bestaat uit een reeks rijen en kolommen. Door de rij en kolom van een element in een raster op te geven, kunt u andere elementen in een gebruikersinterface plaatsen en op afstand plaatsen. Rijen en kolommen worden gedefinieerd met de elementen RowDefinition en ColumnDefinition.
+		*  /label\                                : Met label kan je ergens text neerzetten waardoor bijvoorbeeld de text weergeven kunt worden.
+		*  Content=""                             : Content Kan je gebruiken om bijvoorbeeld tekst toe te voegen.
+		*  Canvas.top/left/right/bottom=""        : Canvas is een lay-outpaneel dat de absolute positionering van onderliggende elementen ten opzichte van de linkerbovenhoek van het canvas ondersteunt.
+		*  Height=""                              : Met height kan je de hoogte van de text tabel aanpassen. Dat is handig als je bijvoorbeeld een groter grote gaat gebruiken waardoor de tekst niet meer leesbaar is en dan bijvoorbeeld de height moet aanpassen,
+		*  Width=""                               : Met widht kan je de breedte van de text tabel aanpassen, dat is handig als de text niet in een standaard text tabel past.
+		*  Fontfamily=""                          : Een lettertypefamilie (Fontfamily) is een verzameling lettertypen die bepaalde ontwerpkenmerken delen binnen een specifieke stijl van lettertype (je kan hiermee text style aanpassen wij gebruiken bijvoorbeeld ("SquadaOne").
+		*  Background=""                          : Met Background kan je de achtergrond aanpassen, in deze code word de background="" gebruikt om een anders soort kleur op de achtergrond te krijgen van de tekst.
+		*  HorizontalAlignment=""                 : Met HorizontalAligment kan je de horizontale uitlijning aanpassen. Bijvoorbeeld HorizontalAlignment="Left" dan is de horizontale uitlijning dus links.
+		*  VerticalAlignment=""	                  : Met VerticalAlignment kan je de verticale uitlijning aanpassen. Bijvoorbeeld VerticalAlignment="top" dan is de verticale uitlijning dus bovenin.
+		*  FontSize=""                            : Met fontsize de eigenschap font-size stelt de grootte van de tekst in (hiermee kan je dus de grote van de tekst letters aanpassen)
+		*  x:Name=""	                          : X:name kan je gebruiken om lines op te slaan in XAML-namescope en word gebruikt door de WPF XAML-prosoccer.
+		*  BorderBrush=""                         : Met BorderBrush kan je gebruiken om de randkleur van objecten,buttons en tekst te veranderen.
+		*  Margin=""                              : De eigenschap Margin vertegenwoordigt de afstand tussen een element en de aangrenzende elementen en wordt gebruikt om de weergavepositie van het element en de weergavepositie van zijn buren te regelen. Margewaarden kunnen worden opgegeven in lay-out- en weergaveklassen.
+		*  Grid.Column=""                         : Een rasterkolom is een verticaal spoor in een CSS-rasterlay-out en is de ruimte tussen twee verticale rasterlijnen.
+		*  stackpanel                             : Met een StackPanel kunt u elementen in een bepaalde richting stapelen. Door eigenschappen te gebruiken die zijn gedefinieerd op StackPanel, kan inhoud zowel verticaal, wat de standaardinstelling is, als horizontaal stromen.
+		*  Button=""                              : Een knop wordt gebruikt om op code te klikken en deze uit te voeren op de gebeurtenishandler voor klikken.
+		*  Click=""                               : Click zorgt ervoor dat er in het .xaml.cs document een private void aanmaakt. Waardoor je de Button een functie kan geven als je er op drukt.
+		*  Cursor=""                              : Met cursor kan je instellen wat voor muisweergave je krijgt als je bijvoorbeeld over een button gaat. (In deze code heb ik Cursor="hand" gebruikt waardoor als je over de button gaat er een soort handje is in de plaats van het normale pijltje).
+
+		\\\-->
+
+
+
+
+
+        <!--   *  Height=""                              : Met height kan je de hoogte van de text tabel aanpassen. Dat is handig als je bijvoorbeeld een groter grote gaat gebruiken waardoor de tekst niet meer leesbaar is en dan bijvoorbeeld de height moet aanpassen,
+		       *  Width=""                               : Met widht kan je de breedte van de text tabel aanpassen, dat is handig als de text niet in een standaard text tabel past.
+               *  HorizontalAlignment=""                 : Met HorizontalAligment kan je de horizontale uitlijning aanpassen. Bijvoorbeeld HorizontalAlignment="Left" dan is de horizontale uitlijning dus links.
+		       *  VerticalAlignment=""	                 : Met VerticalAlignment kan je de verticale uitlijning aanpassen. Bijvoorbeeld VerticalAlignment="top" dan is de verticale uitlijning dus bovenin.
+               *  Margin=""                              : De eigenschap Margin vertegenwoordigt de afstand tussen een element en de aangrenzende elementen en wordt gebruikt om de weergavepositie van het element en de weergavepositie van zijn buren te regelen. Margewaarden kunnen worden opgegeven in lay-out- en weergaveklassen.-->
+        <!--   * Source                                  : Zo weet het programma waar het de bestanden kan vinden. (In deze code gebruiken wij het bijvoorbeeld voor het hoofdmenu meer aantekleden met de vogels en de trekkers.-->
+
+
+
+
+
+
+
+
+    </Grid>
+</Window>
