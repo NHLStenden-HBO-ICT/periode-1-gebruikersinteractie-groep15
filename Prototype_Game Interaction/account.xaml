@@ -43,19 +43,19 @@
             <StackPanel Orientation="Vertical" Grid.Column="0">
                 <TextBlock Height="60" FontFamily="{StaticResource SquadaOne}" 
                            Text="Gebruikersnaam" FontSize="60" HorizontalAlignment="Right"/>
-                <TextBlock Height="10" Text="Verplicht*" FontFamily="{StaticResource SquadaOne}"
-                           HorizontalAlignment="Right"/>
+                <TextBlock Height="25" Text="Verplicht*" FontFamily="{StaticResource SquadaOne}"
+                           HorizontalAlignment="Right" FontSize="20"/>
                 <TextBlock Height="60" FontFamily="{StaticResource SquadaOne}" 
             Text="Email" FontSize="60" HorizontalAlignment="Right"/>
-                <TextBlock Height="10" Text="Verplicht*" FontFamily="{StaticResource SquadaOne}"
+                <TextBlock Height="25" Text="Verplicht*" FontFamily="{StaticResource SquadaOne}"
            HorizontalAlignment="Right"/>
                 <TextBlock Height="60" FontFamily="{StaticResource SquadaOne}" 
             Text="Wachtwoord" FontSize="60" HorizontalAlignment="Right"/>
-                <TextBlock Height="10" Text="Verplicht*" FontFamily="{StaticResource SquadaOne}"
+                <TextBlock Height="25" Text="Verplicht*" FontFamily="{StaticResource SquadaOne}"
            HorizontalAlignment="Right"/>
                 <TextBlock Height="60" FontFamily="{StaticResource SquadaOne}" 
             Text="Postcode" FontSize="60" HorizontalAlignment="Right"/>
-                <TextBlock Height="10" Text="Optioneel*" FontFamily="{StaticResource SquadaOne}"
+                <TextBlock Height="25" Text="Optioneel*" FontFamily="{StaticResource SquadaOne}"
            HorizontalAlignment="Right"/>
             </StackPanel>
 
@@ -63,13 +63,13 @@
                 <TextBox  Height="60" Width="350" HorizontalAlignment="Left" 
          VerticalAlignment="Top" FontSize="17" Style="{StaticResource Textbox1}"
                           Name="gebruiker"/>
-                <TextBlock Height="10"/>
+                <TextBlock Height="25"/>
                 <TextBox  Height="60" Width="350" HorizontalAlignment="Left" 
 VerticalAlignment="Top" FontSize="17" Style="{StaticResource Textbox1}" Name="mail"/>
-                <TextBlock Height="10"/>
+                <TextBlock Height="25"/>
                 <TextBox  Height="60" Width="350" HorizontalAlignment="Left" 
 VerticalAlignment="Top" FontSize="17" Style="{StaticResource Textbox1}" Name="ww"/>
-                <TextBlock Height="10"/>
+                <TextBlock Height="25"/>
                 <TextBox  Height="60" Width="350" HorizontalAlignment="Left" 
 VerticalAlignment="Top" FontSize="17" Style="{StaticResource Textbox1}" Name="pc"/>
             </StackPanel>

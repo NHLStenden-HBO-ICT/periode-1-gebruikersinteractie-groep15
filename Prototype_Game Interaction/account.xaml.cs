@@ -37,10 +37,28 @@ namespace Prototype_Game_Interaction
 
         private void Image_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            var gebruikersnaam = gebruiker.Text;
-            var email = mail.Text;
-            var wachtwoord = ww.Text;
-            var postcode = pc.Text;
+            string gebruikersnaam = gebruiker.Text;
+            string email = mail.Text;
+            string wachtwoord = ww.Text;
+            string postcode = pc.Text;
+
+        
+
+            if (string.IsNullOrEmpty(gebruikersnaam))
+            {
+                MessageBox.Show("Vull uw gebruikersnaam in");
+                return;
+            }
+            if (string.IsNullOrEmpty(wachtwoord))
+            {
+                MessageBox.Show("Vull uw wachtwoord in");
+                return;
+            }
+            if (string.IsNullOrEmpty(email))
+            {
+                MessageBox.Show("Vull uw email in");
+                return;
+            }
 
             using (UserDataContext context = new UserDataContext())
             {
