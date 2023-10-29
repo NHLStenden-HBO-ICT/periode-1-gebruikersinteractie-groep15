@@ -35,7 +35,10 @@
 
 	<ItemGroup>
 		<None Remove="Assets\Accepteren keybind change.png" />
+		<None Remove="Assets\account.jpg" />
 		<None Remove="Assets\Achtergrond.png" />
+		<None Remove="Assets\GameTitel.png" />
+		<None Remove="Assets\log.jpg" />
 		<None Remove="Assets\Player1.png" />
 		<None Remove="Assets\Player2.png" />
 		<None Remove="Assets\rollenFx.png" />
@@ -46,11 +49,20 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<Resource Include="Assets\account.jpg" />
+		<Resource Include="Assets\GameTitel.png" />
+		<Resource Include="Assets\log.jpg" />
 		<Resource Include="Fonts\Squada_One.ttf" />
 		<Resource Include="Teruggaan.png" />
 		<Resource Include="onHover.png" />
 		<Content Include="Assets\rollen.png">
 		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</Content>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="Microsoft.Data.Sqlite.Core" Version="7.0.13" />
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite.Core" Version="7.0.13" />
+	  <PackageReference Include="SQLitePCLRaw.bundle_e_sqlite3" Version="2.1.6" />
 	</ItemGroup>
 </Project>

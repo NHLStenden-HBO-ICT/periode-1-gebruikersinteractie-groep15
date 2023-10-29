@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Microsoft.Data.Sqlite;
+using SQLitePCL;
 
 namespace Prototype_Game_Interaction
 {
@@ -24,24 +26,42 @@ namespace Prototype_Game_Interaction
             InitializeComponent();
         }
 
-        private void inloggen_Click(object sender, RoutedEventArgs e)
+
+
+        private void inlog()
         {
-            if (wachtwoord.Password != "" && email.Text !="")
+            MainWindow main = new MainWindow();
+            main.Show();
+        }
+
+        private void Image_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            var email = mail.Text;
+            var wachtwoord = ww.Password;
+
+            using (UserDataContext context = new UserDataContext())
             {
-                if(wachtwoord.Password == "test" && email.Text == "admin@")
+                bool gebruikergevonden = context.Users.Any(user => user.email == email && user.wachtwoord == wachtwoord);
+
+                if (gebruikergevonden)
                 {
-                    MainWindow main = new MainWindow();
-                    main.Visibility = Visibility.Visible;
-                    this.Close();
+                    inlog();
+                    Close();
                 }
 
                 else
                 {
-                    MessageBox.Show("Gebruiker niet geregegistreerd, Probeer opnieuw.");
+                    MessageBox.Show("user not found");
                 }
             }
+        }
 
-           
+        private void Image_MouseDown_1(object sender, MouseButtonEventArgs e)
+        {
+            account account = new account();
+            account.Visibility = Visibility.Visible;
+            this.Close();
         }
     }
+    
 }

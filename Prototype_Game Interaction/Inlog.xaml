@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Prototype_Game_Interaction"
         mc:Ignorable="d"
-        Title="Inlog" Height="450" Width="800">
+        Title="Inlog" Height="1024" Width="1440">
     
     
 
@@ -19,10 +19,10 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="50"/>
-            <RowDefinition Height="120"/>
-            <RowDefinition/>
             <RowDefinition Height="80"/>
+            <RowDefinition Height="300"/>
+            <RowDefinition Height="294"/>
+            <RowDefinition Height="350"/>
 
         </Grid.RowDefinitions>
         
@@ -31,45 +31,41 @@
         </Grid>
         
         <Grid Grid.Row="1">
-            <TextBlock
-                HorizontalAlignment="Center"
-          Width="500"
-          FontSize="64" 
-          FontFamily="{StaticResource SquadaOne}" Text="Lifthing to Victory">
-            </TextBlock>
+         <Image Source="/Assets/GameTitel.png"  Height="300" Width="1000"/>
+
         </Grid>
 
         <Grid Grid.Row="2">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="400"/>
-                <ColumnDefinition Width="400"/>
+                <ColumnDefinition Width="720"/>
+                <ColumnDefinition Width="720"/>
             </Grid.ColumnDefinitions>
 
-            <StackPanel>
-                <TextBlock x:Name="mail" Height="30"
+            <StackPanel VerticalAlignment="Center">
+                <TextBlock Height="80"
                  HorizontalAlignment="Right"
-                 FontSize="30" 
+                 FontSize="80" 
                 FontFamily="{StaticResource SquadaOne}" Text="Email:"/>
                 <Rectangle Fill="White" Height="5"/>
-                <TextBlock x:Name="ww" HorizontalAlignment="Right"
-                           FontSize="30"
+                <TextBlock  HorizontalAlignment="Right"
+                           FontSize="80"
                            FontFamily="{StaticResource SquadaOne}"
                            Text=" Wachtwoord:"/>
                 <Rectangle Fill="White" Height="12"/>
                 
-                <TextBlock Text="Blijf ingelogd" FontSize="10" FontFamily="{StaticResource SquadaOne}" HorizontalAlignment="Right"/>
+                <TextBlock Text="Blijf ingelogd" FontSize="30" FontFamily="{StaticResource SquadaOne}" HorizontalAlignment="Right"/>
             </StackPanel>
 
-            <StackPanel Grid.Column="1">
-                <TextBox x:Name="email"  Height="27" Width="200" HorizontalAlignment="Left" 
-                         VerticalAlignment="Top" FontSize="20" Style="{StaticResource Textbox1}"/>
+            <StackPanel Grid.Column="1" VerticalAlignment="Center">
+                <TextBox x:Name="mail"  Height="80" Width="350" HorizontalAlignment="Left" 
+                         VerticalAlignment="Top" FontSize="57" Style="{StaticResource Textbox1}"/>
                 <TextBlock/>
                 <Rectangle Fill="White"/>
-                <PasswordBox x:Name="wachtwoord"  Height="28" Width="200" 
-                             HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="20"
-                             Style="{StaticResource Passwordbox}"/>
+                <PasswordBox x:Name="ww"  Height="80" Width="350" 
+                             HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="70"
+                             Style="{StaticResource Passwordbox}" />
                 <Rectangle Fill="White" Height="4"/>
-                <Rectangle Fill="#aaa6a2" Height="3" Width="200" HorizontalAlignment="Left"/>
+                <Rectangle Fill="#aaa6a2" Height="6" Width="350" HorizontalAlignment="Left"/>
                 <CheckBox/>
             </StackPanel>
 
@@ -77,20 +73,18 @@
 
         <Grid Grid.Row="3">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition Width="50"/>
-                <ColumnDefinition/>
+                <ColumnDefinition Width="720"/>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="720"/>
             </Grid.ColumnDefinitions>
 
-            <Button Height="50" Width="160" HorizontalAlignment="Right"
-                    Grid.Column="0" Content="Account aanmaken" FontFamily="{StaticResource SquadaOne}"
-                    FontSize="20" Background="#FBEEE4" 
-                    Style="{StaticResource btnBlue}"/>
-            
-            <Button x:Name="inloggen" Height="50" Width="150" HorizontalAlignment="Left"
-                    Grid.Column="2" Content="Inloggen" FontFamily="{StaticResource SquadaOne}"
-                    FontSize="20" Click="inloggen_Click" Background="#FBEEE4" Opacity="100"
-                   Style="{StaticResource btnBlue}" />
+           <Image Source="/Assets/log.jpg"  Height="160" Grid.Column="2"  Mouse.MouseDown="Image_MouseDown" 
+                  Cursor="Hand" HorizontalAlignment="Left"/>
+
+            <Image Source="/Assets/account.jpg"  Height="160" Grid.Column="0" Mouse.MouseDown="Image_MouseDown_1"
+                   Cursor="Hand" HorizontalAlignment="Right"/>
+
+           
         </Grid>
     </Grid>
 </Window>
