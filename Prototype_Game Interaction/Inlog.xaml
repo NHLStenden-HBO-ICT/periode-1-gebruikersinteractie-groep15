@@ -38,7 +38,7 @@
 
         <Grid Grid.Row="2">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="720"/>
+                <ColumnDefinition Width="590"/>
                 <ColumnDefinition Width="720"/>
             </Grid.ColumnDefinitions>
 
@@ -58,15 +58,15 @@
             </StackPanel>
 
             <StackPanel Grid.Column="1" VerticalAlignment="Center">
-                <TextBox x:Name="mail"  Height="80" Width="400" HorizontalAlignment="Left" 
-                         VerticalAlignment="Top" FontSize="57" Style="{StaticResource Textbox1}"/>
+                <TextBox x:Name="mail"  Height="80" Width="550" HorizontalAlignment="Left" 
+                         VerticalAlignment="Top" FontSize="50" Style="{StaticResource Textbox1}"/>
                 <TextBlock/>
                 <Rectangle Fill="White"/>
-                <PasswordBox x:Name="ww"  Height="80" Width="400" 
-                             HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="70"
+                <PasswordBox x:Name="ww"  Height="80" Width="550" 
+                             HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="50"
                              Style="{StaticResource Passwordbox}" />
                 <Rectangle Fill="White" Height="4"/>
-                <Rectangle Fill="#aaa6a2" Height="6" Width="410" HorizontalAlignment="Left"/>
+                <Rectangle Fill="#aaa6a2" Height="6" Width="560" HorizontalAlignment="Left"/>
                 <CheckBox/>
             </StackPanel>
 
@@ -79,8 +79,8 @@
                 <ColumnDefinition Width="720"/>
             </Grid.ColumnDefinitions>
 
-           <Image Source="/Assets/log.jpg"  Height="160" Grid.Column="2"  Mouse.MouseDown="Image_MouseDown" 
-                  Cursor="Hand" HorizontalAlignment="Left"/>
+           <Image Source="/Assets/inlog.png"  Height="160" Grid.Column="2"  Mouse.MouseDown="Image_MouseDown" 
+                  Cursor="Hand" HorizontalAlignment="Left" Width="500"/>
 
             <Image Source="/Assets/acc.png" Width="500" Height="160" Grid.Column="0" Mouse.MouseDown="Image_MouseDown_1"
                    Cursor="Hand" HorizontalAlignment="Right"/>

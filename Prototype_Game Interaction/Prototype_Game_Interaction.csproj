@@ -38,6 +38,7 @@
 		<None Remove="Assets\Accepteren keybind change.png" />
 		<None Remove="Assets\Achtergrond.png" />
 		<None Remove="Assets\GameTitel.png" />
+		<None Remove="Assets\inlog.png" />
 		<None Remove="Assets\log.jpg" />
 		<None Remove="Assets\Player1.png" />
 		<None Remove="Assets\Player2.png" />
@@ -51,7 +52,7 @@
 	<ItemGroup>
 		<Resource Include="Assets\acc.png" />
 		<Resource Include="Assets\GameTitel.png" />
-		<Resource Include="Assets\log.jpg" />
+		<Resource Include="Assets\inlog.png" />
 		<Resource Include="Fonts\Squada_One.ttf" />
 		<Resource Include="Teruggaan.png" />
 		<Resource Include="onHover.png" />

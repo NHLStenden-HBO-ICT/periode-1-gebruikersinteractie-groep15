@@ -56,6 +56,7 @@ namespace Prototype_Game_Interaction
             }
         }
 
+        // brengt je naar het inlogscherm
         private void Image_MouseDown_1(object sender, MouseButtonEventArgs e)
         {
             account account = new account();

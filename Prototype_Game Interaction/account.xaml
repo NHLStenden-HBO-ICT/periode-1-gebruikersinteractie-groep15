@@ -33,7 +33,9 @@
         <Grid Grid.Row="1">
            <Image Source="/Assets/acc.png" Height="300" Width="900" />
 
-
+            <TextBlock Text="Vull graag alle verplichte gegevens in om een account aan te maken." FontSize="30"
+                        FontFamily="{StaticResource SquadaOne}" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="20"/>
+            <Rectangle Fill="#aaa6a2" Height="6" Width="900" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="10"/>
         </Grid>
 
         <Grid Grid.Row="2">
@@ -43,6 +45,7 @@
             </Grid.ColumnDefinitions>
             
             <StackPanel Orientation="Vertical" Grid.Column="0">
+                <TextBlock Height="25"/>
                 <TextBlock Height="60" FontFamily="{StaticResource SquadaOne}" 
                            Text="Gebruikersnaam" FontSize="60" HorizontalAlignment="Right"/>
                 <TextBlock Height="25" Text="Verplicht*" FontFamily="{StaticResource SquadaOne}"
@@ -62,6 +65,7 @@
             </StackPanel>
 
             <StackPanel Orientation="Vertical" Grid.Column="1">
+                <TextBlock Height="25"/>
                 <TextBox  Height="60" Width="350" HorizontalAlignment="Left" 
          VerticalAlignment="Top" FontSize="50" Style="{StaticResource Textbox1}"
                           Name="gebruiker"/>
@@ -79,6 +83,7 @@ VerticalAlignment="Top" FontSize="50" Style="{StaticResource Textbox1}" Name="pc
             
         </Grid>
            <Grid Grid.Row="3">
+            <Rectangle Fill="#aaa6a2" Height="6" Width="900" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10"/>
             <Image Source="/Assets/acc.png"  HorizontalAlignment="Right" Mouse.MouseDown="Image_MouseDown"
               Cursor="Hand" Height="200" Width="500"/>
         </Grid>

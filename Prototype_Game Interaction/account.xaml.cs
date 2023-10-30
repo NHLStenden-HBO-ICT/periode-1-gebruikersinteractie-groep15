@@ -74,6 +74,7 @@ namespace Prototype_Game_Interaction
                 context.SaveChanges(); // slaat de gegevens in de databease op
             }
 
+                  // brengt je weer terug naar het inlog scherm
             Inlog inlog = new Inlog();
             inlog.Visibility = Visibility.Visible;
             this.Close();
