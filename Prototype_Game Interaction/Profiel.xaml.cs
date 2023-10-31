@@ -12,43 +12,57 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
+
 namespace Prototype_Game_Interaction
 {
-    /// <summary>
-    /// Interaction logic for Profiel.xaml
-    /// </summary>
     public partial class Profiel : Window
     {
+        private Person _person;
+
         public Profiel()
         {
             InitializeComponent();
+
+            _person = new Person
+            {
+                Name = "Test",
+                Email = "Test",
+                Password = "Test",
+                Postcode = "Test"
+            };
+
+            this.DataContext = _person;
         }
 
-
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show($"Name: {_person.Name}");
+            MessageBox.Show($"Email: {_person.Email}");
+            MessageBox.Show($"Password: {_person.Password}");
+            MessageBox.Show($"Postcode: {_person.Postcode}");
+        }
 
         private void ZekerheidClick(object sender, RoutedEventArgs e)
         {
-            // voor de knop om naar het begin menu te gaan maar je moet eerst nog dat bevestingen in een ander menu
-            SharedData.CurrentScreen = "ConformatieMenu";
+            // Voor de knop om naar het beginscherm te gaan, maar je moet eerst nog bevestigingen in een ander menu verwerken.
+            SharedData.CurrentScreen = "BevestigingsMenu";
 
             ZekerheidMenu zekerheidMenu = new ZekerheidMenu();
             zekerheidMenu.Visibility = Visibility.Visible;
             this.Visibility = Visibility.Hidden;
         }
+    }
 
-        private void Gebruikersnaam_TextChanged(object sender, TextChangedEventArgs e)
+    class Person
+    {
+        public string Name { get; set; }
+        public string Email { get; set; }
+        public string Password { get; set; }
+        public string Postcode { get; set; }
+
+        public Person()
         {
-
-        }
-
-        private void mail_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
+            
         }
     }
 }
