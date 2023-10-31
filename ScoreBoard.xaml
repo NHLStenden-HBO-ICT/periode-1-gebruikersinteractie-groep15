@@ -6,7 +6,6 @@
         xmlns:local="clr-namespace:Prototype_Game_Interaction"
         mc:Ignorable="d"
         Title="ScoreBoard" Height="1024" Width="1440"
-        ResizeMode="CanMinimize"
         WindowStartupLocation="CenterScreen">
 
     <!-- Ophalen van het het Styles Bestand-->
@@ -17,6 +16,7 @@
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Window.Resources>
+
 
     <Grid>
         <Label Content="" Height="550" Width="440" FontFamily="{StaticResource SquadaOne}"  Background="#f3c9a6" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="30" BorderBrush="White" Margin="799,140,0,0"/>
@@ -153,7 +153,7 @@
         <Label Content="   score" x:Name="hoostescore" Margin="0,827,0,0" Height="60" Width="115" FontFamily="{StaticResource SquadaOne}" Background="#33D6F5" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="30" BorderBrush="White" RenderTransformOrigin="0.826,0.542"/>
 
 
-        <!--   * Source                                  : Zo weet het programma waar het de bestanden kan vinden. (In deze code gebruiken wij het bijvoorbeeld voor het hoofdmenu meer aantekleden met de vogels en de trekkers.-->
+        <!--   * Source                                  : Zo weet het programma waar het de bestanden kan vinden. (In deze code gebruiken wij het bijvoorbeeld voor het scoreboard meer aantekleden met de vogels en de trekkers.-->
 
 
 
@@ -162,8 +162,17 @@
 
 
 
-        <Button Content="Beginscherm" FontFamily="{StaticResource SquadaOne}" Click="MainWindowClick" Height="75" HorizontalAlignment="Left" x:Name="MainButton" VerticalAlignment="Top"  Width="210" FontSize="40" Margin="1220,10,0,0" />
+        <Button Name="MainButton" Width="315" Click="MainWindowClick" Height="95" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1062,23,0,0">
+            <Button.Style>
+                <Style TargetType="Button" BasedOn="{StaticResource TerugHover}">
+                    <!-- Hier kun je de stijl van de knop aanpassen -->
+                </Style>
+            </Button.Style>
+            <!-- Hier kun je de inhoud van de knop toevoegen -->
+        </Button>
+
     </Grid>
 </Window>
     
     
+
