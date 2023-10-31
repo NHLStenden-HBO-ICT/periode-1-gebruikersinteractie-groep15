@@ -17,5 +17,9 @@ namespace Prototype_Game_Interaction
 
         public DbSet<User>  Users{ get; set; }
 
+         
     }
+
+    
 }
+

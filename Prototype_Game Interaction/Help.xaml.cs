@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Microsoft.EntityFrameworkCore;
 using Prototype_Game_Interaction;
 
 namespace Prototype_Game_Interaction
@@ -20,9 +22,14 @@ namespace Prototype_Game_Interaction
     /// </summary>
     public partial class Help : Window
     {
+
+        
         public Help()
         {
             InitializeComponent();
+
+
+
         }
     }
 }

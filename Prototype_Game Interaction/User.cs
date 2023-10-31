@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace Prototype_Game_Interaction
 {
@@ -6,12 +7,13 @@ namespace Prototype_Game_Interaction
     {
         [Key]
         public int Id { get; set; }
-        public string gebruikersnaam{ get; set; }
+        public string gebruikersnaam { get; set; }
 
-        public string email {  get; set; }
+        public string email { get; set; }
 
-        public string wachtwoord {  get; set; }
-        
+        public string wachtwoord { get; set; }
+
         public string postcode { get; set; }
     }
+
 }

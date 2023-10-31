@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:Prototype_Game_Interaction"
         mc:Ignorable="d"
         Title="Inlog" Height="1024" Width="1440"
-        WindowStartupLocation="CenterScreen">
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="CanMinimize">
     
     
 
@@ -33,7 +34,7 @@
         
         <Grid Grid.Row="1">
          <Image Source="/Assets/GameTitel.png"  Height="300" Width="1000"/>
-
+            <Rectangle Fill="#aaa6a2" Height="6" Width="900" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="10"/>
         </Grid>
 
         <Grid Grid.Row="2">
@@ -78,8 +79,8 @@
                 <ColumnDefinition Width="100"/>
                 <ColumnDefinition Width="720"/>
             </Grid.ColumnDefinitions>
-
-           <Image Source="/Assets/inlog.png"  Height="160" Grid.Column="2"  Mouse.MouseDown="Image_MouseDown" 
+            
+            <Image Source="/Assets/inlog.png"  Height="160" Grid.Column="2"  Mouse.MouseDown="Image_MouseDown" 
                   Cursor="Hand" HorizontalAlignment="Left" Width="500"/>
 
             <Image Source="/Assets/acc.png" Width="500" Height="160" Grid.Column="0" Mouse.MouseDown="Image_MouseDown_1"

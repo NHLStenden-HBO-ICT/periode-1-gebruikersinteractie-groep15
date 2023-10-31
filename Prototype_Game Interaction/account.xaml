@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:Prototype_Game_Interaction"
         mc:Ignorable="d"
         Title="account" Height="1024" Width="1440"
-        WindowStartupLocation="CenterScreen">
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="CanMinimize">
 
     <Window.Resources>
         <ResourceDictionary>
@@ -60,7 +61,7 @@
             HorizontalAlignment="Right" FontSize="20"/>
                 <TextBlock Height="60" FontFamily="{StaticResource SquadaOne}" 
             Text="Postcode" FontSize="60" HorizontalAlignment="Right"/>
-                <TextBlock Height="25" Text="Verplicht*" FontFamily="{StaticResource SquadaOne}"
+                <TextBlock Height="25" Text="Optioneel*" FontFamily="{StaticResource SquadaOne}"
             HorizontalAlignment="Right" FontSize="20"/>
             </StackPanel>
 
