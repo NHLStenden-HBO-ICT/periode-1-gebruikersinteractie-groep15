@@ -52,6 +52,15 @@ namespace Prototype_Game_Interaction
             this.Visibility = Visibility.Hidden;
         }
 
+        private void InstellingenClick(object sender, RoutedEventArgs e)
+        {
+
+            Instellingen instellingen = new Instellingen();
+            instellingen.Visibility = Visibility.Visible;
+            this.Visibility = Visibility.Hidden;
+
+
+        }
 
         private void GameWindow_keyDown(object sender, KeyEventArgs e)
         {
