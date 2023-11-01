@@ -1,0 +1,93 @@
+﻿<Window x:Class="Prototype_Game_Interaction.account"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Prototype_Game_Interaction"
+        mc:Ignorable="d"
+        Title="account" Height="1024" Width="1440"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="CanMinimize">
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Styles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="300"/>
+            <RowDefinition/>
+            <RowDefinition Height="175"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            
+            
+   
+        </Grid>
+
+        <Grid Grid.Row="1">
+           <Image Source="/Assets/acc.png" Height="300" Width="900" />
+
+            <TextBlock Text="Vull graag alle verplichte gegevens in om een account aan te maken." FontSize="30"
+                        FontFamily="{StaticResource SquadaOne}" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="20"/>
+            <Rectangle Fill="#aaa6a2" Height="6" Width="900" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="10"/>
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="720"/>
+                <ColumnDefinition Width="720"/>
+            </Grid.ColumnDefinitions>
+            
+            <StackPanel Orientation="Vertical" Grid.Column="0">
+                <TextBlock Height="25"/>
+                <TextBlock Height="60" FontFamily="{StaticResource SquadaOne}" 
+                           Text="Gebruikersnaam" FontSize="60" HorizontalAlignment="Right"/>
+                <TextBlock Height="25" Text="Verplicht*" FontFamily="{StaticResource SquadaOne}"
+                           HorizontalAlignment="Right" FontSize="20"/>
+                <TextBlock Height="60" FontFamily="{StaticResource SquadaOne}" 
+            Text="Email" FontSize="60" HorizontalAlignment="Right"/>
+                <TextBlock Height="25" Text="Verplicht*" FontFamily="{StaticResource SquadaOne}"
+            HorizontalAlignment="Right" FontSize="20"/>
+                <TextBlock Height="60" FontFamily="{StaticResource SquadaOne}" 
+            Text="Wachtwoord" FontSize="60" HorizontalAlignment="Right"/>
+                <TextBlock Height="25" Text="Verplicht*" FontFamily="{StaticResource SquadaOne}"
+            HorizontalAlignment="Right" FontSize="20"/>
+                <TextBlock Height="60" FontFamily="{StaticResource SquadaOne}" 
+            Text="Postcode" FontSize="60" HorizontalAlignment="Right"/>
+                <TextBlock Height="25" Text="Optioneel*" FontFamily="{StaticResource SquadaOne}"
+            HorizontalAlignment="Right" FontSize="20"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical" Grid.Column="1">
+                <TextBlock Height="25"/>
+                <TextBox  Height="60" Width="350" HorizontalAlignment="Left" 
+         VerticalAlignment="Top" FontSize="50" Style="{StaticResource Textbox1}"
+                          Name="gebruiker"/>
+                <TextBlock Height="25"/>
+                <TextBox  Height="60" Width="350" HorizontalAlignment="Left" 
+VerticalAlignment="Top" FontSize="50" Style="{StaticResource Textbox1}" Name="mail"/>
+                <TextBlock Height="38"/>
+                <TextBox  Height="60" Width="350" HorizontalAlignment="Left" 
+VerticalAlignment="Top" FontSize="50" Style="{StaticResource Textbox1}" Name="ww"/>
+                <TextBlock Height="25"/>
+                <TextBox  Height="60" Width="350" HorizontalAlignment="Left" 
+VerticalAlignment="Top" FontSize="50" Style="{StaticResource Textbox1}" Name="pc"/>
+            </StackPanel>
+            
+            
+        </Grid>
+           <Grid Grid.Row="3">
+            <Rectangle Fill="#aaa6a2" Height="6" Width="900" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10"/>
+            <Image Source="/Assets/acc.png"  HorizontalAlignment="Right" Mouse.MouseDown="Image_MouseDown"
+              Cursor="Hand" Height="200" Width="500"/>
+        </Grid>
+        
+    </Grid>
+</Window>
