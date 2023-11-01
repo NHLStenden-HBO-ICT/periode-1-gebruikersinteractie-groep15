@@ -53,6 +53,9 @@ namespace Prototype_Game_Interaction
         private bool player1KeyProcessed = false;
         private bool player2KeyProcessed = false;
 
+        private bool player1KeyNotPressed = true;
+        private bool player2KeyNotPressed = true;
+
         // Game timer van 30 seconden
         private int remainingTime = 30; // 30 seconden
         private DispatcherTimer gameTimer;
@@ -262,7 +265,11 @@ namespace Prototype_Game_Interaction
 
             Player1curl.Source = frame1;
             Player2curl.Source = frame2;
-
+            if (frameIndex == 8)
+            {
+                player1KeyNotPressed = true;
+                player2KeyNotPressed = true;
+            }
             // Controleer of we ons binnen frame 9 en 15 bevinden
             if (frameIndex >= 9 && frameIndex <= 15)
             {
@@ -287,6 +294,16 @@ namespace Prototype_Game_Interaction
                 // Schakel het drop shadow effect uit (door deze op null te zetten)
                 Player1curl.Effect = null;
                 Player2curl.Effect = null;
+            }
+            if (frameIndex  == 16 && player1KeyNotPressed)
+            {
+                player1Score -= 5;
+                player1ScoreText.Text = $"{player1Score}";
+            }
+            if (frameIndex == 16 && player2KeyNotPressed)
+            {
+                player2Score -= 5;
+                player2ScoreText.Text = $"{player2Score}";
             }
         }
 
@@ -404,7 +421,6 @@ namespace Prototype_Game_Interaction
                     return;
                 }
 
-
             }
             // player 2 control check. Checkt ook of er die animatieronde al een toets is aangeslagen.
             // Dit betekend: dezelfde animatieronde kun je maar 1 toetsaanslag doen, en die registreert min of plus punten.
@@ -483,6 +499,7 @@ namespace Prototype_Game_Interaction
                     }
                     return;
                 }
+                
             }
 
             // Mocht een speler buiten de juiste frame een toets in drukken, dan geld er punt aftrek. Minus 5 punten in dit geval!
@@ -512,11 +529,13 @@ namespace Prototype_Game_Interaction
             {
                 player1Score += 10;
                 player1ScoreText.Text = $"{player1Score}";
+                player1KeyNotPressed = false;
             }
             else if (player == Player.Player2)
             {
                 player2Score += 10;
                 player2ScoreText.Text = $"{player2Score}";
+                player2KeyNotPressed = false;
             }
         }
 
@@ -535,6 +554,8 @@ namespace Prototype_Game_Interaction
                 player2ScoreText.Text = $"{player2Score}";
             }
         }
+
+        
     }
 }
 
