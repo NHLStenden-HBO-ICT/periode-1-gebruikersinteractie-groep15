@@ -18,64 +18,86 @@
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Window.Resources>
-
+  
 
     <Grid>
 
+        <Grid.RowDefinitions>
+            <RowDefinition Height="270"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition/>
+            <RowDefinition Height="175"/>
+        </Grid.RowDefinitions>
 
-        <!--! Gebruikersnaam !-->
-        <TextBlock Height="80"
-                 HorizontalAlignment="Right"
+        <Grid Grid.Row="1">
+            <TextBlock Text="Uw Gegevens:"  FontSize="70" FontFamily="{StaticResource SquadaOne}" HorizontalAlignment="Center"/>
+        </Grid>
+
+        <Grid Grid.Row="2">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="720"/>
+                <ColumnDefinition Width="720"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Orientation="Vertical" Grid.Column="0">
+                <TextBlock Height="80"
+                HorizontalAlignment="Right"
                  FontSize="80" 
-                FontFamily="{StaticResource SquadaOne}" Text="Gebruikersnaam:" Margin="0,379,785,549"/>
+                   FontFamily="{StaticResource SquadaOne}" Text="Gebruikersnaam:" />
 
-        <TextBox x:Name="Gebruikersnaam"  Height="80" Width="550" HorizontalAlignment="Left" 
-        VerticalAlignment="Top" FontSize="57" Style="{StaticResource Gebruikersnaam}" Margin="660,379,0,0" Background="#F3C9A680" TextChanged="Gebruikersnaam_TextChanged"/>
+                <TextBlock Height="80" FontSize="80" FontFamily="{StaticResource SquadaOne}" Text="Wachtwoord:" HorizontalAlignment="Right"/>
+
+                <TextBlock Height="80"
+   HorizontalAlignment="Right"
+   FontSize="80" 
+  FontFamily="{StaticResource SquadaOne}" Text="Email:" />
+                <TextBlock Height="80"
+  HorizontalAlignment="Right"
+  FontSize="80" 
+ FontFamily="{StaticResource SquadaOne}" Text="Postcode:"/>
+
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical" Grid.Column="1">
+                <TextBox x:Name="Gebruikersnaam"  Height="80" Width="550" HorizontalAlignment="Left" 
+VerticalAlignment="Top" FontSize="57" Style="{StaticResource Textbox1}" Background="#F3C9A680" TextChanged="Gebruikersnaam_TextChanged"
+         Text=""/>
+                <TextBlock Height="10"/>
+                <TextBox x:Name="wacht"  Height="80" Width="550" 
+ HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="70"
+Style="{StaticResource Textbox1}"  Background="#F3C9A680" />
+                <TextBlock Height="10"/>
+                <TextBox x:Name="mail"  Height="80" Width="550" HorizontalAlignment="Left" 
+VerticalAlignment="Top" FontSize="57" Style="{StaticResource Textbox1}" Background="#F3C9A680" TextChanged="mail_TextChanged"
+         Text=""/>
+                <TextBlock Height="10"/>
+                <TextBox x:Name="Postcode"  Height="80" Width="550" 
+        HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="70"
+       Style="{StaticResource Textbox1}"  Background="#F3C9A680"
+     Text=""/>
+
+            </StackPanel>
 
 
+        </Grid>
 
-        <!--! wachtwoord !-->
-
-        <TextBlock Height="80"
-                 HorizontalAlignment="Left"
-                 FontSize="80" 
-                FontFamily="{StaticResource SquadaOne}" Text="Wachtwoord:" Margin="262,464,0,464"/>
-
-        <PasswordBox x:Name="ww"  Height="80" Width="550" 
-                    HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="70"
-                   Style="{StaticResource Passwordbox}" Margin="660,469,0,0" Background="#F3C9A680"/>
-
-        <!--! Email !-->
-        <TextBlock Height="80"
-                 HorizontalAlignment="Right"
-                 FontSize="80" 
-                FontFamily="{StaticResource SquadaOne}" Text="Email:" Margin="0,554,785,374"/>
-
-        <TextBox x:Name="mail"  Height="80" Width="550" HorizontalAlignment="Left" 
-        VerticalAlignment="Top" FontSize="57" Style="{StaticResource Email}" Margin="660,559,0,0" Background="#F3C9A680" TextChanged="mail_TextChanged"/>
-
-        <!--! Postcode !-->
-
-        <TextBlock Height="80"
-                 HorizontalAlignment="Right"
-                 FontSize="80" 
-                FontFamily="{StaticResource SquadaOne}" Text="Postcode:" Margin="0,636,785,292"/>
-
-        <TextBox x:Name="Postcode"  Height="80" Width="550" 
-                    HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="70"
-                   Style="{StaticResource Postcode}" Margin="660,644,0,0" Background="#F3C9A680"/>
+        
 
         <!--! teruggaan !-->
-        <Button Content="Teruggaan" Click="MainWindowClick" Height="96" HorizontalAlignment="Left" Name="MainButton" VerticalAlignment="Top"  Width="267" Margin="1115,69,0,0" ></Button>
+      <Image Source="/Assets/Terug.png" Width="300" Height="80" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="30" Mouse.MouseUp="Image_MouseUp"  Cursor="Hand"/>
+
+        
 
 
 
         <!--! profiel !-->
-        <Image Source="/Assets/profiel.png" Margin="41,16,872,812"/>
+        <Grid Grid.Row="0">
+            <Image Source="/Assets/profiel.png" Width="500" Height="150" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        </Grid>
+        
 
-        <!--! Opslaan !-->
-        <Image Source="/Assets/opslaan.png" Margin="1001,852,78,57"/>
-
+        
 
     </Grid>
 </Window>
