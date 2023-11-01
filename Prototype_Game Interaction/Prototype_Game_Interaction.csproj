@@ -15,7 +15,19 @@
 		<Content Include="Assets\Achtergrond.png">
 		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</Content>
+		<Content Include="Assets\Beginscherm.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\GameTitel.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\Instellingen.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
 		<Content Include="Assets\Player1.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\player1curlSheet.png">
 		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</Content>
 		<Content Include="Assets\player1curlSheetFirstFrame.png">
@@ -24,7 +36,22 @@
 		<Content Include="Assets\Player2.png">
 		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</Content>
+		<Content Include="Assets\player2curlSheet.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\player2curlSheetFirstFrame.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
 		<Content Include="Assets\rollenFx.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\Speler1.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\Speler2.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\Start.png">
 		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</Content>
 		<Content Include="Assets\Terug.png">
@@ -42,16 +69,43 @@
 	<ItemGroup>
 		<None Remove="Assets\Accepteren keybind change.png" />
 		<None Remove="Assets\Achtergrond.png" />
+		<None Remove="Assets\Beginscherm.png" />
+		<None Remove="Assets\GameTitel.png" />
+		<None Remove="Assets\Hoofdmenu.png" />
+		<None Remove="Assets\Instellingen.png" />
+		<None Remove="Assets\PijltjesKeys.png" />
 		<None Remove="Assets\Player1.png" />
+		<None Remove="Assets\player1curlSheet.png" />
 		<None Remove="Assets\player1curlSheetFirstFrame.png" />
 		<None Remove="Assets\Player2.png" />
+		<None Remove="Assets\player2curlSheet.png" />
+		<None Remove="Assets\player2curlSheetFirstFrame.png" />
 		<None Remove="Assets\rollenFx.png" />
+		<None Remove="Assets\Speler1.png" />
+		<None Remove="Assets\Speler2.png" />
+		<None Remove="Assets\Start.png" />
 		<None Remove="Assets\Terug.png" />
 		<None Remove="Assets\TerugFx.png" />
+		<None Remove="Assets\WASDKeys.png" />
 		<None Remove="Teruggaanfx.png" />
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Content Include="Assets\PijltjesKeys.png">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Include="Assets\WASDKeys.png">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	</ItemGroup>
+
+	<ItemGroup>
+		<Content Include="Assets\Hoofdmenu.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
 		<Resource Include="Teruggaan.png" />
 		<Resource Include="onHover.png" />
 		<Content Include="Assets\rollen.png">

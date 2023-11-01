@@ -17,42 +17,36 @@
         </ResourceDictionary>
     </Window.Resources>
     <!-- Grid voor het Pauze menu -->
-
+    
     <Grid>
         <Grid Height="1008" VerticalAlignment="Top">
             <TextBlock Name ="TitelScherm"
                        TextAlignment="Center"
-                       Margin="48,44,1034,862"
-                       FontSize="80"
+                       Width="340"
+                       Margin="34,44,1038,862"
+                       FontSize="64"
                        Text="Pauze menu"
                        FontFamily="{StaticResource SquadaOne}"/>
 
             <Button Name="Terugnaarmenu" 
                     Content="Terug naar het begin menu" 
                     Click="ZekerheidClick"
-                    FontSize="50"
+                    FontSize="30"
                     FontFamily="{StaticResource SquadaOne}"
-                    Margin="25,897,902,44" RenderTransformOrigin="0.301,0.544"
+                    Margin="48,914,1078,44" RenderTransformOrigin="0.301,0.544"
             />
 
             <Button Name="Verder" 
                     Content="Verder spelen" 
                     Click="GameClick"
-                    FontSize="50"
+                    FontSize="25"
                     FontFamily="{StaticResource SquadaOne}"
-                    Margin="1127,897,35,44"
+                    Margin="1214,914,62,44"
             />
 
-            <Button Name="Beindig" 
-                    Content="Spel beëindigen" 
-                    Click="EindClick"
-                    FontSize="50"
-                    FontFamily="{StaticResource SquadaOne}"
-                    Margin="668,897,434,44"
-            />
 
         </Grid>
-        <Image Source="/Assets/Player1.png" Margin="0,551,978,0"/>
-        <Image Source="/Assets/Player2.png"  Margin="978,550,-10,-7"/>
+        <Image Source="/Assets/Player1.png" Margin="0,511,1135,195"/>
+        <Image Source="/Assets/Player2.png"  Margin="1116,504,10,195"/>
     </Grid>
 </Window>
