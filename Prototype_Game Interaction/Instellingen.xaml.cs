@@ -19,10 +19,48 @@ namespace Prototype_Game_Interaction
 
     public partial class Instellingen : Window
     {
+        private int initialValueMuziek = 0; // Het oorspronkelijke getal
+        private int initialValueGeluid = 0; // Het oorspronkelijke getal
+
 
         public Instellingen()
         {
             InitializeComponent();
+            this.KeyDown += MainWindow_keyDown;
+            muziekSlider.ValueChanged += MuziekSlider_ValueChanged;
+            geluidSlider.ValueChanged += GeluidSlider_ValueChanged;
+        }
+
+        private void MuziekSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            // Hier berekenen we de nieuwe waarde van de TextBlock op basis van de sliderwaarde.
+            // Je kunt de berekening aanpassen op basis van je vereisten.
+            int newValue = initialValueMuziek + (int)muziekSlider.Value;
+
+            // Zorg ervoor dat de nieuwe waarde niet onder de minimumwaarde gaat, bijvoorbeeld 0.
+            if (newValue < 0)
+            {
+                newValue = 0;
+            }
+
+            // Stel de nieuwe waarde in voor de TextBlock
+            muziekSliderVolume.Text = newValue.ToString();
+        }
+
+        private void GeluidSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            // Hier berekenen we de nieuwe waarde van de TextBlock op basis van de sliderwaarde.
+            // Je kunt de berekening aanpassen op basis van je vereisten.
+            int newValue = initialValueGeluid + (int)geluidSlider.Value;
+
+            // Zorg ervoor dat de nieuwe waarde niet onder de minimumwaarde gaat, bijvoorbeeld 0.
+            if (newValue < 0)
+            {
+                newValue = 0;
+            }
+
+            // Stel de nieuwe waarde in voor de TextBlock
+            geluidSliderVolume.Text = newValue.ToString();
         }
 
         private void TeruggaanButton_Click(object sender, RoutedEventArgs e)
@@ -34,6 +72,13 @@ namespace Prototype_Game_Interaction
                     StartSpel.Visibility = Visibility.Visible;
                      
                 }
+
+                else if (SharedData.CurrentScreen == "PauzeMenu")
+                {
+                    PauzeMenu pauzeMenu = new PauzeMenu();
+                    pauzeMenu.Visibility = Visibility.Visible;
+                }
+                
                 else
                 {
                     SharedData.CurrentScreen = "MainWindow";
@@ -43,6 +88,18 @@ namespace Prototype_Game_Interaction
                 }
                 this.Visibility = Visibility.Hidden;
             }    
+        }
+
+        private void MainWindow_keyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Escape) 
+            {
+                SharedData.CurrentScreen = "MainWindow";
+
+                MainWindow mainWindow = new MainWindow();
+                mainWindow.Visibility = Visibility.Visible;
+                this.Visibility = Visibility.Hidden;
+            }
         }
 
         private async void RollButton_Click(object sender, RoutedEventArgs e)
@@ -71,6 +128,7 @@ namespace Prototype_Game_Interaction
 
             int randomIndex = random.Next(randomTexts.Length);
             randomText.Text = randomTexts[randomIndex];
-        } 
+        }
+
     }
 }

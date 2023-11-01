@@ -23,6 +23,7 @@ namespace Prototype_Game_Interaction
         public ScoreBoard()
         {
             InitializeComponent();
+            this.KeyDown += MainWindow_keyDown; // voor de knop om terug te gaan naar het hoofdmenu
         }
         private void MainWindowClick(object sender, RoutedEventArgs e)
         {
@@ -31,6 +32,17 @@ namespace Prototype_Game_Interaction
             MainWindow mainWindow = new MainWindow();
             mainWindow.Visibility = Visibility.Visible;
             this.Visibility = Visibility.Hidden;
+        }
+
+        private void MainWindow_keyDown(object sender, KeyEventArgs e)
+        {
+            // when the Esc key is pressed the screen will go back to the main menu
+            if (e.Key == Key.Escape)
+            {
+                MainWindow mainWindow = new MainWindow();
+                mainWindow.Visibility = Visibility.Visible;
+                this.Visibility = Visibility.Hidden;
+            }
         }
     }
 }

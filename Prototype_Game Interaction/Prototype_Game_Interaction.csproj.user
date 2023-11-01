@@ -7,16 +7,16 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="account.xaml.cs">
+    <Compile Update="AfsluitMenu.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="EndGame.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="GameWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Help.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="Inlog.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Instellingen.xaml.cs">
@@ -36,10 +36,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="account.xaml">
+    <Page Update="AfsluitMenu.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Inlog.xaml">
+    <Page Update="EndGame.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="PauzeMenu.xaml">

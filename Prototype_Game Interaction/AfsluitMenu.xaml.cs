@@ -11,36 +11,47 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using Prototype_Game_Interaction;
 
 namespace Prototype_Game_Interaction
 {
     /// <summary>
-    /// Interaction logic for Help.xaml
+    /// Interaction logic for AfsluitMenu.xaml
     /// </summary>
-    public partial class Help : Window
+    public partial class AfsluitMenu : Window
     {
-        public Help()
+        public AfsluitMenu()
         {
             InitializeComponent();
-            this.KeyDown += MainWindow_KeyDown; // maakt onderdeel uit van de key press om terug te gaan naar het begin menu. 
+            this.KeyDown += Afsluiten_keyDown;
+            this.KeyDown += MainWindow_keyDown;
         }
 
-        private void TeruggaanButton_Click(object sender, RoutedEventArgs e)
+        private void AfsluitenClick(object sender, RoutedEventArgs e)
         {
+            Application.Current.Shutdown();
+        }
+
+        private void NietafsluitenClick(object sender, RoutedEventArgs e)
+        {
+            SharedData.CurrentScreen = "MainWindow";
+
             MainWindow mainWindow = new MainWindow();
             mainWindow.Visibility = Visibility.Visible;
             this.Visibility = Visibility.Hidden;
         }
 
-            private void MainWindow_KeyDown(object sender, KeyEventArgs e)
+        private void Afsluiten_keyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                Application.Current.Shutdown();
+            }
+        }
+
+        private void MainWindow_keyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Escape)
             {
-                // when the Esc key is pressed the screen will go to the BeginMenu
-                // voor de knop om naar het begin menu te gaan
-                SharedData.CurrentScreen = "MainWindow";
-
                 MainWindow mainWindow = new MainWindow();
                 mainWindow.Visibility = Visibility.Visible;
                 this.Visibility = Visibility.Hidden;

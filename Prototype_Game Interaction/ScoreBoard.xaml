@@ -5,10 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Prototype_Game_Interaction"
         mc:Ignorable="d"
-        Title="ScoreBoard" Height="450" Width="800"
+        Title="ScoreBoard" Height="1024" Width="1440"
         WindowStartupLocation="CenterScreen">
-    
+
+    <!-- Ophalen van het het Styles Bestand-->
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
     <Grid>
-        <Button Content="Beginscherm" Click="MainWindowClick" Height="25" HorizontalAlignment="Left" Name="MainButton" VerticalAlignment="Top"  Width="100" ></Button>
+        <Button Content="Beginscherm" FontFamily="{StaticResource SquadaOne}" Click="MainWindowClick" Height="75" HorizontalAlignment="Left" Name="MainButton" VerticalAlignment="Top"  Width="210" FontSize="40" ></Button>
     </Grid>
 </Window>

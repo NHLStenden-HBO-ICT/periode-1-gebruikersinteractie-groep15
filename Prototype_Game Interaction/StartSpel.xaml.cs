@@ -23,6 +23,7 @@ namespace Prototype_Game_Interaction
         public StartSpel()
         {
             InitializeComponent();
+            this.KeyDown += MainWindow_keydown;
         }
         private void SpelenClick(object sender, RoutedEventArgs e)
         {
@@ -45,6 +46,18 @@ namespace Prototype_Game_Interaction
             Instellingen instellingen = new Instellingen();
             instellingen.Visibility = Visibility.Visible;
             this.Visibility = Visibility.Hidden;
+        }
+
+        private void MainWindow_keydown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Escape) 
+            {
+                SharedData.CurrentScreen = "MainWindow";
+
+                MainWindow mainWindow = new MainWindow();
+                mainWindow.Visibility = Visibility.Visible;
+                this.Visibility= Visibility.Hidden;
+            }
         }
     }
 }

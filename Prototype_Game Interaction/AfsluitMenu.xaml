@@ -1,16 +1,13 @@
-﻿<Window x:Class="Prototype_Game_Interaction.ZekerheidMenu"
+﻿<Window x:Class="Prototype_Game_Interaction.AfsluitMenu"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Prototype_Game_Interaction"
         mc:Ignorable="d"
-        Title="ZekerheidMenu" Height="1024" Width="1440"
-        ResizeMode="CanMinimize"
-        WindowStartupLocation="CenterScreen"
-        >
-
-    <!-- Ophalen van het het Styles Bestand-->
+        Title="AfsluitMenu" Height="1025" Width="1440"
+        WindowStartupLocation="CenterScreen">
+    
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -20,37 +17,35 @@
     </Window.Resources>
 
     <Grid>
-        <TextBlock x:Name="Text"
-                   TextAlignment="Center"
-                   FontFamily="{StaticResource SquadaOne}"
-                   FontSize="48"
-                   Margin="219,267,219,666"
-                   Height="75"
-                   ><Run Text="weet je zeker dat je "/><Run Language="nl-nl" Text="terug naar"/><Run Text=" het begin menu wilt"/><Run Language="nl-nl" Text="?"/></TextBlock>
+        <TextBlock Name="Text"
+            TextAlignment="Center"
+            Text="weet je zeker dat je wilt afsluiten?"
+            FontFamily="{StaticResource SquadaOne}"
+            FontSize="48"
+            Margin="219,267,219,666"
+            Height="75"/>
 
         <!-- Ja button -->
-        <Button x:Name="Jaikwilterug"
-              Click="JaClick"
-              Margin="511,586,511,327">
+        <Button x:Name="Jaikwilafsluiten"
+      Click="AfsluitenClick"
+      Margin="511,586,511,327">
             <Button.Style>
                 <Style 
-                    TargetType="Button" BasedOn="{StaticResource jaButton}">
+            TargetType="Button" BasedOn="{StaticResource jaButton}">
                 </Style>
             </Button.Style>
         </Button>
 
         <!-- Nee button -->
-        <Button x:Name="neeikwilverder"
-               Click="NeeClick"
-               Margin="511,462,511,450">
+        <Button x:Name="Nietafsluiten"
+       Click="NietafsluitenClick"
+       Margin="511,462,511,450">
             <Button.Style>
                 <Style 
-                    TargetType="Button" BasedOn="{StaticResource neeButton}">
+            TargetType="Button" BasedOn="{StaticResource neeButton}">
                 </Style>
             </Button.Style>
         </Button>
-
-
 
         <Image Source="/Assets/Player1.png" Margin="0,706,1135,0"/>
         <Image Source="/Assets/Player2.png"  Margin="1136,706,-10,-7"/>
