@@ -19,17 +19,191 @@
         </ResourceDictionary>
     </Window.Resources>
 
+
     <Grid>
-        <TextBlock Name="knop" 
-           Text="Druk eens op Enter"
-           FontFamily="{StaticResource SquadaOne}" 
-           FontSize="30" 
-           Height="40" 
-           Width="220"  
-           Margin="10,44,1038,800"
-           />
-        <Image Name="Player1curl" Source="/Assets/player1curlSheetFirstFrame.png" Margin="10,254,718,42"/>
+
+        <Rectangle x:Name="countdownOverlay" 
+                   Fill="AliceBlue"
+                   Opacity="0.9"
+                   Visibility="Hidden" 
+                   Panel.ZIndex="1"/>
+
+        <TextBlock x:Name="countDown"
+            HorizontalAlignment="Center" 
+            Margin="0,234,0,0" 
+            TextWrapping="Wrap" 
+            VerticalAlignment="Top" 
+            FontFamily="{StaticResource SquadaOne}"
+            FontSize="300"
+            TextAlignment="Center"
+            Height="295" 
+            Width="258" 
+            Text="3"
+            Panel.ZIndex="2">
+            <TextBlock.Foreground>
+                <SolidColorBrush Color="#586c70" />
+            </TextBlock.Foreground>
+        </TextBlock>
+
+        <Grid>
+
+
+        </Grid>
+
+
+        <Grid>
+            <Image Margin="0,-16,0,0" Source="/Assets/GameBackground2.png" Stretch="Fill" Panel.ZIndex="-2" Opacity="0.5" RenderOptions.BitmapScalingMode="NearestNeighbor"/>
+
+
+            <Image x:Name="Player1curl" 
+               Source="/Assets/player1curlSheetFirstFrame.png" 
+               Margin="-42,184,706,48" RenderOptions.BitmapScalingMode="NearestNeighbor">
+                <Image.Effect>
+                    <DropShadowEffect Color="Yellow" Direction="0" BlurRadius="50" Opacity="1"/>
+                </Image.Effect>
+                
+            </Image>
+
+
+            <Image x:Name="Player2curl" 
+               Source="/Assets/player2curlSheetFirstFrame.png" 
+               Margin="706,184,-42,48" RenderOptions.BitmapScalingMode="NearestNeighbor">
+                <Image.Effect>
+                    <DropShadowEffect Color="#fdb4d8" Direction="0" BlurRadius="50" Opacity="0.5"/>
+                </Image.Effect>
+            </Image>
+
+
+
+            <!-- Textblock voor welke key player 1 moet aanslaan om punten te scoren -->
+            <TextBlock x:Name="player1KeyInput"
+           Margin="196,264,944,544" 
+           Width="300"
+           Height="200"
+           FontFamily="{StaticResource SquadaOne}"
+           FontSize="176"
+           FontWeight="UltraBold"
+           Foreground="#6d92ac"
+           Text="W"
+           TextAlignment="Center"/>
+
+            <!-- Textblock voor welke key player 2 moet aanslaan om punten te scoren -->
+            <TextBlock x:Name="player2KeyInput"      
+           Margin="944,264,196,544" 
+           Width="300"
+           Height="200"
+           FontFamily="{StaticResource SquadaOne}"
+           FontSize="184"
+           FontWeight="UltraBold"
+           Foreground="#6d92ac"
+           Text="↑"
+           TextAlignment="Center"/>
+
+            <!-- Weergave van player 1 huidige score -->
+            <TextBlock x:Name="player1ScoreText"
+           Margin="55,90,0,0" 
+           Width="184"
+           Height="92"
+           FontFamily="{StaticResource SquadaOne}"
+           FontSize="72"
+           HorizontalAlignment="Left"
+           VerticalAlignment="Top" 
+           TextAlignment="Center">
+                <TextBlock.Foreground>
+                    <SolidColorBrush Color="#FF6D92AC" />
+                </TextBlock.Foreground>
+                <Run Language="nl-nl" Text="0"/>
+            </TextBlock>
+
+            <TextBlock 
+                Margin="54,36,0,0" 
+                Width="186"
+                Height="54"
+                FontFamily="{StaticResource SquadaOne}"
+                FontSize="48"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top" 
+                TextAlignment="Center"
+                ><Run Foreground="#586c70" Text="Speler 1"/></TextBlock>
+
+            <!-- Weergave van player 2 huidige score -->
+            <TextBlock x:Name="player2ScoreText"
+            Margin="1203,90,57,0"
+            Height="92"
+            FontFamily="{StaticResource SquadaOne}"
+            FontSize="72"
+            VerticalAlignment="Top" 
+            TextAlignment="Center">
+                <Run Foreground="#6d92ac" Text="0"/>
+                <TextBlock.Foreground>
+                    <SolidColorBrush Color="#FF6D92AC" />
+                </TextBlock.Foreground>
+            </TextBlock>
+
+            <TextBlock
+                Margin="1200,36,54,0"
+                Height="54"
+                FontFamily="{StaticResource SquadaOne}"
+                FontSize="48"
+                VerticalAlignment="Top" 
+                TextAlignment="Center"
+                ><Run Foreground="#586c70" Text="Speler 2"/></TextBlock>
+
+            <!-- Textblock voor de 1 minuut game-timer -->
+            <TextBlock x:Name="timeTextBlock"
+            HorizontalAlignment="Center" 
+                   Margin="0,77,0,0" 
+                   TextWrapping="Wrap" 
+                   VerticalAlignment="Top" 
+                   TextAlignment="Center"
+                   FontFamily="{StaticResource SquadaOne}"
+                   FontSize="164"
+                   Height="162" 
+                   Width="188"><Run Language="nl-nl"/><Run Text="30"/>
+                <TextBlock.Foreground>
+                    <SolidColorBrush Color="#586c70" />
+                </TextBlock.Foreground>
+            </TextBlock>
+
+            <TextBlock 
+                    Margin="0,42,0,0" 
+                    Width="186"
+                    Height="54"
+                    FontFamily="{StaticResource SquadaOne}"
+                    FontSize="56"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Top" 
+                    
+                    TextAlignment="Center"
+                    ><Run Foreground="#586c70" Text="Timer"/></TextBlock>
+            <TextBlock 
+                Margin="253,232,0,0" 
+                Width="186"
+                Height="54"
+                FontFamily="{StaticResource SquadaOne}"
+                FontSize="56"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top" 
+                    
+                TextAlignment="Center"
+                    ><Run Foreground="#FF586C70" Language="nl-nl" Text="Toets"/></TextBlock>
+            <TextBlock 
+                Margin="1001,232,0,0" 
+                Width="186"
+                Height="54"
+                FontFamily="{StaticResource SquadaOne}"
+                FontSize="56"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top" 
+                    
+                TextAlignment="Center"
+                    ><Run Foreground="#FF586C70" Language="nl-nl" Text="Toets"/></TextBlock>
+
+        </Grid>
+
+
 
     </Grid>
 
 </Window>
+

@@ -22,37 +22,50 @@
         <Grid Height="1008" VerticalAlignment="Top">
             <TextBlock Name ="TitelScherm"
                        TextAlignment="Center"
-                       Margin="48,44,1034,862"
-                       FontSize="80"
+                       Width="340"
+                       Margin="34,44,1038,862"
+                       FontSize="64"
                        Text="Pauze menu"
                        FontFamily="{StaticResource SquadaOne}"/>
 
-            <Button Name="Terugnaarmenu" 
-                    Content="Terug naar het begin menu" 
-                    Click="ZekerheidClick"
-                    FontSize="50"
-                    FontFamily="{StaticResource SquadaOne}"
-                    Margin="25,897,902,44" RenderTransformOrigin="0.301,0.544"
-            />
 
-            <Button Name="Verder" 
-                    Content="Verder spelen" 
-                    Click="GameClick"
-                    FontSize="50"
-                    FontFamily="{StaticResource SquadaOne}"
-                    Margin="1127,897,35,44"
-            />
+            <!-- Beginscherm button -->
+            <Button x:Name="Terugnaarmenu"
+                Click="ZekerheidClick"
+                Margin="511,582,511,332">
+                <Button.Style>
+                    <Style 
+                        TargetType="Button" BasedOn="{StaticResource beginschermButton}">
+                    </Style>
+                </Button.Style>
+            </Button>
 
-            <Button Name="Beindig" 
-                    Content="Spel beëindigen" 
-                    Click="EindClick"
-                    FontSize="50"
-                    FontFamily="{StaticResource SquadaOne}"
-                    Margin="668,897,434,44"
-            />
+            <!-- Game hervatten button -->
+            <Button x:Name="Verder"
+                Click="GameClick"
+                Margin="511,338,511,576">
+                <Button.Style>
+                    <Style 
+                        TargetType="Button" BasedOn="{StaticResource hervattenButton}">
+                    </Style>
+                </Button.Style>
+            </Button>
+
+            <!-- Instellingen button -->
+            <Button x:Name="InstellingenButton"
+                Click="InstellingenClick"
+                Margin="511,460,511,454">
+                <Button.Style>
+                    <Style 
+                        TargetType="Button" BasedOn="{StaticResource instellingenButton}">
+                    </Style>
+                </Button.Style>
+            </Button>
+
+
 
         </Grid>
-        <Image Source="/Assets/Player1.png" Margin="0,551,978,0"/>
-        <Image Source="/Assets/Player2.png"  Margin="978,550,-10,-7"/>
+        <Image Source="/Assets/Player1.png" Margin="0,706,1135,-1"/>
+        <Image Source="/Assets/Player2.png"  Margin="1136,705,-10,-7"/>
     </Grid>
 </Window>

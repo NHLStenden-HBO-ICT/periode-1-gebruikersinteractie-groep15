@@ -69,6 +69,400 @@
         </Style.Triggers>
     </Style>
 
+    <!-- Stijl voor on-hover effect: HERSTART KNOP -->
+    <Style x:Key="herstartButton" TargetType="Button" BasedOn="{StaticResource disableDefault}">
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="Assets/HerstartenFx.png" />
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="Background" Value="Transparent"/>
+            </Trigger>
+            <Trigger Property="IsMouseOver" Value="False">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="Assets/Herstarten.png" />
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="Background" Value="Transparent" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <!-- Stijl voor on-hover effect: Start Spel KNOP -->
+    <Style x:Key="startSpelButton" TargetType="Button" BasedOn="{StaticResource disableDefault}">
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="Assets/StartSpelFx.png" />
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="Background" Value="Transparent"/>
+            </Trigger>
+            <Trigger Property="IsMouseOver" Value="False">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="Assets/StartSpel.png" />
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="Background" Value="Transparent" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <!-- Stijl voor on-hover effect: SCOREBOARD KNOP -->
+    <Style x:Key="leaderboardButton" TargetType="Button" BasedOn="{StaticResource disableDefault}">
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="Assets/LeaderboardFx.png" />
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="Background" Value="Transparent"/>
+            </Trigger>
+            <Trigger Property="IsMouseOver" Value="False">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="Assets/Leaderboard.png" />
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="Background" Value="Transparent" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <!-- Stijl voor on-hover effect: INSTELLINGEN KNOP -->
+    <Style x:Key="instellingenButton" TargetType="Button" BasedOn="{StaticResource disableDefault}">
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="Assets/InstellingenFx.png" />
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="Background" Value="Transparent"/>
+            </Trigger>
+            <Trigger Property="IsMouseOver" Value="False">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="Assets/Instellingen.png" />
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="Background" Value="Transparent" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <!-- Stijl voor on-hover effect: HELP KNOP -->
+    <Style x:Key="helpButton" TargetType="Button" BasedOn="{StaticResource disableDefault}">
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="Assets/HelpFx.png" />
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="Background" Value="Transparent"/>
+            </Trigger>
+            <Trigger Property="IsMouseOver" Value="False">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="Assets/Help.png" />
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="Background" Value="Transparent" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <!-- Stijl voor on-hover effect: AFSLUITEN KNOP -->
+    <Style x:Key="afsluitenButton" TargetType="Button" BasedOn="{StaticResource disableDefault}">
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="Assets/AfsluitenFx.png" />
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="Background" Value="Transparent"/>
+            </Trigger>
+            <Trigger Property="IsMouseOver" Value="False">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="Assets/Afsluiten.png" />
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="Background" Value="Transparent" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <!-- Stijl voor on-hover effect: START KNOP, om het spel te starten in het StartSpel window -->
+    <Style x:Key="startenButton" TargetType="Button" BasedOn="{StaticResource disableDefault}">
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="Assets/StartFx.png" />
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="Background" Value="Transparent"/>
+            </Trigger>
+            <Trigger Property="IsMouseOver" Value="False">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="Assets/Start.png" />
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="Background" Value="Transparent" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <!-- Stijl voor on-hover effect: JA bevestigings knop -->
+    <Style x:Key="jaButton" TargetType="Button" BasedOn="{StaticResource disableDefault}">
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="Assets/JaButtonFx.png" />
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="Background" Value="Transparent"/>
+            </Trigger>
+            <Trigger Property="IsMouseOver" Value="False">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="Assets/JaButton.png" />
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="Background" Value="Transparent" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <!-- Stijl voor on-hover effect: JA bevestigings knop -->
+    <Style x:Key="neeButton" TargetType="Button" BasedOn="{StaticResource disableDefault}">
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="Assets/NeeButtonFx.png" />
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="Background" Value="Transparent"/>
+            </Trigger>
+            <Trigger Property="IsMouseOver" Value="False">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="Assets/NeeButton.png" />
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="Background" Value="Transparent" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <!-- Stijl voor on-hover effect: BEGINSCHERM knop -->
+    <Style x:Key="beginschermButton" TargetType="Button" BasedOn="{StaticResource disableDefault}">
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="Assets/BeginschermFx.png" />
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="Background" Value="Transparent"/>
+            </Trigger>
+            <Trigger Property="IsMouseOver" Value="False">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="Assets/Beginscherm.png" />
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="Background" Value="Transparent" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <!-- Stijl voor on-hover effect: HERVATTEN knop -->
+    <Style x:Key="hervattenButton" TargetType="Button" BasedOn="{StaticResource disableDefault}">
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="Assets/HervattenFx.png" />
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="Background" Value="Transparent"/>
+            </Trigger>
+            <Trigger Property="IsMouseOver" Value="False">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="Assets/Hervatten.png" />
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="Background" Value="Transparent" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <!-- Sliders voor instellingenscherm -->
+    <Style x:Key="SliderRepeatButton" TargetType="RepeatButton">
+        <Setter Property="SnapsToDevicePixels" Value="true" />
+        <Setter Property="OverridesDefaultStyle" Value="true" />
+        <Setter Property="IsTabStop" Value="false" />
+        <Setter Property="Focusable" Value="false" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="RepeatButton">
+                    <Border SnapsToDevicePixels="True" Background="#000000" Opacity="0.1" Height="26"/>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="SliderRepeatButton1" TargetType="RepeatButton">
+        <Setter Property="SnapsToDevicePixels" Value="true" />
+        <Setter Property="OverridesDefaultStyle" Value="true" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="RepeatButton">
+                    <Border SnapsToDevicePixels="True" Background="#6D92AC" Height="26"/>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="SliderThumb" TargetType="Thumb">
+        <Setter Property="SnapsToDevicePixels" Value="true" />
+        <Setter Property="OverridesDefaultStyle" Value="true" />
+        <Setter Property="Height" Value="60" />
+        <Setter Property="Width" Value="60" />
+        <Setter Property="Margin" Value="-5, 0, -5, 0"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Thumb">
+                    <Grid>
+                        <Ellipse Height="60" Width="60" Fill="#33d6f5"/>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsDragging" Value="true">
+                            
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="MaxWidth" Value="805" />
+    </Style>
+
+    <ControlTemplate x:Key="Slider" TargetType="Slider">
+        <Grid Margin="25,0,25,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" MinHeight="{TemplateBinding MinHeight}" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Track Grid.Row="1" x:Name="PART_Track" >
+                <Track.DecreaseRepeatButton>
+                    <RepeatButton Style="{StaticResource SliderRepeatButton1}" Command="Slider.DecreaseLarge" />
+                </Track.DecreaseRepeatButton>
+                <Track.IncreaseRepeatButton>
+                    <RepeatButton Style="{StaticResource SliderRepeatButton}"  Command="Slider.IncreaseLarge" />
+                </Track.IncreaseRepeatButton>
+                <Track.Thumb>
+                    <Thumb Style="{StaticResource SliderThumb}" />
+                </Track.Thumb>
+            </Track>
+        </Grid>
+    </ControlTemplate>
+
+    <Style x:Key="Horizontal_Slider" TargetType="Slider">
+        <Setter Property="Focusable" Value="False" />
+        <Setter Property="SnapsToDevicePixels" Value="true" />
+        <Setter Property="OverridesDefaultStyle" Value="true" />
+        <Style.Triggers>
+            <Trigger Property="Orientation" Value="Horizontal">
+                <Setter Property="MinHeight" Value="21" />
+                <Setter Property="MinWidth" Value="805" />
+                <Setter Property="Height" Value="26" />
+                <Setter Property="Background" Value="#6d92ac" />
+                <Setter Property="Template" Value="{StaticResource Slider}" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+
+    <!-- Stijl voor een ronde textbox-->
+    <Style TargetType="TextBox" x:Key="Textbox1">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type TextBox}">
+                    <Border x:Name="border"
+                               CornerRadius="10"
+                               BorderBrush="#aaa6a2"
+                               BorderThickness="2"
+                               Background="#fbeee4"
+>
+                        <ScrollViewer x:Name="PART_ContentHost"
+                               Focusable="false"
+                               HorizontalScrollBarVisibility="Hidden"
+                               VerticalScrollBarVisibility="Hidden"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- Stijl voor een ronde passwordbox-->
+    <Style TargetType="PasswordBox" x:Key="Passwordbox">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type PasswordBox}">
+                    <Border x:Name="border"
+                               CornerRadius="10"
+                               BorderBrush="#aaa6a2"
+                               BorderThickness="2"
+                               Background="#fbeee4"
+>
+                        <ScrollViewer x:Name="PART_ContentHost"
+                               Focusable="false"
+                               HorizontalScrollBarVisibility="Hidden"
+                               VerticalScrollBarVisibility="Hidden"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="account" TargetType="Button" BasedOn="{StaticResource disableDefault}">
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="/Assets/account.jpg" />
+
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="Background" Value="Transparent"/>
+            </Trigger>
+            <Trigger Property="IsMouseOver" Value="False">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="/Assets/account.jpg" />
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="Background" Value="Transparent" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+
 
 
 </ResourceDictionary>

@@ -5,11 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Prototype_Game_Interaction"
         mc:Ignorable="d"
-        Title="MainWindow" 
-        Width="{x:Static SystemParameters.PrimaryScreenWidth}"
-        Height="{x:Static SystemParameters.PrimaryScreenHeight}"
-        WindowStartupLocation="CenterScreen"
-        >
+        Title="MainWindow"
+        Width="1440"
+        Height="1024"
+        ResizeMode="CanMinimize"
+        WindowStartupLocation="CenterScreen">
+
 
     <Window.Resources>
         <ResourceDictionary>
@@ -19,31 +20,81 @@
         </ResourceDictionary>
     </Window.Resources>
 
-    <Grid>
-        <!-- Het hele grid-->
-        <Grid.RowDefinitions>
-            <RowDefinition Height ="*"/>
-            <RowDefinition Height ="3*"/>
-        </Grid.RowDefinitions>
-
-        <Label Content="Lifting to Victory" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Comic Sans MS" FontSize="90"/>
+    <!-- Achtergrond MainWindow -->
 
         
-        <!-- Grid voor Buttons-->
-        <Grid Grid.Row="1">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
 
-            <StackPanel Grid.ColumnSpan="3">
-                <Button Content="Spelen" FontFamily="{StaticResource SquadaOne}" Click="StartButtonClick" Height="75" HorizontalAlignment="Center" Name="StartButton" VerticalAlignment="Top"  Width="275" FontSize="50"></Button>
-                <Button Content="Scoreboard" FontFamily="{StaticResource SquadaOne}" Click="ScoreBoardClick" Height="75" HorizontalAlignment="Center" Name="ScoreButton" VerticalAlignment="Top"  Width="275" FontSize="50" ></Button>
-                <Button Content="Instellingen" FontFamily="{StaticResource SquadaOne}" Click="InstellingenClick" Height="75" HorizontalAlignment="Center" Name="InstellingenButton" VerticalAlignment="Top"  Width="275" FontSize="50"></Button>
-                <Button Content="Help" FontFamily="{StaticResource SquadaOne}" Click="HelpClick" Height="75" HorizontalAlignment="Center" Name="HelpButton" VerticalAlignment="Top"  Width="275" FontSize="50"></Button>
-                <Button Content="Afsluiten" FontFamily="{StaticResource SquadaOne}" Click="QuitButtonClick" Height="75" HorizontalAlignment="Center" Name="QuitButton" VerticalAlignment="Top"  Width="275" FontSize="50" ></Button>
-            </StackPanel>
-            
-        </Grid>
+
+    <Grid>
+
+        <!-- Achtergrond image -->
+        <Image Source="/Assets/Hoofdmenu.png" Stretch="Fill" Opacity="0.04" />
+        
+        <!-- Achtergrond spelers linksonder en rechtsonder -->
+        <Image Margin="0,706,1135,0" Source="/Assets/Player1.png" Stretch="Fill"/>
+        <Image Margin="1136,706,-10,-7" Source="/Assets/Player2.png" Stretch="Fill"/>
+        
+        <!-- Het hele grid-->
+        <!-- Titel van het spel-->
+        <!-- Titel van het spel -->
+        <Image Source="/Assets/GameTitel.png" Width="650" Height="100" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,60,0,0"/>
+
+        <!-- Start Spel button -->
+        <Button x:Name="StartButton"
+          Click="StartButtonClick"
+          Margin="511,285,511,629">
+            <Button.Style>
+                <Style 
+                 TargetType="Button" BasedOn="{StaticResource startSpelButton}">
+                </Style>
+            </Button.Style>
+        </Button>
+
+        <!-- Scoreboard button -->
+        <Button x:Name="ScoreButton"
+          Click="ScoreBoardClick"
+          Margin="511,406,511,508">
+            <Button.Style>
+                <Style 
+                   TargetType="Button" BasedOn="{StaticResource leaderboardButton}">
+                </Style>
+            </Button.Style>
+        </Button>
+
+        <!-- Instellingen button -->
+        <Button x:Name="InstellingenButton"
+  Click="InstellingenClick"
+  Margin="511,527,511,387">
+            <Button.Style>
+                <Style 
+           TargetType="Button" BasedOn="{StaticResource instellingenButton}">
+                </Style>
+            </Button.Style>
+        </Button>
+
+        <!-- Help button -->
+        <Button x:Name="HelpButton"
+Click="HelpClick"
+Margin="511,648,511,266">
+            <Button.Style>
+                <Style 
+         TargetType="Button" BasedOn="{StaticResource helpButton}">
+                </Style>
+            </Button.Style>
+        </Button>
+
+        <!-- Afsluiten button -->
+        <Button x:Name="QuitButton"
+Click="QuitButtonClick"
+Margin="511,769,511,144">
+            <Button.Style>
+                <Style 
+         TargetType="Button" BasedOn="{StaticResource afsluitenButton}">
+                </Style>
+            </Button.Style>
+        </Button>
+
+
+
     </Grid>
 </Window>

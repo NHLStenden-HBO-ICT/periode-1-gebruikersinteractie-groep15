@@ -39,16 +39,19 @@
                     </Style>
                 </Button.Style>
             </Button>
+            <Image Margin="100,241,1104,697" Source="/Assets/muziekLabel.png" Stretch="Fill"/>
+            <Image Margin="100,377,1104,561" Source="/Assets/geluidLabel.png" Stretch="Fill"/>
+
 
         </Grid>
-        
+
         <!-- Een border met een nested grid. Hierin speelt het dobbelsteen spelletje zich af -->
         <Border Name="CenterScreen"
                 BorderBrush="#586c70" 
                 CornerRadius="5"
                 Background="Transparent" 
                 BorderThickness="4" 
-                Margin="480,265,480,249">
+                Margin="490,504,490,28">
 
             <Grid ShowGridLines="False">
                 <Grid.RowDefinitions>
@@ -63,7 +66,7 @@
                        Foreground="#586c70"
                        VerticalAlignment="Top"
                            TextAlignment="Center"
-                       FontFamily="{StaticResource SquadaOne}" Margin="60,19,60,0"/>
+                       FontFamily="{StaticResource SquadaOne}" Margin="18,19,18,0"/>
 
                 <Label Name="resultLabel"
                     FontFamily="{StaticResource SquadaOne}" 
@@ -107,11 +110,72 @@
             </Grid>
         </Border>
 
+
+        <!-- Muziek harder en zachter zetten slider -->
+        <Slider x:Name="muziekSlider" 
+                Style="{StaticResource Horizontal_Slider}" 
+                VerticalAlignment="Top" 
+                Padding="60,0,60,0" 
+                Value="100" 
+                Minimum="0"
+                Maximum="100"
+                TickFrequency="10"
+                Width="300" 
+                Margin="356,245,278,0"  
+                Height="60">
+        </Slider>
+
+        <TextBlock x:Name="muziekSliderVolume" 
+                   HorizontalAlignment="Left" 
+                   Margin="1204,230,0,0" 
+                   TextWrapping="Wrap" 
+                   VerticalAlignment="Top" 
+                   TextAlignment="Center"
+                   FontSize="82"
+                   FontFamily="{StaticResource SquadaOne}"
+                   Height="90" Width="168">
+            <TextBlock.Foreground>
+                <SolidColorBrush Color="#586C70" />
+            </TextBlock.Foreground>
+            <Run Language="nl-nl" Text="100"/>
+        </TextBlock>
+
+
+        <!-- Geluid harder en zachter zetten slider -->
+        <Slider x:Name="geluidSlider" 
+                Style="{StaticResource Horizontal_Slider}" 
+                VerticalAlignment="Top" 
+                Padding="60,0,60,0" 
+                Value="100" 
+                Minimum="0"
+                Maximum="100"
+                TickFrequency="10"
+
+                Width="300" 
+                Margin="356,381,278,0"  
+                Height="60">
+        </Slider>
+
+        <TextBlock x:Name="geluidSliderVolume" 
+           HorizontalAlignment="Left" 
+           Margin="1204,366,0,0" 
+           TextWrapping="Wrap" 
+           VerticalAlignment="Top" 
+           TextAlignment="Center"
+           FontSize="82"
+           FontFamily="{StaticResource SquadaOne}"
+           Height="90" Width="168">
+            <TextBlock.Foreground>
+                <SolidColorBrush Color="#586C70" />
+            </TextBlock.Foreground>
+    <Run Language="nl-nl" Text="100"/>
+        </TextBlock>
+
         <!-- De images links- en rechtsonderin de hoeken -->
-        <Grid>
-        <Image Margin="0,706,1135,0" Source="/Assets/Player1.png" Stretch="Fill"/>
-        <Image Margin="1136,706,-10,-7" Source="/Assets/Player2.png" Stretch="Fill"/>
+        <Grid Panel.ZIndex="-3">
+            <Image Margin="0,706,1135,0" Source="/Assets/Player1.png" Stretch="Fill"/>
+            <Image Margin="1136,706,-10,-7" Source="/Assets/Player2.png" Stretch="Fill"/>
         </Grid>
-    
+
     </Grid>
 </Window>
