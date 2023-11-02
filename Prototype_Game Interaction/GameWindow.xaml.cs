@@ -303,11 +303,15 @@ namespace Prototype_Game_Interaction
             {
                 player1Score -= 5;
                 player1ScoreText.Text = $"{player1Score}";
+                Sound3Play = true;
+               
             }
             if (frameIndex == 16 && player2KeyNotPressed)
             {
                 player2Score -= 5;
                 player2ScoreText.Text = $"{player2Score}";
+                Sound3Play = true;
+                
             }
         }
 
@@ -573,6 +577,7 @@ namespace Prototype_Game_Interaction
                 player1ScoreText.Text = $"{player1Score}";
                 Sound2Play = true;
                 player2KeyNotPressed = false;
+                Soundeffect2();
             }
             else if (player == Player.Player2)
             {
@@ -580,11 +585,11 @@ namespace Prototype_Game_Interaction
                 player2ScoreText.Text = $"{player2Score}";
                 Sound2Play = true;
                 player2KeyNotPressed = false;
+                Soundeffect2();
             }
         }
 
        
-
         //geluidseffect1 dat is voor als je de knop goed indrukt
         private void Soundeffect1()
         {
@@ -614,21 +619,6 @@ namespace Prototype_Game_Interaction
                 Sound2Play = false;
             }
         }
-
-        //geluidseffect3 dat is voor als je de knop niet indrukt
-        private void Soundeffect3()
-        {
-            if (Sound3Play == true)
-            {
-                SoundPlayer soundnokey = new SoundPlayer("soundeffects/hitHurt.wav");
-                soundnokey.Play();
-            }
-            else
-            {
-                Sound3Play = false; 
-            }
-        }
-    }
 
     // enum om spelers te selecteren in de code.
     enum Player
