@@ -43,12 +43,20 @@
 
         </DataGrid>
 
-        <!-- Hoogste score -->
-        <Label Content="Hoogste score" Margin="0,825,0,0" Height="60" Width="170" FontFamily="{StaticResource SquadaOne}"  HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="30" BorderBrush="White" RenderTransformOrigin="0.435,6.859"/>
-        <Label Content="  Daniel   " x:Name="hoostescorenaam" Margin="610,885,0,0" Height="60" Width="110" FontFamily="{StaticResource SquadaOne}" Background="#33D6F5" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="30" BorderBrush="White"/>
-        <Label Content="   1232  " x:Name="hoostescore" Margin="720,885,0,0" Height="60" Width="115" FontFamily="{StaticResource SquadaOne}" Background="#33D6F5" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="30" BorderBrush="White" RenderTransformOrigin="0.826,0.542"/>
-
-
+        <!--  Hoogste score  -->
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,852,650,0">
+            <TextBlock x:Name="HighestScoreLabel" Text="Hoogste Score:" FontFamily="{StaticResource SquadaOne}" FontSize="25" FontWeight="Bold" RenderTransformOrigin="0.36,0.629" Height="49" Width="156"/>
+            <TextBlock x:Name="HighestScore" Text="Loading..." FontFamily="{StaticResource SquadaOne}" FontSize="25" RenderTransformOrigin="0.5,0.5" >
+                <TextBlock.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleX="-3.187"/>
+                        <RotateTransform/>
+                        <TranslateTransform X="0.445"/>
+                    </TransformGroup>
+                </TextBlock.RenderTransform>
+            </TextBlock>
+        </StackPanel>
 
 
 
@@ -194,7 +202,7 @@
 		*  Click=""                               : Click zorgt ervoor dat er in het .xaml.cs document een private void aanmaakt. Waardoor je de Button een functie kan geven als je er op drukt.
 		*  Cursor=""                              : Met cursor kan je instellen wat voor muisweergave je krijgt als je bijvoorbeeld over een button gaat. (In deze code heb ik Cursor="hand" gebruikt waardoor als je over de button gaat er een soort handje is in de plaats van het normale pijltje).
         * Source                                  : Zo weet het programma waar het de bestanden kan vinden. (In deze code gebruiken wij het bijvoorbeeld voor het scoreboard meer aantekleden met de vogels en de trekkers.-->
-	
+
 
 
 

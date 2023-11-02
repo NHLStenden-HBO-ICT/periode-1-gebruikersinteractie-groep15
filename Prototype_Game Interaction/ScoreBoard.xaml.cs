@@ -39,7 +39,7 @@ namespace Prototype_Game_Interaction
         {
             string relativePath = "GameScores.db";
             string currentFolder = AppDomain.CurrentDomain.BaseDirectory;
-            string databasePath = System.IO.Path.Combine(currentFolder, relativePath); 
+            string databasePath = System.IO.Path.Combine(currentFolder, relativePath);
             string connectionString = $@"Data Source={databasePath};Version=3;";
 
             using (var conn = new SQLiteConnection(connectionString))
@@ -54,7 +54,7 @@ namespace Prototype_Game_Interaction
                         {
                             DataTable dt = new DataTable("Scores");
                             sda.Fill(dt);
-                            Scores.ItemsSource = dt.DefaultView; 
+                            Scores.ItemsSource = dt.DefaultView;
                         }
                     }
                 }
@@ -62,8 +62,21 @@ namespace Prototype_Game_Interaction
                 {
                     MessageBox.Show($"An error occurred: {ex.Message}");
                 }
+                string cmdStringHighestScore = "SELECT MAX(Scores) AS HighestScore, Gebruikersnaam FROM Scores GROUP BY Gebruikersnaam ORDER BY HighestScore DESC LIMIT 1";
+                using (var cmdHighestScore = new SQLiteCommand(cmdStringHighestScore, conn))
+                {
+                    using (SQLiteDataReader reader = cmdHighestScore.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            HighestScore.Text = $"{reader["Gebruikersnaam"]}: {reader["HighestScore"]}";
+                        }
+                    }
+                }
             }
         }
+
+
 
         private void MainWindowClick(object sender, RoutedEventArgs e)
         {
