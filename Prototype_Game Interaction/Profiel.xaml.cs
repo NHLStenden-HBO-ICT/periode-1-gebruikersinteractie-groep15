@@ -22,10 +22,6 @@ namespace Prototype_Game_Interaction
         public Profiel()
         {
             InitializeComponent();
-            Gebruikersnaam.Text = change.Text;
-            wacht.Text = change.Text2;
-            mail.Text = change.Text3;
-            Postcode.Text = change.Text4;
         }
 
 
@@ -50,11 +46,9 @@ namespace Prototype_Game_Interaction
 
         }
 
-        private void Image_MouseUp(object sender, MouseButtonEventArgs e)
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            MainWindow mainWindow = new MainWindow();
-            mainWindow.Visibility = Visibility.Visible;
-            this.Close();
+
         }
     }
 }
