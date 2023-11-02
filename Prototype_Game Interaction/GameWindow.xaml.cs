@@ -4,6 +4,7 @@ using System.Data.SqlTypes;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
+using System.Media;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 using System.Windows;
@@ -56,12 +57,17 @@ namespace Prototype_Game_Interaction
         private bool player1KeyNotPressed = true;
         private bool player2KeyNotPressed = true;
 
+        //bools voor de geluidseffecten
+        private bool Sound1Play = false;
+        private bool Sound2Play = false;
+        private bool Sound3Play = false;
+
         // Game timer van 30 seconden
         private int remainingTime = 30; // 30 seconden
         private DispatcherTimer gameTimer;
 
         // 3 seconden countdown voordat de game begint
-        private int countdownTime = 3; 
+        private int countdownTime = 3;
         private DispatcherTimer countdownStartTimer;
 
         //Methode om de pijltjestoetsen te laten zien in het scherm ipv. Up, Down, Left, Right. Had vast mooier gekund, maar idk.
@@ -82,8 +88,6 @@ namespace Prototype_Game_Interaction
             }
         }
 
-
-
         public GameWindow()
         {
             InitializeComponent();
@@ -92,7 +96,7 @@ namespace Prototype_Game_Interaction
 
             // animatie timer
             animationTimer = new DispatcherTimer();
-            animationTimer.Interval = TimeSpan.FromMilliseconds(32);
+            animationTimer.Interval = TimeSpan.FromMilliseconds(36);
             animationTimer.Tick += AnimationTimer_Tick;
             animationTimer.Start();
 
@@ -121,7 +125,7 @@ namespace Prototype_Game_Interaction
 
             GenerateKeysForNextRound();
 
-            
+
 
             // Stel de initial visibility in
             isGameWindowVisible = true;
@@ -295,7 +299,7 @@ namespace Prototype_Game_Interaction
                 Player1curl.Effect = null;
                 Player2curl.Effect = null;
             }
-            if (frameIndex  == 16 && player1KeyNotPressed)
+            if (frameIndex == 16 && player1KeyNotPressed)
             {
                 player1Score -= 5;
                 player1ScoreText.Text = $"{player1Score}";
@@ -353,6 +357,7 @@ namespace Prototype_Game_Interaction
                     if (!player1KeyProcessed)
                     {
                         HandleCorrectKey(Player.Player1);
+                        Soundeffect1();
                         player1KeyProcessed = true;
                     }
                     return;
@@ -362,6 +367,7 @@ namespace Prototype_Game_Interaction
                     if (!player1KeyProcessed)
                     {
                         HandleCorrectKey(Player.Player1);
+                        Soundeffect1();
                         player1KeyProcessed = true;
                     }
                     return;
@@ -371,6 +377,7 @@ namespace Prototype_Game_Interaction
                     if (!player1KeyProcessed)
                     {
                         HandleCorrectKey(Player.Player1);
+                        Soundeffect1();
                         player1KeyProcessed = true;
                     }
                     return;
@@ -380,6 +387,7 @@ namespace Prototype_Game_Interaction
                     if (!player1KeyProcessed)
                     {
                         HandleCorrectKey(Player.Player1);
+                        Soundeffect1();
                         player1KeyProcessed = true;
                     }
                     return;
@@ -389,6 +397,7 @@ namespace Prototype_Game_Interaction
                     if (!player1KeyProcessed)
                     {
                         HandleIncorrectKey(Player.Player1);
+                        Soundeffect2();
                         player1KeyProcessed = true;
                     }
                     return;
@@ -398,6 +407,7 @@ namespace Prototype_Game_Interaction
                     if (!player1KeyProcessed)
                     {
                         HandleIncorrectKey(Player.Player1);
+                        Soundeffect2();
                         player1KeyProcessed = true;
                     }
                     return;
@@ -407,6 +417,7 @@ namespace Prototype_Game_Interaction
                     if (!player1KeyProcessed)
                     {
                         HandleIncorrectKey(Player.Player1);
+                        Soundeffect2();
                         player1KeyProcessed = true;
                     }
                     return;
@@ -416,6 +427,7 @@ namespace Prototype_Game_Interaction
                     if (!player1KeyProcessed)
                     {
                         HandleIncorrectKey(Player.Player1);
+                        Soundeffect2();
                         player1KeyProcessed = true;
                     }
                     return;
@@ -432,6 +444,7 @@ namespace Prototype_Game_Interaction
                     if (!player2KeyProcessed)
                     {
                         HandleCorrectKey(Player.Player2);
+                        Soundeffect1();
                         player2KeyProcessed = true;
                     }
                     return;
@@ -441,6 +454,7 @@ namespace Prototype_Game_Interaction
                     if (!player2KeyProcessed)
                     {
                         HandleCorrectKey(Player.Player2);
+                        Soundeffect1();
                         player2KeyProcessed = true;
                     }
                     return;
@@ -450,6 +464,7 @@ namespace Prototype_Game_Interaction
                     if (!player2KeyProcessed)
                     {
                         HandleCorrectKey(Player.Player2);
+                        Soundeffect1();
                         player2KeyProcessed = true;
                     }
                     return;
@@ -459,6 +474,7 @@ namespace Prototype_Game_Interaction
                     if (!player2KeyProcessed)
                     {
                         HandleCorrectKey(Player.Player2);
+                        Soundeffect1();
                         player2KeyProcessed = true;
                     }
                     return;
@@ -468,6 +484,7 @@ namespace Prototype_Game_Interaction
                     if (!player2KeyProcessed)
                     {
                         HandleIncorrectKey(Player.Player2);
+                        Soundeffect2();
                         player2KeyProcessed = true;
                     }
                     return;
@@ -477,6 +494,7 @@ namespace Prototype_Game_Interaction
                     if (!player2KeyProcessed)
                     {
                         HandleIncorrectKey(Player.Player2);
+                        Soundeffect2();
                         player2KeyProcessed = true;
                     }
                     return;
@@ -486,6 +504,7 @@ namespace Prototype_Game_Interaction
                     if (!player2KeyProcessed)
                     {
                         HandleIncorrectKey(Player.Player2);
+                        Soundeffect2();
                         player2KeyProcessed = true;
                     }
                     return;
@@ -495,6 +514,7 @@ namespace Prototype_Game_Interaction
                     if (!player2KeyProcessed)
                     {
                         HandleIncorrectKey(Player.Player2);
+                        Soundeffect2();
                         player2KeyProcessed = true;
                     }
                     return;
@@ -509,6 +529,7 @@ namespace Prototype_Game_Interaction
                 player1Score -= 5;
                 player1ScoreText.Text = $"{player1Score}";
                 player1KeyProcessed = true;
+                Sound2Play = true;
             }
 
             // Mocht een speler buiten de juiste frame een toets in drukken, dan geld er punt aftrek. Minus 5 punten in dit geval!
@@ -518,6 +539,7 @@ namespace Prototype_Game_Interaction
                 player2Score -= 5;
                 player2ScoreText.Text = $"{player2Score}";
                 player2KeyProcessed = true;
+                Sound2Play = true;
             }
         }
 
@@ -530,12 +552,14 @@ namespace Prototype_Game_Interaction
                 player1Score += 10;
                 player1ScoreText.Text = $"{player1Score}";
                 player1KeyNotPressed = false;
+                Sound1Play = true;
             }
             else if (player == Player.Player2)
             {
                 player2Score += 10;
                 player2ScoreText.Text = $"{player2Score}";
                 player2KeyNotPressed = false;
+                Sound1Play = true;
             }
         }
 
@@ -547,21 +571,69 @@ namespace Prototype_Game_Interaction
             {
                 player1Score -= 2;
                 player1ScoreText.Text = $"{player1Score}";
+                Sound2Play = true;
+                player2KeyNotPressed = false;
             }
             else if (player == Player.Player2)
             {
                 player2Score -= 2;
                 player2ScoreText.Text = $"{player2Score}";
+                Sound2Play = true;
+                player2KeyNotPressed = false;
             }
         }
 
-        
-    }
-}
+       
 
-// enum om spelers te selecteren in de code.
-enum Player
-{
-    Player1,
-    Player2
+        //geluidseffect1 dat is voor als je de knop goed indrukt
+        private void Soundeffect1()
+        {
+
+
+            if (Sound1Play == true)
+            {
+                SoundPlayer sound = new SoundPlayer("soundeffects/jump.wav");
+                sound.Play();
+            }
+            else
+            {
+                Sound1Play = false;
+            }
+        }
+
+        //geluidseffect2 dat is voor als je de knop fout indrukt
+        private void Soundeffect2()
+        {
+            if (Sound2Play == true)
+            {
+                SoundPlayer soundfail = new SoundPlayer("soundeffects/hitHurt.wav");
+                soundfail.Play();
+            }
+            else
+            {
+                Sound2Play = false;
+            }
+        }
+
+        //geluidseffect3 dat is voor als je de knop niet indrukt
+        private void Soundeffect3()
+        {
+            if (Sound3Play == true)
+            {
+                SoundPlayer soundnokey = new SoundPlayer("soundeffects/hitHurt.wav");
+                soundnokey.Play();
+            }
+            else
+            {
+                Sound3Play = false; 
+            }
+        }
+    }
+
+    // enum om spelers te selecteren in de code.
+    enum Player
+    {
+        Player1,
+        Player2
+    }
 }
