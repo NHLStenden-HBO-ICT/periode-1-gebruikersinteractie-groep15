@@ -5,9 +5,70 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Prototype_Game_Interaction"
         mc:Ignorable="d"
-        Title="Help" Height="450" Width="800"
+        Title="Help" 
+        Width="1440"
+        Height="1024"
+        ResizeMode="CanMinimize"
         WindowStartupLocation="CenterScreen">
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+
     <Grid>
-        
+
+        <!-- Vraagteken Pictogram -->
+        <Image Source="/Assets/VraagtekenHelp.png" Stretch="Fill" Margin="214,44,1128,870" />
+
+        <!-- Controls P1 & P2 -->
+        <Image Source="/Assets/HelpControlsP1.png" Stretch="Fill" Margin="876,203,163,566"/>
+        <Image Source="/Assets/HelpControlsP2.png" Stretch="Fill" Margin="876,482,163,291"/>
+
+        <!-- Grid blok voor de titel van het scherm en de Teruggaan button -->
+        <Grid Height="1008" VerticalAlignment="Top">
+            <TextBlock Name="TitelScherm"     
+         TextAlignment="Center"
+         Margin="52,58,1243,880"
+         FontSize="64" 
+         FontFamily="{StaticResource SquadaOne}" Text="Help"/>
+        </Grid>
+
+        <!-- Button terugkeren Hoofmenu -->
+        <Button x:Name="TeruggaanButton"
+                Click="TeruggaanButton_Click"
+                 Margin="946,44,76,870">
+            <Button.Style>
+                <Style 
+            TargetType="Button" BasedOn="{StaticResource TerugHover}">
+                </Style>
+            </Button.Style>
+        </Button>
+
+
+        <!-- Text met uitleg over spel -->
+        <TextBlock HorizontalAlignment="Left" 
+                   Margin="42,256,0,0" 
+                   TextWrapping="Wrap" 
+                   Text="Dit lokaal multiplayer-spel voor twee spelers draait om het behalen van zoveel mogelijk punten door perfecte timing en knoppencombinaties. De timing van de knoppeninvoer wordt ingevoerd wanneer de karakter van een speler gloeit. Versla je tegenstander door meer punten te scoren tijdens een speelsessie. " 
+                   FontSize="35"
+                   FontFamily="{StaticResource SquadaOne}"
+                   VerticalAlignment="Top" 
+                   Height="414" 
+                   Width="754"/>
+
+
+        <!-- De images links- en rechtsonderin de hoeken -->
+        <Grid>
+            <Image Margin="0,706,1135,0" Source="/Assets/Player1.png" Stretch="Fill"/>
+            <Image Margin="1136,706,-10,-7" Source="/Assets/Player2.png" Stretch="Fill"/>
+
+        </Grid>
+
+
     </Grid>
 </Window>

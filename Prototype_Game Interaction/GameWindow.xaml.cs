@@ -304,14 +304,14 @@ namespace Prototype_Game_Interaction
                 player1Score -= 5;
                 player1ScoreText.Text = $"{player1Score}";
                 Sound3Play = true;
-               
+
             }
             if (frameIndex == 16 && player2KeyNotPressed)
             {
                 player2Score -= 5;
                 player2ScoreText.Text = $"{player2Score}";
                 Sound3Play = true;
-                
+
             }
         }
 
@@ -523,7 +523,7 @@ namespace Prototype_Game_Interaction
                     }
                     return;
                 }
-                
+
             }
 
             // Mocht een speler buiten de juiste frame een toets in drukken, dan geld er punt aftrek. Minus 5 punten in dit geval!
@@ -589,7 +589,7 @@ namespace Prototype_Game_Interaction
             }
         }
 
-       
+
         //geluidseffect1 dat is voor als je de knop goed indrukt
         private void Soundeffect1()
         {
@@ -619,7 +619,7 @@ namespace Prototype_Game_Interaction
                 Sound2Play = false;
             }
         }
-
+    }
     // enum om spelers te selecteren in de code.
     enum Player
     {
