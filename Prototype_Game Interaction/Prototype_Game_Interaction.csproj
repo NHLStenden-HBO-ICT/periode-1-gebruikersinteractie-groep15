@@ -142,7 +142,7 @@
 		<Content Include="Assets\VraagtekenHelp.png">
 		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</Content>
-		<Content Include="C:\repos\periode-1-gebruikersinteractie-groep15\Prototype_Game Interaction\Fonts\Squada_One.ttf">
+		<Content Include="C:\Users\Durk\Documents\School\Coderen\periode-1-gebruikersinteractie-groep15\Prototype_Game Interaction\Fonts\Squada_One.ttf">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</Content>
 	</ItemGroup>
