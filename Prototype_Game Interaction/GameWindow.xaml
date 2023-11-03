@@ -52,21 +52,22 @@
 
 
         <Grid>
-            <Image Margin="0,-16,0,0" Source="/Assets/GameBackground2.png" Stretch="Fill" Panel.ZIndex="-2" Opacity="0.5"/>
+            <Image Margin="0,-16,0,0" Source="/Assets/GameBackground2.png" Stretch="Fill" Panel.ZIndex="-2" Opacity="0.5" RenderOptions.BitmapScalingMode="NearestNeighbor"/>
 
 
             <Image x:Name="Player1curl" 
                Source="/Assets/player1curlSheetFirstFrame.png" 
-               Margin="-42,184,706,48">
+               Margin="-42,184,706,48" RenderOptions.BitmapScalingMode="NearestNeighbor">
                 <Image.Effect>
                     <DropShadowEffect Color="Yellow" Direction="0" BlurRadius="50" Opacity="1"/>
                 </Image.Effect>
+                
             </Image>
 
 
             <Image x:Name="Player2curl" 
                Source="/Assets/player2curlSheetFirstFrame.png" 
-               Margin="706,184,-42,48">
+               Margin="706,184,-42,48" RenderOptions.BitmapScalingMode="NearestNeighbor">
                 <Image.Effect>
                     <DropShadowEffect Color="#fdb4d8" Direction="0" BlurRadius="50" Opacity="0.5"/>
                 </Image.Effect>
