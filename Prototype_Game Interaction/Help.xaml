@@ -54,7 +54,7 @@
         <TextBlock HorizontalAlignment="Left" 
                    Margin="42,256,0,0" 
                    TextWrapping="Wrap" 
-                   Text="Dit lokaal multiplayer-spel voor twee spelers draait om het behalen van zoveel mogelijk punten door perfecte timing en knoppencombinaties. De timing van de knoppeninvoer wordt ingevoerd wanneer de karakter van een speler gloeit. Versla je tegenstander door meer punten te scoren tijdens een speelsessie. " 
+                   Text="Dit lokaal multiplayer-spel voor twee spelers draait om het behalen van zoveel mogelijk punten door perfecte timing en knoppencombinaties. Geen power-ups, maar wel multipliers bij herhaalde perfecte timing. Versla je tegenstander door meer punten te scoren tijdens een speelsessie. " 
                    FontSize="35"
                    FontFamily="{StaticResource SquadaOne}"
                    VerticalAlignment="Top" 

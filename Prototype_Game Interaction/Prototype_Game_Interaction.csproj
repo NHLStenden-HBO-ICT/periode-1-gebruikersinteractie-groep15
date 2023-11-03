@@ -42,6 +42,12 @@
 		<Content Include="Assets\Help.png">
 		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</Content>
+		<Content Include="Assets\HelpControlsP1.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\HelpControlsP2.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
 		<Content Include="Assets\HelpFx.png">
 		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</Content>
@@ -73,6 +79,9 @@
 		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</Content>
 		<Content Include="Assets\LeaderboardFx.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\LogoSportschool.png">
 		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</Content>
 		<Content Include="Assets\muziekLabel.png">
@@ -130,6 +139,9 @@
 		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</Content>
 		<Content Include="Assets\rollen.png" />
+		<Content Include="Assets\VraagtekenHelp.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
 		<Content Include="C:\repos\periode-1-gebruikersinteractie-groep15\Prototype_Game Interaction\Fonts\Squada_One.ttf">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</Content>
@@ -149,6 +161,8 @@
 		<None Remove="Assets\geluidLabel.png" />
 		<None Remove="Assets\geluidTekst.png" />
 		<None Remove="Assets\Help.png" />
+		<None Remove="Assets\HelpControlsP1.png" />
+		<None Remove="Assets\HelpControlsP2.png" />
 		<None Remove="Assets\HelpFx.png" />
 		<None Remove="Assets\Herstarten.png" />
 		<None Remove="Assets\HerstartenFx.png" />
@@ -162,6 +176,7 @@
 		<None Remove="Assets\JaButtonFx.png" />
 		<None Remove="Assets\Leaderboard.png" />
 		<None Remove="Assets\LeaderboardFx.png" />
+		<None Remove="Assets\LogoSportschool.png" />
 		<None Remove="Assets\muziekLabel.png" />
 		<None Remove="Assets\muziekTekst.png" />
 		<None Remove="Assets\NeeButton.png" />
@@ -182,6 +197,7 @@
 		<None Remove="Assets\StartSpelFx.png" />
 		<None Remove="Assets\Terug.png" />
 		<None Remove="Assets\TerugFx.png" />
+		<None Remove="Assets\VraagtekenHelp.png" />
 		<None Remove="Assets\WASDKeys.png" />
 		<None Remove="Teruggaanfx.png" />
 	</ItemGroup>
