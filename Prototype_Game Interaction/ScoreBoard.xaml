@@ -43,9 +43,9 @@
 
         </DataGrid>
 
-        <!--  Hoogste score  -->
+
         <StackPanel Orientation="Vertical" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,852,650,0">
-            <TextBlock x:Name="HighestScoreLabel" Text="Hoogste Score:" FontFamily="{StaticResource SquadaOne}" FontSize="25" FontWeight="Bold" RenderTransformOrigin="0.36,0.629" Height="49" Width="156"/>
+            <TextBlock x:Name="HighestScoreLabel" Text="Highest Score:" FontFamily="{StaticResource SquadaOne}" FontSize="25" FontWeight="Bold" RenderTransformOrigin="0.36,0.629" Height="49" Width="156"/>
             <TextBlock x:Name="HighestScore" Text="Loading..." FontFamily="{StaticResource SquadaOne}" FontSize="25" RenderTransformOrigin="0.5,0.5" >
                 <TextBlock.RenderTransform>
                     <TransformGroup>
