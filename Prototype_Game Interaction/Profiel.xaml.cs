@@ -21,7 +21,19 @@ namespace Prototype_Game_Interaction
     {
         public Profiel()
         {
-            InitializeComponent();
+            InitializeComponent();  // This should be the first call in the constructor
+            Gebruikersnaam.Text = change.Text;
+            wacht.Text = change.Text2;
+            mail.Text = change.Text3;
+            Postcode.Text = change.Text4;
+        }
+
+        public static class change
+        {
+            public static string Text { get; set; }
+            public static string Text2 { get; set; }
+            public static string Text3 { get; set; }
+            public static string Text4 { get; set; }
         }
 
 
@@ -46,9 +58,11 @@ namespace Prototype_Game_Interaction
 
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        private void Image_MouseUp(object sender, MouseButtonEventArgs e)
         {
-
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Visibility = Visibility.Visible;
+            this.Close();
         }
     }
 }
