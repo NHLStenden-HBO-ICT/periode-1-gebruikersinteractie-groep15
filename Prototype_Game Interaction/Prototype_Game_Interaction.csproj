@@ -142,12 +142,13 @@
 		<Content Include="Assets\VraagtekenHelp.png">
 		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</Content>
-		<Content Include="C:\Users\Durk\Documents\School\Coderen\periode-1-gebruikersinteractie-groep15\Prototype_Game Interaction\Fonts\Squada_One.ttf">
+		<Content Include="C:\repos\periode-1-gebruikersinteractie-groep15\Prototype_Game Interaction\Fonts\Squada_One.ttf">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</Content>
 	</ItemGroup>
 
 	<ItemGroup>
+		<None Remove="Assets\acc.png" />
 		<None Remove="Assets\Accepteren keybind change.png" />
 		<None Remove="Assets\Achtergrond.png" />
 		<None Remove="Assets\Afsluiten.png" />
@@ -168,6 +169,7 @@
 		<None Remove="Assets\Hervatten.png" />
 		<None Remove="Assets\HervattenFx.png" />
 		<None Remove="Assets\Hoofdmenu.png" />
+		<None Remove="Assets\inlog.png" />
 		<None Remove="Assets\Instellingen.png" />
 		<None Remove="Assets\InstellingenFx.png" />
 		<None Remove="Assets\JaButton.png" />
@@ -216,10 +218,21 @@
 		<Content Include="Assets\Hoofdmenu.png">
 		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</Content>
+		<Resource Include="Assets\acc.png" />
 		<Resource Include="Teruggaan.png" />
 		<Resource Include="onHover.png" />
 		<Content Include="Assets\rollen.png">
 		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</Content>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="Microsoft.Data.Sqlite.Core" Version="7.0.13" />
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite.Core" Version="7.0.13" />
+	  <PackageReference Include="SQLitePCLRaw.bundle_e_sqlite3" Version="2.1.6" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Resource Include="Assets\inlog.png" />
 	</ItemGroup>
 </Project>
