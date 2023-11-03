@@ -33,9 +33,10 @@
         <!-- Achtergrond spelers linksonder en rechtsonder -->
         <Image Margin="0,706,1135,0" Source="/Assets/Player1.png" Stretch="Fill"/>
         <Image Margin="1136,706,-10,-7" Source="/Assets/Player2.png" Stretch="Fill"/>
-        
+
+        <Image Margin="0,0,1160,882"  Source="/Assets/LogoSportschool.png" Stretch="Fill"/>
+
         <!-- Het hele grid-->
-        <!-- Titel van het spel-->
         <!-- Titel van het spel -->
         <Image Source="/Assets/GameTitel.png" Width="650" Height="100" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,60,0,0"/>
 
@@ -63,8 +64,8 @@
 
         <!-- Instellingen button -->
         <Button x:Name="InstellingenButton"
-  Click="InstellingenClick"
-  Margin="511,527,511,387">
+                Click="InstellingenClick"
+                Margin="511,527,511,387">
             <Button.Style>
                 <Style 
            TargetType="Button" BasedOn="{StaticResource instellingenButton}">
@@ -74,8 +75,8 @@
 
         <!-- Help button -->
         <Button x:Name="HelpButton"
-Click="HelpClick"
-Margin="511,648,511,266">
+                Click="HelpClick"
+                Margin="511,648,511,266">
             <Button.Style>
                 <Style 
          TargetType="Button" BasedOn="{StaticResource helpButton}">
@@ -85,8 +86,8 @@ Margin="511,648,511,266">
 
         <!-- Afsluiten button -->
         <Button x:Name="QuitButton"
-Click="QuitButtonClick"
-Margin="511,769,511,144">
+                Click="QuitButtonClick"
+                Margin="511,769,511,144">
             <Button.Style>
                 <Style 
          TargetType="Button" BasedOn="{StaticResource afsluitenButton}">
