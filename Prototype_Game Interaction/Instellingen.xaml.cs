@@ -94,11 +94,29 @@ namespace Prototype_Game_Interaction
         {
             if (e.Key == Key.Escape) 
             {
-                SharedData.CurrentScreen = "MainWindow";
+                {
+                    if (SharedData.CurrentScreen == "StartSpel")
+                    {
+                        StartSpel StartSpel = new StartSpel();
+                        StartSpel.Visibility = Visibility.Visible;
 
-                MainWindow mainWindow = new MainWindow();
-                mainWindow.Visibility = Visibility.Visible;
-                this.Visibility = Visibility.Hidden;
+                    }
+
+                    else if (SharedData.CurrentScreen == "PauzeMenu")
+                    {
+                        PauzeMenu pauzeMenu = new PauzeMenu();
+                        pauzeMenu.Visibility = Visibility.Visible;
+                    }
+
+                    else
+                    {
+                        SharedData.CurrentScreen = "MainWindow";
+
+                        MainWindow mainWindow = new MainWindow();
+                        mainWindow.Visibility = Visibility.Visible;
+                    }
+                    this.Visibility = Visibility.Hidden;
+                }
             }
         }
 
