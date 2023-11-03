@@ -60,7 +60,6 @@ namespace Prototype_Game_Interaction
         //bools voor de geluidseffecten
         private bool Sound1Play = false;
         private bool Sound2Play = false;
-        private bool Sound3Play = false;
 
         // Game timer van 30 seconden
         private int remainingTime = 30; // 30 seconden
@@ -303,14 +302,14 @@ namespace Prototype_Game_Interaction
             {
                 player1Score -= 5;
                 player1ScoreText.Text = $"{player1Score}";
-                Sound3Play = true;
+                
 
             }
             if (frameIndex == 16 && player2KeyNotPressed)
             {
                 player2Score -= 5;
                 player2ScoreText.Text = $"{player2Score}";
-                Sound3Play = true;
+                
 
             }
         }
