@@ -26,6 +26,7 @@ namespace Prototype_Game_Interaction
         {
             InitializeComponent();
             SharedData.CurrentScreen = "MainWindow";
+            this.KeyDown += Afsluiten_keyDown;
         }
 
         private void StartButtonClick(object sender, RoutedEventArgs e)
@@ -52,10 +53,10 @@ namespace Prototype_Game_Interaction
             Instellingen instellingen = new Instellingen();
             instellingen.Visibility = Visibility.Visible;
             this.Visibility = Visibility.Hidden;
-            
+
 
         }
-        private void HelpClick(object sender, RoutedEventArgs e) 
+        private void HelpClick(object sender, RoutedEventArgs e)
         {
             SharedData.CurrentScreen = "Help";
 
@@ -66,8 +67,39 @@ namespace Prototype_Game_Interaction
         }
         private void QuitButtonClick(object sender, RoutedEventArgs e)
         {
-            Application.Current.Shutdown();
+            SharedData.CurrentScreen = "AflsuitMenu";
+
+            AfsluitMenu afsluitMenu = new AfsluitMenu();
+            afsluitMenu.Visibility = Visibility.Visible;
+            this.Visibility = Visibility.Hidden;
         }
-        
+
+        private void profielClick(object sender, RoutedEventArgs e)
+        {
+            // Assuming SharedData.CurrentScreen is used for tracking purposes elsewhere.
+            SharedData.CurrentScreen = "Profiel";
+
+            // Create a new instance of the Profiel window.
+            Profiel profielWindow = new Profiel();
+
+            // Show the Profiel window.
+            profielWindow.Show();
+
+            // Hide the current window.
+            this.Visibility = Visibility.Hidden;
+        }
+
+        private void Afsluiten_keyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Escape)
+            {
+                SharedData.CurrentScreen = "AflsuitMenu";
+
+                AfsluitMenu afsluitMenu = new AfsluitMenu();
+                afsluitMenu.Visibility = Visibility.Visible;
+                this.Visibility = Visibility.Hidden;
+            }
+        }
+
     }
 }
