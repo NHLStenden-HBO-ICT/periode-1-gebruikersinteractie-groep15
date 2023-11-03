@@ -199,6 +199,11 @@
 		<None Remove="Assets\TerugFx.png" />
 		<None Remove="Assets\VraagtekenHelp.png" />
 		<None Remove="Assets\WASDKeys.png" />
+		<None Remove="soundeffects\hitHurt.wav" />
+		<None Remove="soundeffects\hitHurt2.wav" />
+		<None Remove="soundeffects\jump.wav" />
+		<None Remove="soundeffects\jump2.wav" />
+		<None Remove="soundeffects\laserShoot.wav" />
 		<None Remove="Teruggaanfx.png" />
 	</ItemGroup>
 
@@ -216,6 +221,21 @@
 
 	<ItemGroup>
 		<Content Include="Assets\Hoofdmenu.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="soundeffects\hitHurt.wav">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="soundeffects\hitHurt2.wav">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="soundeffects\jump.wav">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="soundeffects\jump2.wav">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="soundeffects\laserShoot.wav">
 		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</Content>
 		<Resource Include="Assets\acc.png" />
