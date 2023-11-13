@@ -4,6 +4,9 @@
              xmlns:local="clr-namespace:Prototype_Game_Interaction"
              StartupUri="inlog.xaml">
     <Application.Resources>
-        
+
+      
+
+
     </Application.Resources>
 </Application>
